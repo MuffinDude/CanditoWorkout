@@ -29,13 +29,13 @@ public class MainTabInsert extends Fragment {
 
         save = (Button) insertTab.findViewById(R.id.saveButton);
         editText = (EditText) insertTab.findViewById(R.id.editText);
-        File dir = new File(path);
+        final File dir = new File(getContext().getFilesDir() + path);
         dir.mkdirs();
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                File file = new File(path, "/savedFile.txt");
+                final File file = new File(dir, "/savedFile.txt");
                 String [] saveText = String.valueOf(editText.getText()).split(System.getProperty("line.separator"));
 
 
@@ -50,10 +50,13 @@ public class MainTabInsert extends Fragment {
 
     public static void Save(File file, String[] data){
         FileOutputStream fos = null;
-        try{
+
+        try {
             fos = new FileOutputStream(file, true);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        catch (FileNotFoundException e) {e.printStackTrace();}
+
         try{
             try{
                 for (int i = 0; i<data.length; i++){
