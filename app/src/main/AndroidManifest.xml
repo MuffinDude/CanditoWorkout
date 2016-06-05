@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="longerinoentertainment.canditoworkout">
 
-    <user-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <user-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <user-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <user-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +14,8 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Week1.Week1"
+            android:label="@string/title_activity_week1"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Week1.Day1" />
+        <activity android:name=".Week1.Day2" />
+        <activity android:name=".Week1.Day3" />
+        <activity android:name=".Week1.Day4" />
+        <activity android:name=".Week1.Day5"></activity>
     </application>
 
 </manifest>
