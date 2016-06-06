@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedInputStream;
@@ -47,6 +48,14 @@ public class MainTabInsert extends Fragment {
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
 
+        String[] values = readFromFile(new File(dir, "savedFile.txt"));
+
+        if (values.length == 3) {
+            System.out.println("readfromfile1");
+            editTextBench.setText(values[0], TextView.BufferType.EDITABLE);
+            editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
+            editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
+        }
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +117,7 @@ public class MainTabInsert extends Fragment {
         }
     }
 
-    public static void readFromFile(File file){
+    public static String[] readFromFile(File file){
     String[] values = new String[3];
     try {
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -129,6 +138,7 @@ public class MainTabInsert extends Fragment {
         System.out.println(benchPress + " bench press");
         System.out.println(squat + " squat");
         System.out.println(deadlift + " deadlift");
+    return values;
     }
 
 }
