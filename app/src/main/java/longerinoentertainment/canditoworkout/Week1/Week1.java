@@ -41,8 +41,6 @@ public class Week1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week1);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -158,15 +156,15 @@ public class Week1 extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Day 1";
                 case 1:
-                    return "SECTION 2";
+                    return "Day 2";
                 case 2:
-                    return "SECTION 3";
+                    return "Day 3";
                 case 3:
-                    return "SECTION 4";
+                    return "Day 4";
                 case 4:
-                    return "SECTION 5";
+                    return "Day 5";
             }
             return null;
         }
