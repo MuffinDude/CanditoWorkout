@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
+                    android:text="x10"
                     android:id="@+id/textView34"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView33"
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
+                    android:text="x10"
                     android:id="@+id/textView35"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView34"
@@ -152,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
+                    android:text="x8"
                     android:id="@+id/textView36"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView35"
@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
+                    android:text="x6"
                     android:id="@+id/textView37"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView36" />
@@ -208,7 +208,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
+                    android:text="x12"
                     android:id="@+id/textView40"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView39"
@@ -218,7 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
+                    android:text="x12"
                     android:id="@+id/textView41"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView40"
@@ -228,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
+                    android:text="x10"
                     android:id="@+id/textView42"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView41"
@@ -238,7 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
+                    android:text="x8"
                     android:id="@+id/textView43"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView42" />
@@ -267,14 +267,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView44"
-                android:layout_centerHorizontal="true" >
+                android:layout_centerHorizontal="true"
+                android:id="@+id/relativeLayout3" >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="warm"
-                    android:id="@+id/textView45"
+                    android:id="@+id/textView61"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
                     android:layout_marginRight="10dp" />
@@ -283,41 +284,42 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
-                    android:id="@+id/textView46"
+                    android:text="x12"
+                    android:id="@+id/textView62"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView45"
+                    android:layout_toEndOf="@+id/textView61"
                     android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
-                    android:id="@+id/textView47"
+                    android:text="x12"
+                    android:id="@+id/textView63"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView46"
+                    android:layout_toEndOf="@+id/textView62"
                     android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
-                    android:id="@+id/textView48"
+                    android:text="x10"
+                    android:id="@+id/textView64"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView47"
+                    android:layout_toEndOf="@+id/textView63"
                     android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
-                    android:id="@+id/textView49"
+                    android:text="x8"
+                    android:id="@+id/textView65"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView48" />
+                    android:layout_toEndOf="@+id/textView64" />
             </RelativeLayout>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -461,20 +463,26 @@
             android:layout_alignParentStart="true"
             android:layout_marginBottom="20dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="STOPPER"
-            android:id="@+id/stopperButton"
-            android:layout_centerVertical="true"
-            android:layout_alignEnd="@+id/chronometer" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
 
-        <Chronometer
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chronometer"
-            android:layout_below="@+id/stopperButton"
-            android:layout_alignStart="@+id/textView56" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STOPPER"
+                android:id="@+id/stopperButton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <Chronometer
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chronometer"
+                android:layout_alignTop="@+id/stopperButton"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
 
     </LinearLayout>
 
