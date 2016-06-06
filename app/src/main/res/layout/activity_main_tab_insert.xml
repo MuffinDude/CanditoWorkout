@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -61,10 +63,12 @@
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="KG/LBS     "
                     android:id="@+id/switch1"
+                    android:text="KG/LBS"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_alignTop="@+id/textView3"
-                    android:layout_alignEnd="@+id/textView2" />
+                    android:layout_toEndOf="@+id/textView3"
+                    android:layout_marginStart="46dp" />
             </RelativeLayout>
 
             <TableLayout
