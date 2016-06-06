@@ -27,7 +27,10 @@ public class MainTabInsert extends Fragment {
     public static double squat;
     public static double deadlift;
     public Button save;
-    public EditText editText;
+    public EditText editTextBench;
+    public EditText editTextSquat;
+    public EditText editTextDeadlift;
+
     public String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/CanditoWorkoutApp";
 
 
@@ -36,7 +39,11 @@ public class MainTabInsert extends Fragment {
         final View insertTab = inflater.inflate(R.layout.activity_main_tab_insert, container, false);
 
         save = (Button) insertTab.findViewById(R.id.saveButton);
-        editText = (EditText) insertTab.findViewById(R.id.editText);
+        editTextBench = (EditText) insertTab.findViewById(R.id.editTextBench);
+        editTextSquat = (EditText) insertTab.findViewById(R.id.editTextSquat);
+        editTextDeadlift = (EditText) insertTab.findViewById(R.id.editTextDeadlift);
+
+
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
 
@@ -44,13 +51,16 @@ public class MainTabInsert extends Fragment {
             @Override
             public void onClick(View view) {
                 final File file = new File(dir, "savedFile.txt");
-                String [] saveText = String.valueOf(editText.getText()).split(System.getProperty("line.separator"));
-
+                //String [] saveText = String.valueOf(editTextBench.getText()).split(System.getProperty("line.separator"));
+                String[] saveText = new String[3];
+                saveText[0] = String.valueOf(editTextBench.getText());
+                saveText[1] = String.valueOf(editTextSquat.getText());
+                saveText[2] = String.valueOf(editTextDeadlift.getText());
 
 
 
                 Save(file, saveText);
-                Toast.makeText(getContext(), "Saved" + editText.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Saved" + editTextBench.getText(), Toast.LENGTH_SHORT).show();
                 readFromFile(file);
             }
         });
@@ -75,12 +85,12 @@ public class MainTabInsert extends Fragment {
             try{
                 for (int i = 0; i<data.length; i++){
                     assert fos != null;
+                    System.out.println(data[i] + "vaata mind pls");
                     fos.write(data[i].getBytes());
                     if (i < data.length-1){
                         fos.write("\n".getBytes());
                     }
-                } fos.write(' ');
-                System.out.println("salvestas h2sti");
+                }// fos.write(' ');
 
             }
             catch (IOException e) {e.printStackTrace();}
@@ -99,23 +109,26 @@ public class MainTabInsert extends Fragment {
     }
 
     public static void readFromFile(File file){
-    StringBuilder text = new StringBuilder();
+    String[] values = new String[3];
     try {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
-
+        int i = 0;
         while ((line = br.readLine()) != null){
-            text.append(line);
-            text.append('\n');
+            values[i] = line;
+            i++;
         }
         br.close();
-        benchPress = Double.parseDouble(text.toString());
-
+        benchPress = Double.parseDouble(values[0]);
+        squat = Double.parseDouble(values[1]);
+        deadlift = Double.parseDouble(values[2]);
     }
     catch (IOException e){
 
     }
-        System.out.println(benchPress + "hahahahahahaha");
+        System.out.println(benchPress + " bench press");
+        System.out.println(squat + " squat");
+        System.out.println(deadlift + " deadlift");
     }
 
 }
