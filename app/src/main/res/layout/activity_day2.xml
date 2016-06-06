@@ -14,12 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -30,64 +32,75 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
-            <RelativeLayout
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView8"
-                android:layout_centerHorizontal="true">
+                android:layout_below="@+id/textView8">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="warm"
-                    android:id="@+id/textView10"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_below="@+id/textView8"
+                    android:layout_centerHorizontal="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
-                    android:id="@+id/textView28"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView10" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="warm"
+                        android:id="@+id/textView10"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
-                    android:id="@+id/textView29"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView28" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="42.5x10"
+                        android:id="@+id/textView28"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView10"
+                        android:layout_marginRight="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
-                    android:id="@+id/textView30"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView29" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="57,5x10"
+                        android:id="@+id/textView29"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView28"
+                        android:layout_marginRight="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
-                    android:id="@+id/textView31"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView30" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="65x8"
+                        android:id="@+id/textView30"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView29"
+                        android:layout_marginRight="10dp" />
 
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="65x6"
+                        android:id="@+id/textView31"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView30" />
+
+                </RelativeLayout>
+            </TableLayout>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,7 +125,8 @@
                     android:text="warm"
                     android:id="@+id/textView33"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -121,7 +135,8 @@
                     android:text="42.5x10"
                     android:id="@+id/textView34"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView33" />
+                    android:layout_toEndOf="@+id/textView33"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -130,7 +145,8 @@
                     android:text="57,5x10"
                     android:id="@+id/textView35"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView34" />
+                    android:layout_toEndOf="@+id/textView34"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,7 +155,8 @@
                     android:text="65x8"
                     android:id="@+id/textView36"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView35" />
+                    android:layout_toEndOf="@+id/textView35"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -158,7 +175,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/relativeLayout"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -183,7 +201,8 @@
                     android:text="warm"
                     android:id="@+id/textView39"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -192,7 +211,8 @@
                     android:text="42.5x10"
                     android:id="@+id/textView40"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView39" />
+                    android:layout_toEndOf="@+id/textView39"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -201,7 +221,8 @@
                     android:text="57,5x10"
                     android:id="@+id/textView41"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView40" />
+                    android:layout_toEndOf="@+id/textView40"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -210,7 +231,8 @@
                     android:text="65x8"
                     android:id="@+id/textView42"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView41" />
+                    android:layout_toEndOf="@+id/textView41"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -229,7 +251,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/relativeLayout2"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -253,7 +276,8 @@
                     android:text="warm"
                     android:id="@+id/textView45"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -262,7 +286,8 @@
                     android:text="42.5x10"
                     android:id="@+id/textView46"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView45" />
+                    android:layout_toEndOf="@+id/textView45"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -271,7 +296,8 @@
                     android:text="57,5x10"
                     android:id="@+id/textView47"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView46" />
+                    android:layout_toEndOf="@+id/textView46"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -280,7 +306,8 @@
                     android:text="65x8"
                     android:id="@+id/textView48"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView47" />
+                    android:layout_toEndOf="@+id/textView47"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -298,13 +325,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/relativeLayout2"
-            android:layout_centerHorizontal="true" >
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="OP1"
+                android:text="OP1 (Hammer Curl)"
                 android:id="@+id/textView50"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
@@ -322,58 +350,54 @@
                     android:text="warm"
                     android:id="@+id/textView51"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
+                    android:text="8-12"
                     android:id="@+id/textView52"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView51" />
+                    android:layout_toEndOf="@+id/textView51"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
+                    android:text="8-12"
                     android:id="@+id/textView53"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView52" />
+                    android:layout_toEndOf="@+id/textView52"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
+                    android:text="8-12"
                     android:id="@+id/textView54"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView53" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
-                    android:id="@+id/textView55"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView54" />
             </RelativeLayout>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_below="@+id/relativeLayout2"
-            android:layout_centerHorizontal="true" >
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="OP2"
+                android:text="OP2 (Chest Fly)"
                 android:id="@+id/textView56"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
@@ -391,44 +415,67 @@
                     android:text="warm"
                     android:id="@+id/textView57"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="42.5x10"
+                    android:text="8-12"
                     android:id="@+id/textView58"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView57" />
+                    android:layout_toEndOf="@+id/textView57"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="57,5x10"
+                    android:text="8-12"
                     android:id="@+id/textView59"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView58" />
+                    android:layout_toEndOf="@+id/textView58"
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x8"
+                    android:text="8-12"
                     android:id="@+id/textView60"
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/textView59" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="65x6"
-                    android:id="@+id/textView61"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/textView60" />
             </RelativeLayout>
+
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ABS IF YOU WANT TO BE RIPPED"
+            android:id="@+id/textView55"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STOPPER"
+            android:id="@+id/stopperButton"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/chronometer" />
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chronometer"
+            android:layout_below="@+id/stopperButton"
+            android:layout_alignStart="@+id/textView56" />
+
     </LinearLayout>
+
 </RelativeLayout>
