@@ -6,4 +6,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_week1">Week1</string>
+    <string name="bench_press">Bench Press</string>
+    <string name="barbell_row">Barbell Row</string>
+    <string name="standing_dumbell_ohp">Standing Dumbell OHP</string>
+    <string name="lat_pulldown">Lat Pulldown</string>
 </resources>
