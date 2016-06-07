@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class MainTabInsert extends Fragment {
     public static double squat;
     public static double deadlift;
     public Button save;
+    public Switch switch1;
     public EditText editTextBench;
     public EditText editTextSquat;
     public EditText editTextDeadlift;
@@ -43,6 +45,18 @@ public class MainTabInsert extends Fragment {
         editTextBench = (EditText) insertTab.findViewById(R.id.editTextBench);
         editTextSquat = (EditText) insertTab.findViewById(R.id.editTextSquat);
         editTextDeadlift = (EditText) insertTab.findViewById(R.id.editTextDeadlift);
+
+        switch1 = (Switch) insertTab.findViewById(R.id.switch1);
+        switch1.setShowText(true);
+
+//        switch1.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                switch1.setTextOff("KG");
+//                switch1.setTextOn("LBS");
+//            }
+//        });
 
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");

@@ -64,11 +64,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/switch1"
-                    android:text="KG/LBS"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_alignTop="@+id/textView3"
                     android:layout_toEndOf="@+id/textView3"
-                    android:layout_marginStart="46dp" />
+                    android:layout_marginStart="46dp"
+                    android:textOff="KG"
+                    android:textOn="LBS"/>
             </RelativeLayout>
 
             <TableLayout
