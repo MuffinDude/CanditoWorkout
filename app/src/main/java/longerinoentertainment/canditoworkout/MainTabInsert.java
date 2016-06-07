@@ -49,15 +49,6 @@ public class MainTabInsert extends Fragment {
         switch1 = (Switch) insertTab.findViewById(R.id.switch1);
         switch1.setShowText(true);
 
-//        switch1.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v) {
-//                switch1.setTextOff("KG");
-//                switch1.setTextOn("LBS");
-//            }
-//        });
-
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
