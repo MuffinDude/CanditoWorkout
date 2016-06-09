@@ -116,7 +116,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Warm-Up"
+                        android:text="Warm"
                         android:id="@+id/button8"
                         android:layout_weight="1" />
 

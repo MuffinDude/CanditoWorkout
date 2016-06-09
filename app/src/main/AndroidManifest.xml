@@ -26,12 +26,8 @@
         <activity
             android:name=".Week1.Week1"
             android:label="@string/title_activity_week1"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Week1.Day1" />
-        <activity android:name=".Week1.Day2" />
-        <activity android:name=".Week1.Day3" />
-        <activity android:name=".Week1.Day4" />
-        <activity android:name=".Week1.Day5"></activity>
     </application>
 
 </manifest>
