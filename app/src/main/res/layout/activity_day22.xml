@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="longerinoentertainment.canditoworkout.Week2.Day2"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp"
     android:paddingTop="15dp"
-    tools:context="longerinoentertainment.canditoworkout.Week1.Day3">
+    android:paddingRight="15dp">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -57,15 +57,8 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="42.5x10"
+                        android:text="62.5x10"
                         android:id="@+id/button18"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="57.5x10"
-                        android:id="@+id/button47"
                         android:layout_weight="1" />
 
                     <Button
@@ -78,7 +71,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="65x6"
+                        android:text="70x6-8"
                         android:id="@+id/button49"
                         android:layout_weight="1" />
 
@@ -129,13 +122,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x10"
-                            android:id="@+id/button9"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x10"
                             android:id="@+id/button16"
                             android:layout_weight="1" />
 
@@ -149,7 +135,7 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x6"
+                            android:text="x8"
                             android:id="@+id/button37"
                             android:layout_weight="1" />
                     </LinearLayout>
@@ -200,28 +186,21 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button31"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
+                            android:text="x10"
                             android:id="@+id/button38"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
+                            android:text="x8"
                             android:id="@+id/button32"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x8"
+                            android:text="x6"
                             android:id="@+id/button39"
                             android:layout_weight="1" />
                     </LinearLayout>
@@ -270,22 +249,8 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button34"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button40"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:text="x10"
-                            android:id="@+id/button35"
+                            android:id="@+id/button34"
                             android:layout_weight="1" />
 
                         <Button
@@ -293,6 +258,13 @@
                             android:layout_height="wrap_content"
                             android:text="x8"
                             android:id="@+id/button41"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="x6"
+                            android:id="@+id/button51"
                             android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>

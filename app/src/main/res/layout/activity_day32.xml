@@ -3,15 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:paddingTop="15dp"
-    tools:context="longerinoentertainment.canditoworkout.Week1.Day3">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="longerinoentertainment.canditoworkout.Week2.Day3">
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView4" >
+        android:id="@+id/scrollView5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -33,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/bench_press"
+                    android:text="Squat"
                     android:id="@+id/textView8"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -45,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView8">
+                    android:layout_below="@+id/textView8"
+                    android:id="@+id/linearLayout2">
 
                     <Button
                         android:layout_width="wrap_content"
@@ -57,31 +64,61 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="42.5x10"
+                        android:text="57.5 x MR10"
                         android:id="@+id/button18"
                         android:layout_weight="1" />
 
-                    <Button
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_toStartOf="@+id/textView8"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="57.5x10"
-                        android:id="@+id/button47"
-                        android:layout_weight="1" />
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Back Off Squats - Reduce weight by 10 lbs or 5 kg if using kg plates.  Then proceed with the following:"
+                        android:id="@+id/textView6"
+                        android:layout_below="@+id/linearLayout2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
 
-                    <Button
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="65x8"
-                        android:id="@+id/button48"
-                        android:layout_weight="1" />
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="- If you were able to complete 10 reps on the MR10 set, perform 10 sets of 3 reps per set, with 60 seconds rest between sets."
+                        android:id="@+id/textView15"
+                        android:layout_marginBottom="5dp" />
 
-                    <Button
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="65x6"
-                        android:id="@+id/button49"
-                        android:layout_weight="1" />
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="- If you completed 8-9 reps on the MR10 set, perform 8 sets of 3 reps per set, with 60 seconds rest between sets."
+                        android:id="@+id/textView16" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="- If you completed 7 reps on the MR 10 set, perform 5 sets of 3 reps per set, with 60 seconds rest between sets."
+                        android:id="@+id/textView17"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="- If you completed less than 7 reps, skip back off sets entirely and reduce your entered 1 rep max by at least 2.5% for following weeks."
+                        android:id="@+id/textView18"
+                        android:layout_gravity="center_horizontal" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -98,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/barbell_row"
+                    android:text="Deadlift Variation"
                     android:id="@+id/textView32"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -128,14 +165,14 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
+                            android:text="x8"
                             android:id="@+id/button9"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
+                            android:text="x8"
                             android:id="@+id/button16"
                             android:layout_weight="1" />
 
@@ -143,159 +180,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x8"
-                            android:id="@+id/button36"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x6"
-                            android:id="@+id/button37"
+                            android:id="@+id/button50"
                             android:layout_weight="1" />
                     </LinearLayout>
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/standing_dumbell_ohp"
-                    android:id="@+id/textView45"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView45"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/relativeLayout4" >
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true" >
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Warm"
-                            android:id="@+id/button29"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button31"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button38"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x10"
-                            android:id="@+id/button32"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button39"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-                android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/lat_pulldown"
-                    android:id="@+id/textView46"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView46"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/relativeLayout5" >
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true" >
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Warm"
-                            android:id="@+id/button33"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button34"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button40"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x10"
-                            android:id="@+id/button35"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button41"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-                </RelativeLayout>
             </RelativeLayout>
 
             <RelativeLayout
@@ -312,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="OP1 (Hammer Curl)"
+                    android:text="OP1 (Calf raise/Leg Curl)"
                     android:id="@+id/textView50"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -338,21 +228,21 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/button23"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x7-10" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button42"
+                        android:id="@+id/button24"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x7-10" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button43"
+                        android:id="@+id/button25"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x7-10" />
 
                 </LinearLayout>
             </RelativeLayout>
@@ -371,7 +261,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="OP2 (Chest Fly)"
+                    android:text="OP2 (Squat Jump/Power Clean)"
                     android:id="@+id/textView56"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -395,24 +285,23 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button44"
+                        android:id="@+id/button27"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x4" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button45"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x4"
+                        android:id="@+id/button28"
+                        android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button46"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
+                        android:text="x4"
+                        android:id="@+id/button30"
+                        android:layout_weight="1" />
                 </LinearLayout>
 
             </RelativeLayout>
