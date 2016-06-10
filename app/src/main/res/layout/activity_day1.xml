@@ -64,28 +64,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="55x6"
-                        android:id="@+id/button18"
+                        android:id="@+id/squatText1"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="55x6"
-                        android:id="@+id/button19"
+                        android:id="@+id/squatText2"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="55x6"
-                        android:id="@+id/button20"
+                        android:id="@+id/squatText3"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="55x6"
-                        android:id="@+id/button21"
+                        android:id="@+id/squatText4"
                         android:layout_weight="1" />
                 </LinearLayout>
 
@@ -134,14 +134,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
-                            android:id="@+id/button9"
+                            android:id="@+id/deadText1"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
-                            android:id="@+id/button16"
+                            android:id="@+id/deadText2"
                             android:layout_weight="1" />
                     </LinearLayout>
 

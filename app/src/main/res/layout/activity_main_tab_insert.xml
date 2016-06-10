@@ -398,8 +398,8 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
-                    android:id="@+id/button7" />
+                    android:text="Reset"
+                    android:id="@+id/resetButton" />
             </RelativeLayout>
 
         </LinearLayout>
