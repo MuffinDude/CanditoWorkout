@@ -56,7 +56,11 @@
         <activity android:name=".Week3.Day1" />
         <activity android:name=".Week3.Day2" />
         <activity android:name=".Week3.Day3" />
-        <activity android:name=".Week3.Day4"></activity>
+        <activity android:name=".Week3.Day4" />
+        <activity android:name=".Week4.Day1" />
+        <activity android:name=".Week4.Day2" />
+        <activity android:name=".Week4.Day3" />
+        <activity android:name=".Week4.Day4"></activity>
     </application>
 
 </manifest>

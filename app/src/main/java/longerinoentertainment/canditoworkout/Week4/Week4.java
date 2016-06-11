@@ -43,8 +43,6 @@ public class Week4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week4);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -55,15 +53,6 @@ public class Week4 extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
     }
 
@@ -137,26 +126,41 @@ public class Week4 extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            Fragment frag = null;
+            switch (position) {
+                case 0:
+                    frag = new Day1();
+                    break;
+                case 1:
+                    frag = new Day2();
+                    break;
+                case 2:
+                    frag = new Day3();
+                    break;
+                case 3:
+                    frag = new Day4();
+                    break;
+            }
+            return frag;
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Day 1";
                 case 1:
-                    return "SECTION 2";
+                    return "Day 2";
                 case 2:
-                    return "SECTION 3";
+                    return "Day 3";
+                case 3:
+                    return "Day 4";
             }
             return null;
         }
