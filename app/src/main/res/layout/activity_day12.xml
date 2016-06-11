@@ -78,6 +78,48 @@
                     android:layout_toStartOf="@+id/textView8"
                     android:layout_alignParentEnd="true">
 
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55 x3"
+                            android:id="@+id/button54"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55 x3"
+                            android:id="@+id/button21"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55 x3"
+                            android:id="@+id/button47"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55 x3"
+                            android:id="@+id/button53"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55 x3"
+                            android:id="@+id/button52"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -97,13 +139,15 @@
                         android:id="@+id/textView15"
                         android:layout_marginBottom="5dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Still complete the 5 sets of 3 reps regardless even if you do perform less than 8 reps on the MR10 set."
-                        android:id="@+id/textView16" />
                 </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infoButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_info_details" />
 
             </RelativeLayout>
 
