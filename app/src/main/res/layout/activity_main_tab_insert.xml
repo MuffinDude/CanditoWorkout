@@ -14,13 +14,12 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView2" >
+        android:id="@+id/scrollView2">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="15dp">
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -30,7 +29,10 @@
                 android:id="@+id/StartingInfo"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
-                android:elevation="15dp">
+                android:elevation="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -79,7 +81,9 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
-                android:elevation="15dp">
+                android:elevation="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -182,7 +186,9 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
-                android:elevation="15dp">
+                android:elevation="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -385,7 +391,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#c8c8c8"
-                android:elevation="15dp">
+                android:elevation="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
 
                 <Button
                     android:layout_width="wrap_content"
