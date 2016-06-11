@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/barbell_row"
-                    android:id="@+id/textView32"
+                    android:id="@+id/accessory1"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -86,7 +86,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView32"
+                    android:layout_below="@+id/accessory1"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout">
 
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/standing_dumbell_ohp"
-                    android:id="@+id/textView45"
+                    android:id="@+id/accessory2"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -151,7 +151,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView45"
+                    android:layout_below="@+id/accessory2"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout4" >
 
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/lat_pulldown"
-                    android:id="@+id/textView46"
+                    android:id="@+id/accessory3"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -214,7 +214,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView46"
+                    android:layout_below="@+id/accessory3"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout5" >
 
@@ -271,7 +271,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="OP1 (Hammer Curl)"
-                    android:id="@+id/textView50"
+                    android:id="@+id/optionalOne"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -282,7 +282,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView50" >
+                    android:layout_below="@+id/optionalOne" >
 
                     <Button
                         android:layout_width="wrap_content"
@@ -330,7 +330,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="OP2 (Chest Fly)"
-                    android:id="@+id/textView56"
+                    android:id="@+id/optionalTwo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -341,7 +341,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView56" >
+                    android:layout_below="@+id/optionalTwo" >
 
                     <Button
                         android:layout_width="wrap_content"

@@ -3,23 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="longerinoentertainment.canditoworkout.Week1.Day5">
+    tools:context="longerinoentertainment.canditoworkout.Week3.Day2"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp">
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView4"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingTop="15dp">
+        android:id="@+id/scrollView4" >
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout"
-            android:orientation="vertical">
+            android:id="@+id/linearLayout">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -57,8 +57,22 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="67.5 xMR"
+                        android:text="42.5x10"
                         android:id="@+id/benchText1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="57.5x10"
+                        android:id="@+id/benchText2"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="65x8"
+                        android:id="@+id/benchText3"
                         android:layout_weight="1" />
 
                 </LinearLayout>
@@ -125,12 +139,6 @@
                             android:id="@+id/button36"
                             android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x6"
-                            android:id="@+id/button37"
-                            android:layout_weight="1" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -140,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="accessory"
-                    android:id="@+id/textView34"
+                    android:id="@+id/textView21"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true" />
 
@@ -152,7 +160,7 @@
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
-                android:elevation="5dp">
+                android:elevation="5dp" >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -206,12 +214,6 @@
                             android:id="@+id/button32"
                             android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button39"
-                            android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -220,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="accessory"
-                    android:id="@+id/textView35"
+                    android:id="@+id/textView22"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true" />
             </RelativeLayout>
@@ -231,7 +233,7 @@
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
-                android:elevation="5dp">
+                android:elevation="5dp" >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -285,12 +287,6 @@
                             android:id="@+id/button35"
                             android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button41"
-                            android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -299,7 +295,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="accessory"
-                    android:id="@+id/textView36"
+                    android:id="@+id/textView23"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true" />
             </RelativeLayout>
@@ -307,147 +303,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_below="@+id/relativeLayout2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:background="#898989"
-                android:elevation="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Hammer Curl"
-                    android:id="@+id/optionalOne"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/optionalOne" >
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Warm"
-                        android:id="@+id/button22"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button23"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button42"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button43"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="optional"
-                    android:id="@+id/textView43"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_below="@+id/relativeLayout2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:background="#898989"
-                android:elevation="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Chest Fly"
-                    android:id="@+id/optionalTwo"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/optionalTwo" >
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Warm"
-                        android:id="@+id/button26"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button44"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button45"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button46"
-                        android:layout_weight="1"
-                        android:text="x8-12" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="optional"
-                    android:id="@+id/textView44"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
                 android:background="#5c5c5c"
                 android:elevation="5dp"
-                android:layout_weight="1"
                 android:layout_marginBottom="15dp">
 
                 <Button
@@ -470,7 +328,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="AAAABBSS"
+                    android:text="6-PACK and NO OPTIONALS"
                     android:id="@+id/textView55"
                     android:layout_alignParentStart="true"
                     android:layout_marginBottom="5dp" />

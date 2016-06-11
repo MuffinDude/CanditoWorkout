@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Deadlift Variation"
-                    android:id="@+id/textView32"
+                    android:id="@+id/accessory1"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -144,7 +144,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView32"
+                    android:layout_below="@+id/accessory1"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout">
 
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="OP1 (Calf raise/Leg Curl)"
-                    android:id="@+id/textView50"
+                    android:id="@+id/optionalOne"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -214,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView50" >
+                    android:layout_below="@+id/optionalOne" >
 
                     <Button
                         android:layout_width="wrap_content"
@@ -262,7 +262,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="OP2 (Squat Jump/Power Clean)"
-                    android:id="@+id/textView56"
+                    android:id="@+id/optionalTwo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -273,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView56" >
+                    android:layout_below="@+id/optionalTwo" >
 
                     <Button
                         android:layout_width="wrap_content"

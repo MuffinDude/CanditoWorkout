@@ -58,28 +58,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="42.5x10"
-                        android:id="@+id/button18"
+                        android:id="@+id/benchText1"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="57.5x10"
-                        android:id="@+id/button47"
+                        android:id="@+id/benchText2"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65x8"
-                        android:id="@+id/button48"
+                        android:id="@+id/benchText3"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65x6"
-                        android:id="@+id/button49"
+                        android:id="@+id/benchText4"
                         android:layout_weight="1" />
 
                 </LinearLayout>
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
+                android:background="#727272"
                 android:elevation="5dp">
 
                 <TextView
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/barbell_row"
-                    android:id="@+id/textView32"
+                    android:id="@+id/accessory1"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -107,7 +107,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView32"
+                    android:layout_below="@+id/accessory1"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout">
 
@@ -156,6 +156,15 @@
 
                 </RelativeLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView21"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -163,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
+                android:background="#727272"
                 android:elevation="5dp" >
 
                 <TextView
@@ -171,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/standing_dumbell_ohp"
-                    android:id="@+id/textView45"
+                    android:id="@+id/accessory2"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -179,7 +188,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView45"
+                    android:layout_below="@+id/accessory2"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout4" >
 
@@ -226,6 +235,15 @@
                             android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView22"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -233,7 +251,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
+                android:background="#727272"
                 android:elevation="5dp" >
 
                 <TextView
@@ -241,7 +259,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/lat_pulldown"
-                    android:id="@+id/textView46"
+                    android:id="@+id/accessory3"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -249,7 +267,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView46"
+                    android:layout_below="@+id/accessory3"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout5" >
 
@@ -296,6 +314,15 @@
                             android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView23"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -305,15 +332,15 @@
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
+                android:background="#898989"
                 android:elevation="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="OP1 (Hammer Curl)"
-                    android:id="@+id/textView50"
+                    android:text="Hammer Curl"
+                    android:id="@+id/optionalOne"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -324,7 +351,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView50" >
+                    android:layout_below="@+id/optionalOne" >
 
                     <Button
                         android:layout_width="wrap_content"
@@ -355,6 +382,15 @@
                         android:text="x8-12" />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="optional"
+                    android:id="@+id/textView24"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -364,15 +400,15 @@
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
+                android:background="#898989"
                 android:elevation="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="OP2 (Chest Fly)"
-                    android:id="@+id/textView56"
+                    android:text="Chest Fly"
+                    android:id="@+id/optionalTwo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -383,7 +419,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView56" >
+                    android:layout_below="@+id/optionalTwo" >
 
                     <Button
                         android:layout_width="wrap_content"
@@ -415,6 +451,15 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="optional"
+                    android:id="@+id/textView25"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -422,7 +467,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="#5c5c5c"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:layout_width="wrap_content"

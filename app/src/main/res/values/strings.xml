@@ -11,4 +11,9 @@
     <string name="standing_dumbell_ohp">Standing Dumbell OHP</string>
     <string name="lat_pulldown">Lat Pulldown</string>
     <string name="title_activity_week2">Week2</string>
+    <string name="deadlift">Deadlift</string>
+    <string name="title_activity_week3">Week3</string>
+    <string name="title_activity_week4">Week4</string>
+    <string name="title_activity_week5">Week5</string>
+    <string name="title_activity_week6">Week6</string>
 </resources>

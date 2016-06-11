@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="longerinoentertainment.canditoworkout.Week1.Day4">
+    tools:context="longerinoentertainment.canditoworkout.Week3.Day1">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -63,30 +63,24 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="50x8"
+                        android:text="55x6"
                         android:id="@+id/squatText1"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="50x8"
+                        android:text="55x6"
                         android:id="@+id/squatText2"
                         android:layout_weight="1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="50x8"
-                        android:id="@+id/squatTextt3"
+                        android:text="55x6"
+                        android:id="@+id/squatText3"
                         android:layout_weight="1" />
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="50x8"
-                        android:id="@+id/squatText4"
-                        android:layout_weight="1" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -133,155 +127,19 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="75x8"
+                            android:text="87.5x6"
                             android:id="@+id/deadText1"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="75x8"
+                            android:text="87.5x6"
                             android:id="@+id/deadText2"
                             android:layout_weight="1" />
                     </LinearLayout>
 
                 </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_below="@+id/relativeLayout2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:background="#898989"
-                android:elevation="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Calf raise/Leg Curl"
-                    android:id="@+id/optionalOne"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/optionalOne" >
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Warm"
-                        android:id="@+id/button22"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button23"
-                        android:layout_weight="1"
-                        android:text="x7-10" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button24"
-                        android:layout_weight="1"
-                        android:text="x7-10" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button25"
-                        android:layout_weight="1"
-                        android:text="x7-10" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="optional"
-                    android:id="@+id/textView41"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_below="@+id/relativeLayout2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:background="#898989"
-                android:elevation="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Squat Jump/Power Clean"
-                    android:id="@+id/optionalTwo"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/optionalTwo" >
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Warm"
-                        android:id="@+id/button26"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/button27"
-                        android:layout_weight="1"
-                        android:text="x4" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="x4"
-                        android:id="@+id/button28"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="x4"
-                        android:id="@+id/button30"
-                        android:layout_weight="1" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="optional"
-                    android:id="@+id/textView42"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 
@@ -313,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="6-Pack"
+                    android:text="6-PACK and NO ACCESSORY LIFTS"
                     android:id="@+id/textView55"
                     android:layout_alignParentStart="true"
                     android:layout_marginBottom="5dp" />

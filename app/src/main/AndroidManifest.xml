@@ -36,7 +36,27 @@
         <activity
             android:name=".Week2.Week2"
             android:label="@string/title_activity_week2"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Week3.Week3"
+            android:label="@string/title_activity_week3"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Week4.Week4"
+            android:label="@string/title_activity_week4"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Week5.Week5"
+            android:label="@string/title_activity_week5"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Week6.Week6"
+            android:label="@string/title_activity_week6"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Week3.Day1" />
+        <activity android:name=".Week3.Day2" />
+        <activity android:name=".Week3.Day3" />
+        <activity android:name=".Week3.Day4"></activity>
     </application>
 
 </manifest>
