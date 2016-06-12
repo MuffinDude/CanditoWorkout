@@ -37,7 +37,13 @@ public class Day2 extends Fragment {
         bench3 = (Button) infoTab.findViewById(R.id.benchText3);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
-
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
@@ -54,13 +60,7 @@ public class Day2 extends Fragment {
         bench2.setText(benchText2);
         bench3.setText(benchText3);
 
-        stopper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
-                chronometer.start();
-            }
-        });
+
 
         return infoTab;
     }

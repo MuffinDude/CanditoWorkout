@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week2;
 
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -31,6 +33,9 @@ public class Day3  extends Fragment {
     Button sqt9;
     Button sqt10;
     ImageButton info;
+    Button stopper;
+    Chronometer chronometer;
+    private long timeWhenStopped = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +52,15 @@ public class Day3  extends Fragment {
         sqt8 = (Button) infoTab.findViewById(R.id.squat8);
         sqt9 = (Button) infoTab.findViewById(R.id.squat9);
         sqt10 = (Button) infoTab.findViewById(R.id.squat10);
-
+        stopper = (Button) infoTab.findViewById(R.id.stopperButton);
+        chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
         info = (ImageButton) infoTab.findViewById(R.id.infoButton);
         info.setOnClickListener(new View.OnClickListener() {
             @Override
