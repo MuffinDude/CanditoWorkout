@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week2;
 
+import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -47,6 +48,36 @@ public class Day1 extends Fragment {
             public void onClick(View view) {
                 chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
                 chronometer.start();
+            }
+        });
+        sqt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
         info = (ImageButton) infoTab.findViewById(R.id.infoButton);
