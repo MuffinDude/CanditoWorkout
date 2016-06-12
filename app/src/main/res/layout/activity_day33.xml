@@ -83,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/deadlift"
+                    android:text="DeadLift Variation"
                     android:id="@+id/deadlift"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -113,7 +113,7 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="87.5x6"
+                            android:text="x6"
                             android:id="@+id/deadText1"
                             android:layout_weight="1" />
 
