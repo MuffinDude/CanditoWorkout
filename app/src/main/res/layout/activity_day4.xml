@@ -78,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="50x8"
-                        android:id="@+id/squatTextt3"
+                        android:id="@+id/squatText3"
                         android:layout_weight="1" />
 
                     <Button

@@ -12,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -22,8 +24,6 @@ public class Day1 extends Fragment {
     Button squat4;
     Button dead1;
     Button dead2;
-    double squat;
-    double deadlift;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,17 +33,25 @@ public class Day1 extends Fragment {
         squat2 = (Button) infoTab.findViewById(R.id.squatText2);
         squat3 = (Button) infoTab.findViewById(R.id.squatText3);
         squat4 = (Button) infoTab.findViewById(R.id.squatText4);
+        dead1 = (Button) infoTab.findViewById(R.id.deadText1);
+        dead2 = (Button) infoTab.findViewById(R.id.deadText2);
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
-        dir.mkdirs();
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        squat1.setText(values[1] +" x6");
-        squat2.setText(values[1] +" x6");
-        squat3.setText(values[1] +" x6");
-        squat4.setText(values[1] +" x6");
+        double deadNumber = round(values[2]);
+        double squatNumber = round(values[1]);
+
+        String deadText = Double.toString(deadNumber)+ "x6";
+        String squatText = Double.toString(squatNumber) + "x6";
+        squat1.setText(squatText);
+        squat2.setText(squatText);
+        squat3.setText(squatText);
+        squat4.setText(squatText);
+        dead1.setText(deadText);
+        dead2.setText(deadText);
         return infoTab;
     }
 
@@ -58,14 +66,13 @@ public class Day1 extends Fragment {
                 i++;
             }
             br.close();
-            squat = Double.parseDouble(values[1]);
-            deadlift = Double.parseDouble(values[2]);
         }
-        catch (IOException e){
-
+        catch (IOException ignored){
         }
-        System.out.println(squat + " squat");
-        System.out.println(deadlift + " deadlift");
         return values;
+    }
+    public static double round(String valueString) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
+        return value;
     }
 }
