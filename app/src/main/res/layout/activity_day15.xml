@@ -128,7 +128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
-                            android:id="@+id/button20"
+                            android:id="@+id/deadText3"
                             android:layout_weight="1" />
                     </LinearLayout>
 

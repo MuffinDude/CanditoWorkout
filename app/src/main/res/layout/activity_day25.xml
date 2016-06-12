@@ -107,21 +107,21 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
+                            android:text="x8"
                             android:id="@+id/button9"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
+                            android:text="x6"
                             android:id="@+id/button16"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x8"
+                            android:text="x6"
                             android:id="@+id/button36"
                             android:layout_weight="1" />
 
@@ -182,22 +182,22 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
+                            android:text="x8"
                             android:id="@+id/button31"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button38"
+                            android:text="x6"
+                            android:id="@+id/button32"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
-                            android:id="@+id/button32"
+                            android:text="x6"
+                            android:id="@+id/button20"
                             android:layout_weight="1" />
 
                     </LinearLayout>
@@ -255,22 +255,22 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button34"
+                            android:text="x8"
+                            android:id="@+id/button18"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x12"
-                            android:id="@+id/button40"
+                            android:text="x6"
+                            android:id="@+id/button21"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="x10"
-                            android:id="@+id/button35"
+                            android:text="x6"
+                            android:id="@+id/button47"
                             android:layout_weight="1" />
 
                     </LinearLayout>
