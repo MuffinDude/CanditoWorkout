@@ -58,7 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65xMR"
-                        android:id="@+id/button48"
+                        android:id="@+id/benchText1"
                         android:layout_weight="1" />
 
                 </LinearLayout>
