@@ -77,8 +77,8 @@ public class Day3  extends Fragment {
 
         double squatNumber = round(values[1]);
 
-        String squatText = Double.toString(squatNumber+2.5) + "x6";
-        String squatTextSixty = Double.toString(squatNumber-2.5) + "x6";
+        String squatText = Double.toString(squatNumber+2.5) + "x10MR";
+        String squatTextSixty = Double.toString(squatNumber-2.5) + "x3";
         squat1.setText(squatText);
         sqt1.setText(squatTextSixty);
         sqt2.setText(squatTextSixty);
@@ -91,6 +91,72 @@ public class Day3  extends Fragment {
         sqt9.setText(squatTextSixty);
         sqt10.setText(squatTextSixty);
 
+        squat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                squat1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt6.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt7.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt8.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt9.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+        sqt10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqt10.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
         return infoTab;
     }
     public String[] readFromFile(File file){
