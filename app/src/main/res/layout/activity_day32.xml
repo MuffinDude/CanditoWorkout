@@ -216,60 +216,129 @@
                 android:background="#5c5c5c"
                 android:elevation="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Deadlift Variation"
-                    android:id="@+id/accessory1"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory1"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/relativeLayout">
+                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true">
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Deadlift Variation"
+                        android:id="@+id/accessory1"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal" />
 
-                        <Button
-                            android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accessory1"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/relativeLayout">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Warm"
-                            android:id="@+id/button8"
-                            android:layout_weight="1" />
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true">
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button9"
-                            android:layout_weight="1" />
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Warm"
+                                android:id="@+id/button8"
+                                android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button16"
-                            android:layout_weight="1" />
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/button9"
+                                android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8"
-                            android:id="@+id/button50"
-                            android:layout_weight="1" />
-                    </LinearLayout>
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/button16"
+                                android:layout_weight="1" />
 
-                </RelativeLayout>
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/button50"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horizontalScrollView3"
+                        android:layout_column="0" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deficit"
+                                android:id="@+id/button48"
+                                android:layout_column="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Satch Grip"
+                                android:id="@+id/button49"
+                                android:layout_column="2" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Standard"
+                                android:id="@+id/button52"
+                                android:layout_column="3" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sumo"
+                                android:id="@+id/button53"
+                                android:layout_column="3" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Suitcase"
+                                android:id="@+id/button54"
+                                android:layout_column="3" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rack Pull"
+                                android:id="@+id/button55"
+                                android:layout_column="3" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Trap Bar"
+                                android:id="@+id/button56"
+                                android:layout_column="3" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
 
             </RelativeLayout>
 
