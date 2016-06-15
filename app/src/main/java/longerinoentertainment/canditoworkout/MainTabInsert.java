@@ -74,7 +74,7 @@ public class MainTabInsert extends Fragment {
 
 
                 Save(file, saveText);
-                Toast.makeText(getContext(), "Saved" + editTextBench.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
                 readFromFile(file);
             }
         });
