@@ -37,7 +37,7 @@ public class Day5  extends Fragment {
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        double benchNumber1 = round(values[0]);
+        double benchNumber1 = round(values[0])-2.5;
 
         String benchText1 = Double.toString(benchNumber1) + "xMR";
         bench1.setText(benchText1);
