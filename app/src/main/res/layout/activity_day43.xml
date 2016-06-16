@@ -68,6 +68,13 @@
                         android:id="@+id/benchText2"
                         android:layout_weight="1" />
 
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="57.5x10"
+                        android:id="@+id/benchText3"
+                        android:layout_weight="1" />
+
                 </LinearLayout>
 
             </RelativeLayout>
