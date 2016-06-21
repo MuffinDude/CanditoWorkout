@@ -9,9 +9,11 @@ import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,18 +36,21 @@ public class MainTabInsert extends Fragment {
     public EditText editTextBench;
     public EditText editTextSquat;
     public EditText editTextDeadlift;
+    public Spinner spinner1;
 
     public String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/CanditoWorkoutApp";
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         final View insertTab = inflater.inflate(R.layout.activity_main_tab_insert, container, false);
 
         save = (Button) insertTab.findViewById(R.id.saveButton);
         editTextBench = (EditText) insertTab.findViewById(R.id.editTextBench);
         editTextSquat = (EditText) insertTab.findViewById(R.id.editTextSquat);
         editTextDeadlift = (EditText) insertTab.findViewById(R.id.editTextDeadlift);
+        spinner1 = (Spinner) insertTab.findViewById(R.id.spinner1);
 
         switch1 = (Switch) insertTab.findViewById(R.id.switch1);
         switch1.setShowText(true);
@@ -62,6 +67,11 @@ public class MainTabInsert extends Fragment {
             editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
             editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
         }
+        // SPINNER 1 PART
+        String[] spinnerItems1 = new String[]{"Dumbbell Row", "Barbell Row", "Machine Row"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, spinnerItems1);
+        spinner1.setAdapter(adapter);
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
