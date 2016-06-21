@@ -10,8 +10,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 
 public class MainTabInfo extends Fragment {
-    private String myPdfUrl = "http://www.canditotraininghq.com/app/download/911765404/Candito+6+Week+Strength+Program.pdf";
-    private String url = "http://docs.google.com/gview?embedded=true&url=" + myPdfUrl;
+    private String url = "file:///android_asset/candito6weekINTRO.htm";
     private WebView mWebView;
     private static final String TAG = "YOUR-TAG-NAME";
 
