@@ -14,16 +14,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Change Settings"
+            android:id="@+id/textView79"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Max Rep Weights"
             android:id="@+id/maxRepsButton"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Accessory Exercises"
             android:id="@+id/accessoryButton"
@@ -31,7 +41,7 @@
             android:layout_alignParentStart="true" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Optional Exercises  (ARMS)"
             android:id="@+id/optionalArmsButton"
@@ -39,7 +49,7 @@
             android:layout_alignParentStart="true" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Optional Exercises  (LEGS)"
             android:id="@+id/optionalLegsButton"
