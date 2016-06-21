@@ -231,37 +231,30 @@
                         android:layout_column="0" >
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" >
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Barbell Row"
-                                android:id="@+id/button11"
-                                android:layout_column="1" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Dumbell Row"
-                                android:id="@+id/button12"
-                                android:layout_column="2" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Machine Row"
-                                android:id="@+id/button13"
-                                android:layout_column="3" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="New Button"
-                                android:id="@+id/button14"
-                                android:layout_column="3" />
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dumbbell Row"
+                                    android:id="@+id/radioButton" />
+    
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Barbell Row"
+                                    android:id="@+id/radioButton2" />
+    
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Machine Row"
+                                    android:id="@+id/radioButton3" />
+                            </RadioGroup>
                         </LinearLayout>
                     </HorizontalScrollView>
                 </TableRow>
@@ -290,37 +283,36 @@
                         android:layout_column="0" >
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Seated Dumbbell OHP"
+                                    android:id="@+id/radioButton4" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Standing Dumbell OHP"
-                                android:id="@+id/button5"
-                                android:layout_column="1" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Standing Dumbbell OHP"
+                                    android:id="@+id/radioButton5" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Seated Dumbell OHP"
-                                android:id="@+id/button6"
-                                android:layout_column="2" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Military Press"
+                                    android:id="@+id/radioButton6" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Military Press"
-                                android:id="@+id/button10"
-                                android:layout_column="3" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Lateral Dumbell Raise"
-                                android:id="@+id/button4"
-                                android:layout_column="3" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lateral Dumbell Raise"
+                                    android:id="@+id/radioButton7" />
+                            </RadioGroup>
                         </LinearLayout>
                     </HorizontalScrollView>
 
@@ -349,37 +341,30 @@
                         android:layout_column="0" >
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" >
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weighted Pull-up"
+                                    android:id="@+id/radioButton8" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Weighted Pull-Up"
-                                android:id="@+id/button"
-                                android:layout_column="1" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weighted Chin-up"
+                                    android:id="@+id/radioButton9" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Weighted Chin-Up"
-                                android:id="@+id/button2"
-                                android:layout_column="2" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Lat Pulldown"
-                                android:id="@+id/button3"
-                                android:layout_column="3" />
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Lateral Dumbell Raise"
-                                android:id="@+id/button15"
-                                android:layout_column="3" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lat Pulldown"
+                                    android:id="@+id/radioButton10" />
+                            </RadioGroup>
                         </LinearLayout>
                     </HorizontalScrollView>
 
