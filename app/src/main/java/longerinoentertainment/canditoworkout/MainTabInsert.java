@@ -5,6 +5,7 @@ import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,7 +58,7 @@ public class MainTabInsert extends Fragment {
 
         if (values.length == 3) {
             System.out.println("readfromfile1");
-            editTextBench.setText(values[0], TextView.BufferType.EDITABLE);
+            editTextBench.setText(values[0]+1, TextView.BufferType.EDITABLE);
             editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
             editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
         }
@@ -67,7 +68,11 @@ public class MainTabInsert extends Fragment {
                 final File file = new File(dir, "savedFile.txt");
                 //String [] saveText = String.valueOf(editTextBench.getText()).split(System.getProperty("line.separator"));
                 String[] saveText = new String[3];
-                saveText[0] = String.valueOf(editTextBench.getText());
+
+                Editable benchText = editTextBench.getText();
+                String bench = benchText.toString();
+
+                saveText[0] = String.valueOf(Double.parseDouble(bench)-1);
                 saveText[1] = String.valueOf(editTextSquat.getText());
                 saveText[2] = String.valueOf(editTextDeadlift.getText());
 

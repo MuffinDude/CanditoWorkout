@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week3;
 
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Chronometer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +24,9 @@ public class Day1 extends Fragment {
     Button squat3;
     Button dead1;
     Button dead2;
-
+    Button stopper;
+    Chronometer chronometer;
+    private long timeWhenStopped = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day13, container, false);
@@ -36,7 +40,15 @@ public class Day1 extends Fragment {
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
-
+        stopper = (Button) infoTab.findViewById(R.id.stopperButton);
+        chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
         double deadNumber = round(values[2])+ 10;
         double squatNumber = round(values[1])+ 7.5;
 
