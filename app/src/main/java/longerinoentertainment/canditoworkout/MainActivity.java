@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
                 case 2:
                     frag = new MainTabInfo();
                     break;
+                case 3:
+                    frag = new MainTabSettings();
+                    break;
             }
             return frag;
         }
@@ -145,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -157,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Weeks";
                 case 2:
                     return "Introduction";
+                case 3:
+                    return "Settings";
             }
             return null;
         }

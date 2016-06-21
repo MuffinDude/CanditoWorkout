@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="longerinoentertainment.canditoworkout.Settings.SettingsOptionalArms">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView7" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/saveButton"
+                android:layout_alignEnd="@+id/saveButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tableLayout4"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="#c8c8c8"
+                android:elevation="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Choose optional exes"
+                        android:id="@+id/textView77"
+                        android:layout_above="@+id/AdditionalExes"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp" >
+
+                    <TextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Arms"
+                        android:id="@+id/textView78"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp" >
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horizontalScrollView10"
+                        android:layout_column="0" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lateral Dumbbell Raise"
+                                    android:id="@+id/radioButton36"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Incline Chest Fly"
+                                    android:id="@+id/radioButton37"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="One Armed Tricep Extension"
+                                    android:id="@+id/radioButton38"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bicep cable/machine movements"
+                                    android:id="@+id/radioButton39"
+                                    android:checked="false"
+                                    android:layout_gravity="right" />
+
+                                <RadioButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Preacher curl"
+                                    android:id="@+id/radioButton40"
+                                    android:checked="false"
+                                    android:layout_gravity="left|center_horizontal" />
+
+                                <RadioButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Skullscrushers"
+                                    android:id="@+id/radioButton41"
+                                    android:checked="false"
+                                    android:layout_gravity="left|center_horizontal" />
+
+                                <RadioButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hammer Curl (if not used as main accessory)"
+                                    android:id="@+id/radioButton42"
+                                    android:checked="false"
+                                    android:layout_gravity="center_horizontal" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/saveButton" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

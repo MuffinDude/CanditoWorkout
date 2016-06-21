@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="longerinoentertainment.canditoworkout.Settings.SettingsOptionalLegs">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/saveButton"
+                android:layout_alignEnd="@+id/saveButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tableLayout5"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="#c8c8c8"
+                android:elevation="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Choose optional exes"
+                        android:id="@+id/textView81"
+                        android:layout_above="@+id/AdditionalExes"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp" >
+
+                    <TextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Leg 1 (BodyBuilding)"
+                        android:id="@+id/textView83"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp" >
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horizontalScrollView14"
+                        android:layout_column="0" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Calf Raises On Leg Press"
+                                    android:id="@+id/radioButton64"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Any other form of calf raise"
+                                    android:id="@+id/radioButton65"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leg Curl"
+                                    android:id="@+id/radioButton66"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leg Extension"
+                                    android:id="@+id/radioButton67"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Isolation Glute Exercises"
+                                    android:id="@+id/radioButton68"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Single Leg Press"
+                                    android:id="@+id/radioButton69"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Single Leg Curl"
+                                    android:id="@+id/radioButton70"
+                                    android:checked="false" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp" >
+
+                    <TextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Leg2 (Explosive)"
+                        android:id="@+id/textView84"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horizontalScrollView15"
+                        android:layout_column="0" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Box Jumps"
+                                    android:id="@+id/radioButton71"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jump Squats"
+                                    android:id="@+id/radioButton72"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Powercleans"
+                                    android:id="@+id/radioButton73"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Deep Squat Jumps"
+                                    android:id="@+id/radioButton74"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Single Leg Box Jumps"
+                                    android:id="@+id/radioButton75"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Med Ball Throws"
+                                    android:id="@+id/radioButton76"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Explosive Single Leg Press"
+                                    android:id="@+id/radioButton77"
+                                    android:checked="false" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/saveButton" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

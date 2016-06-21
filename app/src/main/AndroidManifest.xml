@@ -4,7 +4,8 @@
 
     <user-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <user-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -54,7 +55,11 @@
             android:label="@string/title_activity_week6"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
+        <activity android:name=".MainTabSettings" />
+        <activity android:name=".Settings.SettingsMaxReps" />
+        <activity android:name=".Settings.SettingsAccessoryExercises" />
+        <activity android:name=".Settings.SettingsOptionalArms" />
+        <activity android:name=".Settings.SettingsOptionalLegs"></activity>
     </application>
 
 </manifest>

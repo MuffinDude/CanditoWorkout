@@ -16,690 +16,693 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView2">
 
-        <LinearLayout
-            android:orientation="vertical"
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/StartingInfo"
+            android:layout_marginBottom="20dp"
+            android:background="#c8c8c8"
+            android:elevation="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Weights are in"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textView2"
                 android:layout_alignParentStart="true"
-                android:id="@+id/StartingInfo"
-                android:layout_marginBottom="20dp"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginBottom="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Weights are in"
-                    android:id="@+id/textView3"
-                    android:layout_below="@+id/textView2"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="15dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Workday starts at MONDAY"
-                    android:id="@+id/textView2"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="15dp" />
-
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/switch1"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_alignTop="@+id/textView3"
-                    android:layout_marginStart="46dp"
-                    android:textOff="KG"
-                    android:textOn="LBS"
-                    android:checked="false"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="30dp"
-                    android:switchPadding="20dp"
-                    android:showText="true"
-                    android:singleLine="false"
-                    android:splitTrack="true"
-                    android:nestedScrollingEnabled="false" />
-            </RelativeLayout>
-
-            <TableLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/MaxWeights"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Workday starts at MONDAY"
+                android:id="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_marginStart="46dp"
+                android:textOff="KG"
+                android:textOn="LBS"
+                android:checked="false"
                 android:layout_alignParentEnd="true"
-                android:layout_above="@+id/AdditionalExes"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp">
+                android:textSize="30dp"
+                android:switchPadding="20dp"
+                android:showText="true"
+                android:singleLine="false"
+                android:splitTrack="true"
+                android:nestedScrollingEnabled="false" />
+        </RelativeLayout>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaxWeights"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/AdditionalExes"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="#c8c8c8"
+            android:elevation="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="What are your 1RM&apos;s for the following lifts"
-                        android:id="@+id/textView4"
-                        android:layout_below="@+id/textView3"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginBottom="15dp"
-                        android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Bench Press"
-                        android:id="@+id/textView5"
-                        android:layout_column="0"
-                        android:layout_weight="1" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
-                        android:ems="10"
-                        android:id="@+id/editTextBench"
-                        android:layout_column="1"
-                        android:text="100"
-                        android:gravity="right"
-                        android:background="#00ffffff" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Squat"
-                        android:id="@+id/textView7"
-                        android:layout_column="0"
-                        android:layout_weight="1" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
-                        android:ems="10"
-                        android:id="@+id/editTextSquat"
-                        android:layout_column="1"
-                        android:text="100"
-                        android:gravity="right"
-                        android:background="#00ffffff" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Deadlift"
-                        android:id="@+id/textView9"
-                        android:layout_column="0"
-                        android:layout_weight="1" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
-                        android:ems="10"
-                        android:id="@+id/editTextDeadlift"
-                        android:layout_column="1"
-                        android:text="100"
-                        android:gravity="right"
-                        android:singleLine="false"
-                        android:background="#00ffffff" />
-
-                </TableRow>
-
-            </TableLayout>
-
-            <TableLayout
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/saveButton"
-                android:layout_alignEnd="@+id/saveButton"
-                android:layout_alignParentStart="true"
-                android:id="@+id/AdditionalExes"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp">
+                android:layout_height="match_parent">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="What are your 1RM&apos;s for the following lifts"
+                    android:id="@+id/textView4"
+                    android:layout_below="@+id/textView3"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_column="0" />
+            </TableRow>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Choose accessory exes"
-                        android:id="@+id/textView11"
-                        android:layout_above="@+id/AdditionalExes"
-                        android:layout_alignParentStart="true"
-                        android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Upper Back Exercise #1(horizontal)"
-                        android:id="@+id/textView12"
-                        android:layout_column="0" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp">
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
-                            <Spinner
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@android:drawable/btn_dropdown"
-                                android:spinnerMode="dropdown"
-                                android:id="@+id/spinner1" />
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Dumbbell Row"
-                                    android:id="@+id/radioButton" />
-    
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Barbell Row"
-                                    android:id="@+id/radioButton2" />
-    
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Machine Row"
-                                    android:id="@+id/radioButton3" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Shoulder Exercise"
-                        android:id="@+id/textView13"
-                        android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp">
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/scrollView"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Seated Dumbbell OHP"
-                                    android:id="@+id/radioButton4" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Standing Dumbbell OHP"
-                                    android:id="@+id/radioButton5" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Military Press"
-                                    android:id="@+id/radioButton6" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lateral Dumbell Raise"
-                                    android:id="@+id/radioButton7" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-
-
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp">
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Upper Back Exercise 2 (vertical)"
-                        android:id="@+id/textView14"
-                        android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView2"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Weighted Pull-up"
-                                    android:id="@+id/radioButton8" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Weighted Chin-up"
-                                    android:id="@+id/radioButton9" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lat Pulldown"
-                                    android:id="@+id/radioButton10" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-
-                </TableRow>
-
-            </TableLayout>
-
-            <TableLayout
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/saveButton"
-                android:layout_alignEnd="@+id/saveButton"
-                android:layout_alignParentStart="true"
-                android:id="@+id/tableLayout"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp" >
+                android:layout_height="match_parent">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Bench Press"
+                    android:id="@+id/textView5"
+                    android:layout_column="0"
+                    android:layout_weight="1" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Choose optional exes"
-                        android:id="@+id/textView18"
-                        android:layout_above="@+id/AdditionalExes"
-                        android:layout_alignParentStart="true"
-                        android:layout_column="0" />
-                </TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editTextBench"
+                    android:layout_column="1"
+                    android:text="100"
+                    android:gravity="right"
+                    android:background="#00ffffff" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp" >
+            </TableRow>
 
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Arms"
-                        android:id="@+id/textView67"
-                        android:layout_column="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Squat"
+                    android:id="@+id/textView7"
+                    android:layout_column="0"
+                    android:layout_weight="1" />
 
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView4"
-                        android:layout_column="0" >
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editTextSquat"
+                    android:layout_column="1"
+                    android:text="100"
+                    android:gravity="right"
+                    android:background="#00ffffff" />
 
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
+            </TableRow>
 
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lateral Dumbbell Raise"
-                                    android:id="@+id/radioButton11"
-                                    android:checked="false" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Deadlift"
+                    android:id="@+id/textView9"
+                    android:layout_column="0"
+                    android:layout_weight="1" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Incline Chest Fly"
-                                    android:id="@+id/radioButton12"
-                                    android:checked="false" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editTextDeadlift"
+                    android:layout_column="1"
+                    android:text="100"
+                    android:gravity="right"
+                    android:singleLine="false"
+                    android:background="#00ffffff" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="One Armed Tricep Extension"
-                                    android:id="@+id/radioButton13"
-                                    android:checked="false" />
+            </TableRow>
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Bicep cable/machine movements"
-                                    android:id="@+id/radioButton21"
-                                    android:checked="false"
-                                    android:layout_gravity="right" />
+        </TableLayout>
 
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Preacher curl"
-                                    android:id="@+id/radioPreacher"
-                                    android:checked="false"
-                                    android:layout_gravity="left|center_horizontal" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/saveButton"
+            android:layout_alignEnd="@+id/saveButton"
+            android:layout_alignParentStart="true"
+            android:id="@+id/AdditionalExes"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="#c8c8c8"
+            android:elevation="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
 
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Skullscrushers"
-                                    android:id="@+id/radioSkull"
-                                    android:checked="false"
-                                    android:layout_gravity="left|center_horizontal" />
-
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hammer Curl (if not used as main accessory)"
-                                    android:id="@+id/radioButton22"
-                                    android:checked="false"
-                                    android:layout_gravity="center_horizontal" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp" >
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Leg 1 (BodyBuilding)"
-                        android:id="@+id/textView68"
-                        android:layout_column="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView5"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
-
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Calf Raises On Leg Press"
-                                    android:id="@+id/radioCalf"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Any other form of calf raise"
-                                    android:id="@+id/radioOtherCalf"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Leg Curl"
-                                    android:id="@+id/radioLegCurl"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Leg Extension"
-                                    android:id="@+id/radioLegExtension"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Isolation Glute Exercises"
-                                    android:id="@+id/radioButton14"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Single Leg Press"
-                                    android:id="@+id/radioButton16"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Single Leg Curl"
-                                    android:id="@+id/radioButton15"
-                                    android:checked="false" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp" >
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Leg2 (Explosive)"
-                        android:id="@+id/textView69"
-                        android:layout_column="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView6"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
-
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Box Jumps"
-                                    android:id="@+id/radioButton18"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Jump Squats"
-                                    android:id="@+id/radioButton19"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Powercleans"
-                                    android:id="@+id/radioButton20"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Deep Squat Jumps"
-                                    android:id="@+id/radioButton23"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Single Leg Box Jumps"
-                                    android:id="@+id/radioButton24"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Med Ball Throws"
-                                    android:id="@+id/radioButton25"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Explosive Single Leg Press"
-                                    android:id="@+id/radioButton17"
-                                    android:checked="false" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
-                </TableRow>
-            </TableLayout>
-
-            <RelativeLayout
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp">
+                android:layout_marginBottom="15dp">
 
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SAVE"
-                    android:id="@+id/saveButton"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Choose accessory exes"
+                    android:id="@+id/textView11"
+                    android:layout_above="@+id/AdditionalExes"
+                    android:layout_alignParentStart="true"
+                    android:layout_column="0" />
+            </TableRow>
 
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Upper Back Exercise #1(horizontal)"
+                    android:id="@+id/textView12"
+                    android:layout_column="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset"
-                    android:id="@+id/resetButton" />
-            </RelativeLayout>
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_column="0" >
 
-        </LinearLayout>
-    </ScrollView>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:spinnerMode="dropdown"
+                            android:id="@+id/spinner1" />
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dumbbell Row"
+                                android:id="@+id/radioButton" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Barbell Row"
+                                android:id="@+id/radioButton2" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Machine Row"
+                                android:id="@+id/radioButton3" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Shoulder Exercise"
+                    android:id="@+id/textView13"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/scrollView"
+                    android:layout_column="0" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Seated Dumbbell OHP"
+                                android:id="@+id/radioButton4" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Standing Dumbbell OHP"
+                                android:id="@+id/radioButton5" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Military Press"
+                                android:id="@+id/radioButton6" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lateral Dumbell Raise"
+                                android:id="@+id/radioButton7" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Upper Back Exercise 2 (vertical)"
+                    android:id="@+id/textView14"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView2"
+                    android:layout_column="0" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weighted Pull-up"
+                                android:id="@+id/radioButton8" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weighted Chin-up"
+                                android:id="@+id/radioButton9" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lat Pulldown"
+                                android:id="@+id/radioButton10" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/saveButton"
+            android:layout_alignEnd="@+id/saveButton"
+            android:layout_alignParentStart="true"
+            android:id="@+id/tableLayout"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="#c8c8c8"
+            android:elevation="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Choose optional exes"
+                    android:id="@+id/textView18"
+                    android:layout_above="@+id/AdditionalExes"
+                    android:layout_alignParentStart="true"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Arms"
+                    android:id="@+id/textView67"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp" >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView4"
+                    android:layout_column="0" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lateral Dumbbell Raise"
+                                android:id="@+id/radioButton11"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Incline Chest Fly"
+                                android:id="@+id/radioButton12"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="One Armed Tricep Extension"
+                                android:id="@+id/radioButton13"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bicep cable/machine movements"
+                                android:id="@+id/radioButton21"
+                                android:checked="false"
+                                android:layout_gravity="right" />
+
+                            <RadioButton
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Preacher curl"
+                                android:id="@+id/radioPreacher"
+                                android:checked="false"
+                                android:layout_gravity="left|center_horizontal" />
+
+                            <RadioButton
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Skullscrushers"
+                                android:id="@+id/radioSkull"
+                                android:checked="false"
+                                android:layout_gravity="left|center_horizontal" />
+
+                            <RadioButton
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hammer Curl (if not used as main accessory)"
+                                android:id="@+id/radioButton22"
+                                android:checked="false"
+                                android:layout_gravity="center_horizontal" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Leg 1 (BodyBuilding)"
+                    android:id="@+id/textView68"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp" >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView5"
+                    android:layout_column="0" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calf Raises On Leg Press"
+                                android:id="@+id/radioCalf"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Any other form of calf raise"
+                                android:id="@+id/radioOtherCalf"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Leg Curl"
+                                android:id="@+id/radioLegCurl"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Leg Extension"
+                                android:id="@+id/radioLegExtension"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Isolation Glute Exercises"
+                                android:id="@+id/radioButton14"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Single Leg Press"
+                                android:id="@+id/radioButton16"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Single Leg Curl"
+                                android:id="@+id/radioButton15"
+                                android:checked="false" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Leg2 (Explosive)"
+                    android:id="@+id/textView69"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView6"
+                    android:layout_column="0" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Box Jumps"
+                                android:id="@+id/radioButton18"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jump Squats"
+                                android:id="@+id/radioButton19"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Powercleans"
+                                android:id="@+id/radioButton20"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deep Squat Jumps"
+                                android:id="@+id/radioButton23"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Single Leg Box Jumps"
+                                android:id="@+id/radioButton24"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Med Ball Throws"
+                                android:id="@+id/radioButton25"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Explosive Single Leg Press"
+                                android:id="@+id/radioButton17"
+                                android:checked="false" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c8c8c8"
+            android:elevation="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE"
+                android:id="@+id/saveButton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:id="@+id/resetButton" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
