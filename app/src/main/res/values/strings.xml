@@ -15,8 +15,7 @@
     <string name="title_activity_week4">Week4</string>
     <string name="title_activity_week5">Week5</string>
     <string name="title_activity_week6">Week6</string>
+    <string name="explosiveness">Explosiveness</string>
+    <string name="hypertrophy">Hypertrophy</string>
 
-    <string name="yaas1">asdasd</string>
-    <string name="yaas2">sdfsdf</string>
-    <string name="yaas3">asdasd</string>
 </resources>
