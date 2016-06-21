@@ -1,7 +1,7 @@
 # CanditoWorkout
 
-To-Do
--Saving of accessory and optional exercises
+To-Do /n
+-Saving of accessory and optional exercises \n
 -Creating introductory screen for first time users
 -Making a better stopper
 -Making settings screen actually work
