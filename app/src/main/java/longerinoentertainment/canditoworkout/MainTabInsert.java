@@ -1,34 +1,26 @@
 package longerinoentertainment.canditoworkout;
 
-import android.content.Context;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 public class MainTabInsert extends Fragment {
+
     public static double benchPress;
     public static double squat;
     public static double deadlift;
@@ -37,9 +29,6 @@ public class MainTabInsert extends Fragment {
     public EditText editTextBench;
     public EditText editTextSquat;
     public EditText editTextDeadlift;
-
-    //public String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/CanditoWorkoutApp";
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,17 +54,17 @@ public class MainTabInsert extends Fragment {
             editTextBench.setText(values[0], TextView.BufferType.EDITABLE);
             editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
             editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
+        } else {
+            editTextBench.setText("100");
+            editTextSquat.setText("100");
+            editTextDeadlift.setText("100");
         }
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final File file = new File(dir, "savedFile.txt");
-                //String [] saveText = String.valueOf(editTextBench.getText()).split(System.getProperty("line.separator"));
                 String[] saveText = new String[3];
-
-                Editable benchText = editTextBench.getText();
-                String bench = benchText.toString();
 
                 saveText[0] = String.valueOf(editTextBench.getText());
                 saveText[1] = String.valueOf(editTextSquat.getText());
@@ -83,7 +72,7 @@ public class MainTabInsert extends Fragment {
 
 
 
-                Save(file, saveText);
+                saveData(file, saveText);
                 Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
                 readFromFile(file);
             }
@@ -92,7 +81,7 @@ public class MainTabInsert extends Fragment {
         return insertTab;
     }
 
-    public static void Save(File file, String[] data){
+    public static void saveData(File file, String[] data){
 
         FileOutputStream fos = null;
         try{
