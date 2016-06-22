@@ -64,7 +64,7 @@ public class MainTabInsert extends Fragment {
 
         if (values.length == 3) {
             System.out.println("readfromfile1");
-            editTextBench.setText(values[0]+1, TextView.BufferType.EDITABLE);
+            editTextBench.setText(values[0], TextView.BufferType.EDITABLE);
             editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
             editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
         }
@@ -83,7 +83,7 @@ public class MainTabInsert extends Fragment {
                 Editable benchText = editTextBench.getText();
                 String bench = benchText.toString();
 
-                saveText[0] = String.valueOf(Double.parseDouble(bench)-1);
+                saveText[0] = String.valueOf(editTextBench.getText());
                 saveText[1] = String.valueOf(editTextSquat.getText());
                 saveText[2] = String.valueOf(editTextDeadlift.getText());
 
