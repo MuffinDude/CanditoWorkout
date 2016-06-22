@@ -112,11 +112,15 @@
                         android:text="Bench Press"
                         android:id="@+id/textView5"
                         android:layout_column="0"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".70"
+                        android:layout_marginRight="5dp"
+                        android:maxLength="10"
                         android:inputType="number|numberDecimal"
                         android:ems="10"
                         android:id="@+id/editTextBench"
@@ -141,6 +145,9 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".70"
+                        android:layout_marginRight="5dp"
+                        android:maxLength="10"
                         android:inputType="number|numberDecimal"
                         android:ems="10"
                         android:id="@+id/editTextSquat"
@@ -165,6 +172,9 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".70"
+                        android:layout_marginRight="5dp"
+                        android:maxLength="10"
                         android:inputType="number|numberDecimal"
                         android:ems="10"
                         android:id="@+id/editTextDeadlift"
@@ -201,7 +211,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Choose accessory exes"
+                        android:text="Accessory exercises"
                         android:id="@+id/textView11"
                         android:layout_above="@+id/AdditionalExes"
                         android:layout_alignParentStart="true"
@@ -215,9 +225,10 @@
 
                     <TextView
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Upper Back Exercise #1(horizontal)"
+                        android:text="Horizontal upper back excercise"
                         android:id="@+id/textView12"
-                        android:layout_column="0" />
+                        android:layout_column="0"
+                        android:layout_width="wrap_content" />
 
                 </TableRow>
 
@@ -236,12 +247,7 @@
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" >
-                            <Spinner
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@android:drawable/btn_dropdown"
-                                android:spinnerMode="dropdown"
-                                android:id="@+id/spinner1" />
+
                             <RadioGroup
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content">
@@ -335,7 +341,7 @@
 
                     <TextView
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Upper Back Exercise 2 (vertical)"
+                        android:text="Vertical upper back excercise"
                         android:id="@+id/textView14"
                         android:layout_column="0" />
                 </TableRow>
@@ -405,7 +411,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Choose optional exes"
+                        android:text="Optional exercises"
                         android:id="@+id/textView18"
                         android:layout_above="@+id/AdditionalExes"
                         android:layout_alignParentStart="true"
