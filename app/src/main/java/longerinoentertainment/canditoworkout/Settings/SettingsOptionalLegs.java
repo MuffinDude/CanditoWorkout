@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Settings;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -14,6 +15,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -41,6 +48,8 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         none2 = (CheckBox) findViewById(R.id.noneBox2);
         ex1 = (LinearLayout) findViewById(R.id.ex1Layout);
         ex2 = (LinearLayout) findViewById(R.id.ex2Layout);
+
+        final File dir = new File(getFilesDir() + "/CanditoWorkoutApp");
 
         hypertrophy1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,10 +120,10 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         });
     }
 
-
     final int CONTEXT_MENU_VIEW =1;
     final int CONTEXT_MENU_EDIT =2;
     final int CONTEXT_MENU_ARCHIVE =3;
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo) {
         //Context menu
@@ -130,6 +139,7 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             menu.add(Menu.NONE, CONTEXT_MENU_ARCHIVE, Menu.NONE, "Deledgdge");
         }
     }
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         // TODO Auto-generated method stub
@@ -151,5 +161,26 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             break;
         }
         return super.onContextItemSelected(item);
+    }
+
+    private void updateLine(File data, String toUpdate, String updated) throws IOException {
+        BufferedReader file = new BufferedReader(new FileReader(data));
+        String line;
+        String input = "";
+
+        while ((line = file.readLine()) != null)
+            input += line + System.lineSeparator();
+
+        //okei, teeb muutujad mis salvestavad avamisel kohe ära algsed andmed ja pärast, salvestamisel, leiab algsed andmed ja asendab uute andmetega, yaaas
+
+        //Checking the contents of the text file
+        System.out.println(input);
+        input = input.replace(toUpdate, updated);
+
+        FileOutputStream os = new FileOutputStream(data);
+        os.write(input.getBytes());
+
+        file.close();
+        os.close();
     }
 }
