@@ -74,13 +74,6 @@
                         android:id="@+id/squatText2"
                         android:layout_weight="1" />
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="55x6"
-                        android:id="@+id/squatText3"
-                        android:layout_weight="1" />
-
                 </LinearLayout>
 
             </RelativeLayout>
