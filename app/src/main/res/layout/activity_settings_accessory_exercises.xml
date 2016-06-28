@@ -28,8 +28,6 @@
                 android:id="@+id/tableLayout3"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
-                android:background="#c8c8c8"
-                android:elevation="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" >
 
@@ -66,50 +64,39 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/group1">
 
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView7"
-                        android:layout_column="0" >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
 
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioGroup1">
 
-                            <Spinner
+                            <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@android:drawable/btn_dropdown"
-                                android:spinnerMode="dropdown"
-                                android:id="@+id/spinner" />
+                                android:text="Dumbbell Row"
+                                android:id="@+id/radioButton26"
+                                android:checked="true" />
 
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Barbell Row"
+                                android:id="@+id/radioButton27" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Dumbbell Row"
-                                    android:id="@+id/radioButton26" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Barbell Row"
-                                    android:id="@+id/radioButton27" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Machine Row"
-                                    android:id="@+id/radioButton28" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Machine Row"
+                                android:id="@+id/radioButton28" />
+                        </RadioGroup>
+                    </LinearLayout>
                 </TableRow>
 
                 <TableRow
@@ -129,49 +116,45 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/group2">
 
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView8"
-                        android:layout_column="0" >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
 
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioGroup2">
 
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Seated Dumbbell OHP"
+                                android:id="@+id/radioButton29"
+                                android:checked="true" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Seated Dumbbell OHP"
-                                    android:id="@+id/radioButton29" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Standing Dumbbell OHP"
+                                android:id="@+id/radioButton30" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Standing Dumbbell OHP"
-                                    android:id="@+id/radioButton30" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Military Press"
+                                android:id="@+id/radioButton31" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Military Press"
-                                    android:id="@+id/radioButton31" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lateral Dumbell Raise"
-                                    android:id="@+id/radioButton32" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lateral Dumbell Raise"
+                                android:id="@+id/radioButton32" />
+                        </RadioGroup>
+                    </LinearLayout>
                 </TableRow>
 
                 <TableRow
@@ -192,47 +175,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView9"
-                        android:layout_column="0" >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
 
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioGroup3">
 
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weighted Pull-up"
+                                android:id="@+id/radioButton33"
+                                android:checked="true" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Weighted Pull-up"
-                                    android:id="@+id/radioButton33" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weighted Chin-up"
+                                android:id="@+id/radioButton34" />
 
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Weighted Chin-up"
-                                    android:id="@+id/radioButton34" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lat Pulldown"
-                                    android:id="@+id/radioButton35" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lat Pulldown"
+                                android:id="@+id/radioButton35" />
+                        </RadioGroup>
+                    </LinearLayout>
                 </TableRow>
 
             </TableLayout>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Save"
                 android:id="@+id/saveButton"

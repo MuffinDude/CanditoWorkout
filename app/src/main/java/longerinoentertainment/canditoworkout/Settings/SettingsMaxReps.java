@@ -64,17 +64,17 @@ public class SettingsMaxReps extends AppCompatActivity {
         });
     }
 
-private void updateLine(File data, String bench, String squat, String dead) throws IOException {
-    String values[] = readFromFile(data);
-    values[0] = bench;
-    values[1] = squat;
-    values[2] = dead;
+    private void updateLine(File data, String bench, String squat, String dead) throws IOException {
+        String values[] = readFromFile(data);
+        values[0] = bench;
+        values[1] = squat;
+        values[2] = dead;
 
-    FileWriter fw = new FileWriter(data);
-    for (int j = 0; j < values.length; j++) {
-        fw.write(values[j] + "\n");
-    }
-    fw.close();
+        FileWriter fw = new FileWriter(data);
+        for (int j = 0; j < values.length; j++) {
+            fw.write(values[j] + "\n");
+        }
+        fw.close();
 }
 
     public static String[] readFromFile(File file){

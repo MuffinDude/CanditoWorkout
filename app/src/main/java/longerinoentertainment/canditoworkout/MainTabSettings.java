@@ -22,6 +22,7 @@ public class MainTabSettings extends Fragment {
     Button accessory;
     Button optionalArms;
     Button optionalLegs;
+    Button print;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,7 +33,15 @@ public class MainTabSettings extends Fragment {
         accessory = (Button) settingsTab.findViewById(R.id.accessoryButton);
         optionalArms = (Button) settingsTab.findViewById(R.id.optionalArmsButton);
         optionalLegs = (Button) settingsTab.findViewById(R.id.optionalLegsButton);
+        print = (Button) settingsTab.findViewById(R.id.printButton);
 
+        print.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //// TODO: 28.06.2016 prindi kõik välja 
+            }
+        });
+        
         maxReps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
