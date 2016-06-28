@@ -58,7 +58,7 @@
                 <Switch
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/switch1"
+                    android:id="@+id/weightSwitch"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_alignTop="@+id/textView3"
                     android:layout_marginStart="46dp"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/MaxWeights"
                 android:layout_alignParentEnd="true"
-                android:layout_above="@+id/AdditionalExes"
+                android:layout_above="@+id/AccessoryExes"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
@@ -194,7 +194,7 @@
                 android:layout_above="@+id/saveButton"
                 android:layout_alignEnd="@+id/saveButton"
                 android:layout_alignParentStart="true"
-                android:id="@+id/AdditionalExes"
+                android:id="@+id/AccessoryExes"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
@@ -213,7 +213,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Accessory exercises"
                         android:id="@+id/textView11"
-                        android:layout_above="@+id/AdditionalExes"
+                        android:layout_above="@+id/AccessoryExes"
                         android:layout_alignParentStart="true"
                         android:layout_column="0" />
                 </TableRow>
@@ -250,18 +250,21 @@
 
                             <RadioGroup
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroup1">
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Dumbbell Row"
-                                    android:id="@+id/radioButton" />
+                                    android:id="@+id/radioButton"
+                                    android:checked="true" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Barbell Row"
-                                    android:id="@+id/radioButton2" />
+                                    android:id="@+id/radioButton2"
+                                    android:checked="false" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -302,12 +305,14 @@
                             android:layout_height="match_parent">
                             <RadioGroup
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroup2">
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Seated Dumbbell OHP"
-                                    android:id="@+id/radioButton4" />
+                                    android:id="@+id/radioButton4"
+                                    android:checked="true" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -362,12 +367,14 @@
                             android:layout_height="match_parent" >
                             <RadioGroup
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroup3">
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Weighted Pull-up"
-                                    android:id="@+id/radioButton8" />
+                                    android:id="@+id/radioButton8"
+                                    android:checked="true" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -394,7 +401,7 @@
                 android:layout_above="@+id/saveButton"
                 android:layout_alignEnd="@+id/saveButton"
                 android:layout_alignParentStart="true"
-                android:id="@+id/tableLayout"
+                android:id="@+id/OptionalExes"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:background="#c8c8c8"
@@ -413,100 +420,9 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Optional exercises"
                         android:id="@+id/textView18"
-                        android:layout_above="@+id/AdditionalExes"
+                        android:layout_above="@+id/AccessoryExes"
                         android:layout_alignParentStart="true"
                         android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp" >
-
-                    <TextView
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Arms"
-                        android:id="@+id/textView67"
-                        android:layout_column="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp" >
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/horizontalScrollView4"
-                        android:layout_column="0" >
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
-
-                            <RadioGroup
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lateral Dumbbell Raise"
-                                    android:id="@+id/radioButton11"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Incline Chest Fly"
-                                    android:id="@+id/radioButton12"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="One Armed Tricep Extension"
-                                    android:id="@+id/radioButton13"
-                                    android:checked="false" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Bicep cable/machine movements"
-                                    android:id="@+id/radioButton21"
-                                    android:checked="false"
-                                    android:layout_gravity="right" />
-
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Preacher curl"
-                                    android:id="@+id/radioPreacher"
-                                    android:checked="false"
-                                    android:layout_gravity="left|center_horizontal" />
-
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Skullscrushers"
-                                    android:id="@+id/radioSkull"
-                                    android:checked="false"
-                                    android:layout_gravity="left|center_horizontal" />
-
-                                <RadioButton
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hammer Curl (if not used as main accessory)"
-                                    android:id="@+id/radioButton22"
-                                    android:checked="false"
-                                    android:layout_gravity="center_horizontal" />
-                            </RadioGroup>
-                        </LinearLayout>
-                    </HorizontalScrollView>
                 </TableRow>
 
                 <TableRow
@@ -541,14 +457,15 @@
 
                             <RadioGroup
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroupLegs1">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Calf Raises On Leg Press"
                                     android:id="@+id/radioCalf"
-                                    android:checked="false" />
+                                    android:checked="true" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -627,14 +544,15 @@
 
                             <RadioGroup
                                 android:layout_width="fill_parent"
-                                android:layout_height="wrap_content" >
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroupLegs2">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Box Jumps"
                                     android:id="@+id/radioButton18"
-                                    android:checked="false" />
+                                    android:checked="true" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -690,7 +608,8 @@
                 android:elevation="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp">
+                android:layout_marginLeft="15dp"
+                android:id="@+id/SaveLayout">
 
                 <Button
                     android:layout_width="wrap_content"

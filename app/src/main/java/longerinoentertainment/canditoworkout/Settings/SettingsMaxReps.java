@@ -1,26 +1,19 @@
 package longerinoentertainment.canditoworkout.Settings;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -29,7 +22,6 @@ public class SettingsMaxReps extends AppCompatActivity {
     EditText squat;
     EditText deadlift;
     Button save;
-    final Context context = getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,45 +33,52 @@ public class SettingsMaxReps extends AppCompatActivity {
         squat = (EditText) findViewById(R.id.squatText);
         deadlift = (EditText) findViewById(R.id.deadText);
 
-        final File dir = new File(context.getFilesDir() + "/CanditoWorkoutApp");
+        final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
-        if (values.length >= 3) {
-            bench.setText(values[0]+1, TextView.BufferType.EDITABLE);
-            squat.setText(values[1], TextView.BufferType.EDITABLE);
-            deadlift.setText(values[2], TextView.BufferType.EDITABLE);
-        }
+        bench.setText(values[0], TextView.BufferType.EDITABLE);
+        squat.setText(values[1], TextView.BufferType.EDITABLE);
+        deadlift.setText(values[2], TextView.BufferType.EDITABLE);
+
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 final File file = new File(dir, "savedFile.txt");
 
                 Editable benchText = bench.getText();
                 String bench = benchText.toString();
-                String benchString = String.valueOf(Double.parseDouble(bench)-1);
+                //kui nümbrid ei ole korras siis epab -1 kirjutamisel võtma ja pärast +1 lisama doe
+                String benchString = String.valueOf(Double.parseDouble(bench));
                 String squatString = String.valueOf(squat.getText());
                 String deadString = String.valueOf(deadlift.getText());
 
-                Save(file, benchString, squatString, deadString);
-                Toast toast = Toast.makeText(context,"Changes made", Toast.LENGTH_LONG);
-                toast.show();
-                readFromFile(file);
+                try {
+                    updateLine(file, benchString, squatString, deadString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
+                Toast.makeText(getBaseContext(), "Saved", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
     }
 
+private void updateLine(File data, String bench, String squat, String dead) throws IOException {
+    String values[] = readFromFile(data);
+    values[0] = bench;
+    values[1] = squat;
+    values[2] = dead;
 
-
-
-    public void Save(File file, String bench, String squat, String dead){
-        // TODO: 21.06.2016
+    FileWriter fw = new FileWriter(data);
+    for (int j = 0; j < values.length; j++) {
+        fw.write(values[j] + "\n");
     }
+    fw.close();
+}
 
     public static String[] readFromFile(File file){
-        String[] values = new String[3];
+        String[] values = new String[9];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

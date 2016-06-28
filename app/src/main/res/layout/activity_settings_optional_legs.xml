@@ -25,7 +25,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Choose optional exercises for legs"
                 android:id="@+id/textView81"
-                android:layout_above="@+id/AdditionalExes"
+                android:layout_above="@+id/AccessoryExes"
                 android:layout_alignParentStart="true"
                 android:layout_column="0"
                 android:gravity="center"

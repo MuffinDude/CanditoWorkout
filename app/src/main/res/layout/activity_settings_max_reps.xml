@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tableLayout2"
                 android:layout_alignParentEnd="true"
-                android:layout_above="@+id/AdditionalExes"
+                android:layout_above="@+id/AccessoryExes"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp"
                 android:layout_marginRight="15dp"
@@ -65,7 +65,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
+                        android:inputType="number"
                         android:ems="10"
                         android:id="@+id/benchText"
                         android:layout_column="1"
@@ -91,7 +91,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
+                        android:inputType="number"
                         android:ems="10"
                         android:id="@+id/squatText"
                         android:layout_column="1"
@@ -116,7 +116,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number|numberDecimal"
+                        android:inputType="number"
                         android:ems="10"
                         android:id="@+id/deadText"
                         android:layout_column="1"

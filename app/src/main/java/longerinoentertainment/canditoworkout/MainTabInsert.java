@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,8 +26,13 @@ public class MainTabInsert extends Fragment {
     public static double benchPress;
     public static double squat;
     public static double deadlift;
+    private RadioGroup g1;
+    private RadioGroup g2;
+    private RadioGroup g3;
+    private RadioGroup gLegs1;
+    private RadioGroup gLegs2;
     public Button save;
-    public Switch switch1;
+    public Switch weightSwitch;
     public EditText editTextBench;
     public EditText editTextSquat;
     public EditText editTextDeadlift;
@@ -39,45 +46,77 @@ public class MainTabInsert extends Fragment {
         editTextBench = (EditText) insertTab.findViewById(R.id.editTextBench);
         editTextSquat = (EditText) insertTab.findViewById(R.id.editTextSquat);
         editTextDeadlift = (EditText) insertTab.findViewById(R.id.editTextDeadlift);
-
-        switch1 = (Switch) insertTab.findViewById(R.id.switch1);
-        switch1.setShowText(true);
+        g1 = (RadioGroup) insertTab.findViewById(R.id.radioGroup1);
+        g2 = (RadioGroup) insertTab.findViewById(R.id.radioGroup2);
+        g3 = (RadioGroup) insertTab.findViewById(R.id.radioGroup3);
+        gLegs1 = (RadioGroup) insertTab.findViewById(R.id.radioGroupLegs1);
+        gLegs2 = (RadioGroup) insertTab.findViewById(R.id.radioGroupLegs2);
+        weightSwitch = (Switch) insertTab.findViewById(R.id.weightSwitch);
+        weightSwitch.setShowText(true);
 
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
-
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
 
-        if (values.length == 3) {
-            System.out.println("readfromfile1");
+        if (values.length >= 3) {
             editTextBench.setText(values[0], TextView.BufferType.EDITABLE);
             editTextSquat.setText(values[1], TextView.BufferType.EDITABLE);
             editTextDeadlift.setText(values[2], TextView.BufferType.EDITABLE);
         } else {
-            editTextBench.setText("100");
-            editTextSquat.setText("100");
-            editTextDeadlift.setText("100");
+            editTextBench.setText(R.string.hundred);
+            editTextSquat.setText(R.string.hundred);
+            editTextDeadlift.setText(R.string.hundred);
         }
-
+        /*TEKSTIFAIL
+        0 rida - bench
+        1 rida - squat
+        2 rida - dead
+        3 rida - kg(1) või lbs(0)
+        4 rida - leg optional 1
+        5 rida - leg optional 2
+        6 rida - arm accessory 1
+        7 rida - arm accessory 2
+        8 rida - arm accessory 3
+        */
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final File file = new File(dir, "savedFile.txt");
-                String[] saveText = new String[3];
+                String[] saveText = new String[9];
 
                 saveText[0] = String.valueOf(editTextBench.getText());
                 saveText[1] = String.valueOf(editTextSquat.getText());
                 saveText[2] = String.valueOf(editTextDeadlift.getText());
 
+                if(weightSwitch.isChecked()){
+                    saveText[3] = "LBS";
+                }else{
+                    saveText[3] = "KG";
+                }
 
+                int legsId1 = gLegs1.getCheckedRadioButtonId();
+                RadioButton legs1 = (RadioButton) insertTab.findViewById(legsId1);
+                saveText[4] = String.valueOf(legs1.getText());
+                int legsId2 = gLegs2.getCheckedRadioButtonId();
+                RadioButton legs2 = (RadioButton) insertTab.findViewById(legsId2);
+                saveText[5] = String.valueOf(legs2.getText());
+
+                int selectedId = g1.getCheckedRadioButtonId();
+                RadioButton radioButton = (RadioButton) insertTab.findViewById(selectedId);
+                saveText[6] = String.valueOf(radioButton.getText());
+                int selectedId2 = g2.getCheckedRadioButtonId();
+                RadioButton radioButton2 = (RadioButton) insertTab.findViewById(selectedId2);
+                saveText[7] = String.valueOf(radioButton2.getText());
+                int selectedId3 = g3.getCheckedRadioButtonId();
+                RadioButton radioButton3 = (RadioButton) insertTab.findViewById(selectedId3);
+                saveText[8] = String.valueOf(radioButton3.getText());
 
                 saveData(file, saveText);
                 Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
                 readFromFile(file);
             }
         });
-
         return insertTab;
     }
 
@@ -99,7 +138,6 @@ public class MainTabInsert extends Fragment {
             try{
                 for (int i = 0; i<data.length; i++){
                     assert fos != null;
-                    System.out.println(data[i] + "vaata mind pls");
                     fos.write(data[i].getBytes());
                     if (i < data.length-1){
                         fos.write("\n".getBytes());
@@ -113,8 +151,16 @@ public class MainTabInsert extends Fragment {
             try{
                 assert fos != null;
                 for (int i = 0; i < fos.toString().length(); i++){
+                    //why the fuck ta nii palju kordi seda kõike välja prindib
                     System.out.println(data[0]);
-                    System.out.println(data.length);
+                    System.out.println(data[1]);
+                    System.out.println(data[2]);
+                    System.out.println(data[3]);
+                    System.out.println(data[4]);
+                    System.out.println(data[5]);
+                    System.out.println(data[6]);
+                    System.out.println(data[7]);
+                    System.out.println(data[8]);
                 }
                 fos.close();
             }
@@ -123,7 +169,7 @@ public class MainTabInsert extends Fragment {
     }
 
     public static String[] readFromFile(File file){
-    String[] values = new String[3];
+    String[] values = new String[9];
     try {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
@@ -133,17 +179,9 @@ public class MainTabInsert extends Fragment {
             i++;
         }
         br.close();
-        benchPress = Double.parseDouble(values[0]);
-        squat = Double.parseDouble(values[1]);
-        deadlift = Double.parseDouble(values[2]);
-    }
-    catch (IOException e){
 
     }
-        System.out.println(benchPress + " bench press");
-        System.out.println(squat + " squat");
-        System.out.println(deadlift + " deadlift");
+    catch (IOException ignored){}
     return values;
     }
-
 }
