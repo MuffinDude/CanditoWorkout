@@ -32,5 +32,6 @@
     <string name="singleLegBoxJumps">Single Leg Box Jumps</string>
     <string name="medBallThrows">Med Ball Throws</string>
     <string name="explosiveSinglePress">Explosive Single Leg Press</string>
+    <string name="none">None</string>
 
 </resources>

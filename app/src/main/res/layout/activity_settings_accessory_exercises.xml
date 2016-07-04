@@ -88,7 +88,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Barbell Row"
-                                android:id="@+id/radioButton27" />
+                                android:id="@+id/radioButton27"
+                                android:checked="false" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -151,8 +152,9 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lateral Dumbell Raise"
-                                android:id="@+id/radioButton32" />
+                                android:text="Lateral Dumbbell Raise"
+                                android:id="@+id/radioButton32"
+                                android:checked="false" />
                         </RadioGroup>
                     </LinearLayout>
                 </TableRow>
@@ -209,14 +211,15 @@
 
             </TableLayout>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Save"
-                android:id="@+id/saveButton"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

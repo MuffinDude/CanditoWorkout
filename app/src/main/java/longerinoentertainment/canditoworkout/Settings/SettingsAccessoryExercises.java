@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -33,10 +34,19 @@ public class SettingsAccessoryExercises extends AppCompatActivity {
         g3 = (RadioGroup) findViewById(R.id.radioGroup3);
 
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
-        dir.mkdirs();
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
+        if (Objects.equals(values[6], "Dumbbell Row"))g1.check(R.id.radioButton26);
+        if (Objects.equals(values[6], "Barbell Row"))g1.check(R.id.radioButton27);
+        if (Objects.equals(values[6], "Machine Row"))g1.check(R.id.radioButton28);
 
-        // TODO: 28.06.2016 When already picked something, it should check the ones picked
+        if (Objects.equals(values[7], "Seated Dumbbell OHP"))g2.check(R.id.radioButton29);
+        if (Objects.equals(values[7], "Standing Dumbbell OHP"))g2.check(R.id.radioButton30);
+        if (Objects.equals(values[7], "Military Press"))g2.check(R.id.radioButton31);
+        if (Objects.equals(values[7], "Lateral Dumbbell Raise"))g2.check(R.id.radioButton32);
+
+        if (Objects.equals(values[8], "Weighted Pull-up"))g3.check(R.id.radioButton33);
+        if (Objects.equals(values[8], "Weighted Chin-up"))g3.check(R.id.radioButton34);
+        if (Objects.equals(values[8], "Lat Pulldown"))g3.check(R.id.radioButton35);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,12 +55,15 @@ public class SettingsAccessoryExercises extends AppCompatActivity {
 
                 int selectedId = g1.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
+                assert radioButton != null;
                 String ex1 = String.valueOf(radioButton.getText());
                 int selectedId2 = g2.getCheckedRadioButtonId();
                 RadioButton radioButton2 = (RadioButton) findViewById(selectedId2);
+                assert radioButton2 != null;
                 String ex2 = String.valueOf(radioButton2.getText());
                 int selectedId3 = g3.getCheckedRadioButtonId();
                 RadioButton radioButton3 = (RadioButton) findViewById(selectedId3);
+                assert radioButton3 != null;
                 String ex3 = String.valueOf(radioButton3.getText());
 
                 try {
@@ -70,14 +83,14 @@ public class SettingsAccessoryExercises extends AppCompatActivity {
         values[8] = ex3;
 
         FileWriter fw = new FileWriter(data);
-        for (int j = 0; j < values.length; j++) {
-            fw.write(values[j] + "\n");
+        for (String value : values) {
+            fw.write(value + "\n");
         }
         fw.close();
     }
 
     public static String[] readFromFile(File file){
-        String[] values = new String[9];
+        String[] values = new String[11];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

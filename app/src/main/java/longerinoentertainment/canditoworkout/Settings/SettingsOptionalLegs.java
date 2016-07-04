@@ -1,26 +1,20 @@
 package longerinoentertainment.canditoworkout.Settings;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -169,7 +163,7 @@ public class SettingsOptionalLegs extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo) {
         //Context menu
-        if (v.getId() == R.id.explosivenessButton1){
+        if (v.getId() == R.id.hypertrophyButton1){
             menu.setHeaderTitle("Hypertrophy");
             menu.add(Menu.NONE, CONTEXT_MENU_EX1, Menu.NONE, R.string.calfLeg);
             menu.add(Menu.NONE, CONTEXT_MENU_EX2, Menu.NONE, R.string.otherCalf);
@@ -223,31 +217,38 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             }
             break;
             case CONTEXT_MENU_EEX1:{
-                hypertrophy1.setText(R.string.boxJumps);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.boxJumps);
             }
             break;
             case CONTEXT_MENU_EEX2:{
-                hypertrophy1.setText(R.string.jumpSquats);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.jumpSquats);
             }
             break;
             case CONTEXT_MENU_EEX3:{
-                hypertrophy1.setText(R.string.powercleans);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.powercleans);
             }
             break;
             case CONTEXT_MENU_EEX4:{
-                hypertrophy1.setText(R.string.deepSquatJumps);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.deepSquatJumps);
             }
             break;
             case CONTEXT_MENU_EEX5:{
-                hypertrophy1.setText(R.string.singleLegBoxJumps);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.singleLegBoxJumps);
             }
             break;
             case CONTEXT_MENU_EEX6:{
-                hypertrophy1.setText(R.string.medBallThrows);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.medBallThrows);
             }
             break;
             case CONTEXT_MENU_EEX7:{
-                hypertrophy1.setText(R.string.explosiveSinglePress);
+                hypertrophy1.setText(R.string.none);
+                explosiveness1.setText(R.string.explosiveSinglePress);
             }
             break;
         }
@@ -260,14 +261,14 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         values[5] = ex2;
 
         FileWriter fw = new FileWriter(data);
-        for (int j = 0; j < values.length; j++) {
-            fw.write(values[j] + "\n");
+        for (String value : values) {
+            fw.write(value + "\n");
         }
         fw.close();
     }
 
     public static String[] readFromFile(File file){
-        String[] values = new String[9];
+        String[] values = new String[11];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

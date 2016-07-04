@@ -78,6 +78,8 @@ public class MainTabInsert extends Fragment {
         6 rida - arm accessory 1
         7 rida - arm accessory 2
         8 rida - arm accessory 3
+        9 rida - arm optional 1
+        10 rida - arm optional 2
         */
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,7 +171,7 @@ public class MainTabInsert extends Fragment {
     }
 
     public static String[] readFromFile(File file){
-    String[] values = new String[9];
+    String[] values = new String[11];
     try {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
