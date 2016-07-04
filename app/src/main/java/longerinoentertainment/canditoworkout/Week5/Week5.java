@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week5;
 
+import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,12 +18,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import longerinoentertainment.canditoworkout.R;
 
 public class Week5 extends AppCompatActivity {
-
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -37,6 +38,13 @@ public class Week5 extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+    public void buttonOnClick(View v, Chronometer chronometer){
+        // TODO: 04.07.2016 start the chronometer and change the button color
+        System.out.println("i should work");
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

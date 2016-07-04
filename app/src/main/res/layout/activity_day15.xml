@@ -115,21 +115,24 @@
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
                             android:id="@+id/deadText1"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="buttonOnClick" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
                             android:id="@+id/deadText2"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="buttonOnClick" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="87.5x6"
                             android:id="@+id/deadText3"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="buttonOnClick" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -286,24 +289,16 @@
                     android:text="STOPPER"
                     android:id="@+id/stopperButton"
                     android:layout_alignParentTop="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView55" />
+                    android:layout_alignParentStart="true" />
 
                 <Chronometer
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/chronometer"
                     android:layout_alignTop="@+id/stopperButton"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="6-PACK"
-                    android:id="@+id/textView55"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="5dp" />
             </RelativeLayout>
 
         </LinearLayout>

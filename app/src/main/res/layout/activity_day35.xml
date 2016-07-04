@@ -229,24 +229,16 @@
                     android:text="STOPPER"
                     android:id="@+id/stopperButton"
                     android:layout_alignParentTop="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView55" />
+                    android:layout_alignParentStart="true" />
 
                 <Chronometer
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/chronometer"
                     android:layout_alignTop="@+id/stopperButton"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="6-PACK"
-                    android:id="@+id/textView55"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="5dp" />
             </RelativeLayout>
 
         </LinearLayout>

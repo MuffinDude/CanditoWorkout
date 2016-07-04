@@ -52,7 +52,7 @@ public class Day5 extends Fragment {
         return infoTab;
     }
     public String[] readFromFile(File file){
-        String[] values = new String[3];
+        String[] values = new String[9];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

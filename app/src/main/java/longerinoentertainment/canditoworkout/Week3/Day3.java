@@ -48,7 +48,7 @@ public class Day3 extends Fragment {
     }
 
     public String[] readFromFile(File file){
-        String[] values = new String[3];
+        String[] values = new String[9];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

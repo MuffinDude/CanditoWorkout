@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week5;
 
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Chronometer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,6 +23,9 @@ public class Day1 extends Fragment {
     Button dead1;
     Button dead2;
     Button dead3;
+    Button stopper;
+    Chronometer chronometer;
+    private long timeWhenStopped = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +35,9 @@ public class Day1 extends Fragment {
         dead1 = (Button) infoTab.findViewById(R.id.deadText1);
         dead2 = (Button) infoTab.findViewById(R.id.deadText2);
         dead3 = (Button) infoTab.findViewById(R.id.deadText3);
+
+
+
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
@@ -51,7 +59,7 @@ public class Day1 extends Fragment {
     }
 
     public String[] readFromFile(File file){
-        String[] values = new String[3];
+        String[] values = new String[9];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
