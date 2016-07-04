@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -31,6 +32,7 @@ public class SettingsOptionalLegs extends AppCompatActivity {
     CheckBox none2;
     LinearLayout ex1;
     LinearLayout ex2;
+    TextView rightNow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +42,19 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         hypertrophy2 = (Button) findViewById(R.id.hypertrophyButton2);
         explosiveness1 = (Button) findViewById(R.id.explosivenessButton1);
         explosiveness2 = (Button) findViewById(R.id.explosivenessButton2);
+        rightNow = (TextView) findViewById(R.id.rightNow);
         save = (Button) findViewById(R.id.saveButton);
         none = (CheckBox) findViewById(R.id.noneBox);
         none2 = (CheckBox) findViewById(R.id.noneBox2);
         ex1 = (LinearLayout) findViewById(R.id.ex1Layout);
         ex2 = (LinearLayout) findViewById(R.id.ex2Layout);
 
-        final int[] numero = {0,1};
         final File dir = new File(getFilesDir() + "/CanditoWorkoutApp");
+        String[] values = readFromFile(new File(dir, "savedFile.txt"));
+        rightNow.setText("Right now you have chosen: " + values[4] + " and " + values[5]);
+
+        final int[] numero = {0,1};
+
 
         hypertrophy1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,10 +79,34 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             }
         });
 
+        hypertrophy2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                registerForContextMenu(hypertrophy2);
+                openContextMenu(hypertrophy2);
+                hypertrophy2.setBackgroundColor(0xFF3399ff);
+                explosiveness2.setBackgroundColor(0xFF000000);
+                explosiveness2.setText(R.string.explosiveness);
+                numero[1] = 1;
+            }
+        });
+        explosiveness2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                registerForContextMenu(explosiveness2);
+                openContextMenu(explosiveness2);
+                explosiveness2.setBackgroundColor(0xFF3399ff);
+                hypertrophy2.setBackgroundColor(0xFF000000);
+                hypertrophy2.setText(R.string.hypertrophy);
+                numero[1]= 2;
+            }
+        });
+
         none.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numero[0]=0;
+                numero[1]=0;
                 if (none.isChecked()){
                     final int color = 0x80000000;
                     final Drawable drawable = new ColorDrawable(color);
@@ -96,20 +127,21 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         none2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                numero[1]=0;
                 if (none2.isChecked()){
                     final int color = 0x80000000;
                     final Drawable drawable = new ColorDrawable(color);
                     ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.GONE);
                     explosiveness2.setVisibility(View.GONE);
-                    numero[1]=1;
+
                 }else{
                     final int color = 0x00000000;
                     final Drawable drawable = new ColorDrawable(color);
                     ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.VISIBLE);
                     explosiveness2.setVisibility(View.VISIBLE);
-                    numero[1]=2;
+
                 }
             }
         });
@@ -117,19 +149,21 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //// TODO: 22.06.2016 saves all the stuff and reads all the stuffs
+                // TODO: 22.06.2016 saves all the stuff and work better
                 final File file = new File(dir, "savedFile.txt");
 
                 String ex1,ex2;
                 if (numero[0]== 1){
                     ex1= (String) hypertrophy1.getText();
                 } else if (numero[0] == 0){
-                    ex1="none";
+                    ex1="None";
                 }else{
                     ex1= (String) explosiveness1.getText();
                 }
                 if (numero[1]==1){
                     ex2 = (String) hypertrophy2.getText();
+                }else if (numero[1]==0){
+                    ex2="None";
                 }else{
                     ex2 = (String) explosiveness2.getText();
                 }
@@ -139,7 +173,6 @@ public class SettingsOptionalLegs extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Toast.makeText(getBaseContext(), "Saved", Toast.LENGTH_SHORT).show();
-                finish();
                 finish();
             }
         });
@@ -159,6 +192,20 @@ public class SettingsOptionalLegs extends AppCompatActivity {
     final int CONTEXT_MENU_EEX5 =12;
     final int CONTEXT_MENU_EEX6 =13;
     final int CONTEXT_MENU_EEX7 =14;
+    final int CONTEXT_MENU_2EX1 =15;
+    final int CONTEXT_MENU_2EX2 =16;
+    final int CONTEXT_MENU_2EX3 =17;
+    final int CONTEXT_MENU_2EX4 =18;
+    final int CONTEXT_MENU_2EX5 =19;
+    final int CONTEXT_MENU_2EX6 =20;
+    final int CONTEXT_MENU_2EX7 =21;
+    final int CONTEXT_MENU_2EEX1 =22;
+    final int CONTEXT_MENU_2EEX2 =23;
+    final int CONTEXT_MENU_2EEX3 =24;
+    final int CONTEXT_MENU_2EEX4 =25;
+    final int CONTEXT_MENU_2EEX5 =26;
+    final int CONTEXT_MENU_2EEX6 =27;
+    final int CONTEXT_MENU_2EEX7 =28;
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo) {
@@ -172,6 +219,24 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             menu.add(Menu.NONE, CONTEXT_MENU_EX5, Menu.NONE, R.string.isolationGlutes);
             menu.add(Menu.NONE, CONTEXT_MENU_EX6, Menu.NONE, R.string.singleLegPress);
             menu.add(Menu.NONE, CONTEXT_MENU_EX7, Menu.NONE, R.string.singleLegCurl);
+        }else if (v.getId() == R.id.hypertrophyButton2){
+            menu.setHeaderTitle("Hypertrophy");
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX1, Menu.NONE, R.string.calfLeg);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX2, Menu.NONE, R.string.otherCalf);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX3, Menu.NONE, R.string.legCurl);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX4, Menu.NONE, R.string.legExtension);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX5, Menu.NONE, R.string.isolationGlutes);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX6, Menu.NONE, R.string.singleLegPress);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EX7, Menu.NONE, R.string.singleLegCurl);
+        }else if (v.getId() == R.id.explosivenessButton2){
+            menu.setHeaderTitle("Explosiveness");
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX1, Menu.NONE, R.string.boxJumps);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX2, Menu.NONE, R.string.jumpSquats);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX3, Menu.NONE, R.string.powercleans);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX4, Menu.NONE, R.string.deepSquatJumps);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX5, Menu.NONE, R.string.singleLegBoxJumps);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX6, Menu.NONE, R.string.medBallThrows);
+            menu.add(Menu.NONE, CONTEXT_MENU_2EEX7, Menu.NONE, R.string.explosiveSinglePress);
         }else{
             menu.setHeaderTitle("Explosiveness");
             menu.add(Menu.NONE, CONTEXT_MENU_EEX1, Menu.NONE, R.string.boxJumps);
@@ -189,9 +254,9 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         switch(item.getItemId())
         {
             case CONTEXT_MENU_EX1:{
-                hypertrophy1.setText(R.string.calfLeg);
-            }
-            break;
+            hypertrophy1.setText(R.string.calfLeg);
+        }
+        break;
             case CONTEXT_MENU_EX2:{
                 hypertrophy1.setText(R.string.otherCalf);
             }
@@ -217,38 +282,87 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             }
             break;
             case CONTEXT_MENU_EEX1:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.boxJumps);
             }
             break;
             case CONTEXT_MENU_EEX2:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.jumpSquats);
             }
             break;
             case CONTEXT_MENU_EEX3:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.powercleans);
             }
             break;
             case CONTEXT_MENU_EEX4:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.deepSquatJumps);
             }
             break;
             case CONTEXT_MENU_EEX5:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.singleLegBoxJumps);
             }
             break;
             case CONTEXT_MENU_EEX6:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.medBallThrows);
             }
             break;
             case CONTEXT_MENU_EEX7:{
-                hypertrophy1.setText(R.string.none);
                 explosiveness1.setText(R.string.explosiveSinglePress);
+            }
+            break;
+            case CONTEXT_MENU_2EX1:{
+                hypertrophy2.setText(R.string.calfLeg);
+            }
+            break;
+            case CONTEXT_MENU_2EX2:{
+                hypertrophy2.setText(R.string.otherCalf);
+            }
+            break;
+            case CONTEXT_MENU_2EX3:{
+                hypertrophy2.setText(R.string.legCurl);
+            }
+            break;
+            case CONTEXT_MENU_2EX4:{
+                hypertrophy2.setText(R.string.legExtension);
+            }
+            break;
+            case CONTEXT_MENU_2EX5:{
+                hypertrophy2.setText(R.string.isolationGlutes);
+            }
+            break;
+            case CONTEXT_MENU_2EX6:{
+                hypertrophy2.setText(R.string.singleLegPress);
+            }
+            break;
+            case CONTEXT_MENU_2EX7:{
+                hypertrophy2.setText(R.string.singleLegCurl);
+            }
+            break;
+            case CONTEXT_MENU_2EEX1:{
+                explosiveness2.setText(R.string.boxJumps);
+            }
+            break;
+            case CONTEXT_MENU_2EEX2:{
+                explosiveness2.setText(R.string.jumpSquats);
+            }
+            break;
+            case CONTEXT_MENU_2EEX3:{
+                explosiveness2.setText(R.string.powercleans);
+            }
+            break;
+            case CONTEXT_MENU_2EEX4:{
+                explosiveness2.setText(R.string.deepSquatJumps);
+            }
+            break;
+            case CONTEXT_MENU_2EEX5:{
+                explosiveness2.setText(R.string.singleLegBoxJumps);
+            }
+            break;
+            case CONTEXT_MENU_2EEX6:{
+                explosiveness2.setText(R.string.medBallThrows);
+            }
+            break;
+            case CONTEXT_MENU_2EEX7:{
+                explosiveness2.setText(R.string.explosiveSinglePress);
             }
             break;
         }
