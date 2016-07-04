@@ -2,19 +2,18 @@
 
 To-Do
 
--Saving of accessory and optional exercises
-
--Creating introductory screen for first time users
+-Reading optional and accessory exercises into weeks and change them according to input
 
 -Making a better stopper
-
--Making settings screen actually work
-
--Making a better design for everything
 
 -When done with a workout, it changes color and so do weeks
 
 -Making week 6 functional
 
--Making sure that it actually calculates everything correctly
+-Recalculate everything according to the excel tabel
 
+-Designing better settings menu
+
+-Designing normal opening menu for the first timers
+
+-Calculate everything for LBS aswell
