@@ -78,7 +78,7 @@ public class SettingsMaxReps extends AppCompatActivity {
 }
 
     public static String[] readFromFile(File file){
-        String[] values = new String[9];
+        String[] values = new String[11];
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;

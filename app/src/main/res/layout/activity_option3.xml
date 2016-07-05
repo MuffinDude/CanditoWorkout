@@ -13,8 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="3.  Take this 6th week to actually find your 1 rep max.  Then either deload or start new cycle"
+        android:text="Find your actual ONE REP MAX and then deload or start it all over again"
         android:id="@+id/textView47"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="OPTION 3"
+        android:id="@+id/textView60"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -13,8 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="1.  Skip Week 6.  Just use projected one rep max from last week&apos;s 1-4 rep set.  Start next cycle."
+        android:text="Skip week 6. Go to winnings page, insert your scores and start it all over again"
         android:id="@+id/textView45"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="OPTION 1"
+        android:id="@+id/textView58"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

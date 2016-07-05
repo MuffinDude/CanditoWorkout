@@ -13,8 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="2.  Use projected max for next cycle, but take a deload week (repeat week 1 but skip last upper workout)."
+        android:text="Use projected max for next cycle, but take a deload week (repeat week 1 but skip last upper workout)."
         android:id="@+id/textView46"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="OPTION 2"
+        android:id="@+id/textView59"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

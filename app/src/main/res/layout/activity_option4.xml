@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Take what you lifted in week 5, and multiply by 1.03 if you completed 2 reps, 1.06 if 3 reps, and 1.09 if 4 reps."
+        android:text="Take what you lifted in week 5 and insert it down below you pleb"
         android:id="@+id/textView49"
         android:layout_below="@+id/textView48"
         android:layout_centerHorizontal="true" />
@@ -38,9 +38,10 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView50"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout">
 
         <TableRow
             android:layout_width="match_parent"
@@ -86,24 +87,26 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="x"
-                android:id="@+id/textView58"
+                android:id="@+id/oldBench"
                 android:layout_column="1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView61"
-                android:layout_column="2" />
+                android:text="100"
+                android:id="@+id/benchNew"
+                android:layout_column="2"
+                android:inputType="number|numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView65"
+                android:text="0"
+                android:id="@+id/benchIncrease"
                 android:layout_column="3" />
+
         </TableRow>
 
         <TableRow
@@ -121,23 +124,24 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="x"
-                android:id="@+id/textView59"
+                android:id="@+id/oldSquat"
                 android:layout_column="1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView62"
-                android:layout_column="2" />
+                android:text="100"
+                android:id="@+id/squatNew"
+                android:layout_column="2"
+                android:inputType="number|numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView66"
+                android:text="0"
+                android:id="@+id/squatIncrease"
                 android:layout_column="3" />
         </TableRow>
 
@@ -156,24 +160,71 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="x"
-                android:id="@+id/textView60"
+                android:id="@+id/oldDead"
                 android:layout_column="1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView63"
-                android:layout_column="2" />
+                android:text="100"
+                android:id="@+id/deadNew"
+                android:layout_column="2"
+                android:inputType="number|numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="x"
-                android:id="@+id/textView64"
+                android:text="0"
+                android:id="@+id/deadIncrease"
                 android:layout_column="2" />
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calculate"
+        android:id="@+id/calculateButton"
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/benchTimes"
+        android:layout_below="@+id/calculateButton"
+        android:layout_alignParentStart="true"
+        android:text="1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/squatTimes"
+        android:layout_below="@+id/benchTimes"
+        android:layout_toStartOf="@+id/calculateButton"
+        android:text="1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/deadTimes"
+        android:layout_below="@+id/squatTimes"
+        android:layout_alignEnd="@+id/squatTimes"
+        android:text="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:id="@+id/saveButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
