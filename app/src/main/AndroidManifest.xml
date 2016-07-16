@@ -57,7 +57,17 @@
         <activity android:name=".Settings.SettingsMaxReps" />
         <activity android:name=".Settings.SettingsAccessoryExercises" />
         <activity android:name=".Settings.SettingsOptionalArms" />
-        <activity android:name=".Settings.SettingsOptionalLegs"></activity>
+        <activity android:name=".Settings.SettingsOptionalLegs" />
+        <activity
+            android:name=".FirstTime.FirstTime"
+            android:label="@string/title_activity_first_time"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".FirstTime.FirstMaxReps" />
+        <activity android:name=".FirstTime.FirstAccessoryExes" />
+        <activity android:name=".FirstTime.FirstOptionalArms" />
+        <activity android:name=".FirstTime.FirstOptionalLegs" />
+        <activity android:name=".FirstTime.LandingPage" />
+        <activity android:name=".FirstTime.EndingPage"></activity>
     </application>
 
 </manifest>

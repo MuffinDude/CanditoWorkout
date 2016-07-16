@@ -33,5 +33,6 @@
     <string name="medBallThrows">Med Ball Throws</string>
     <string name="explosiveSinglePress">Explosive Single Leg Press</string>
     <string name="none">None</string>
+    <string name="title_activity_first_time">FirstTime</string>
 
 </resources>

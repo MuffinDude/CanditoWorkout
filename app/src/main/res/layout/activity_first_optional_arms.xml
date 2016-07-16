@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="longerinoentertainment.canditoworkout.FirstTime.FirstOptionalArms">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView7" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Choose optional exercises for arms"
+                    android:id="@+id/textView77"
+                    android:layout_above="@+id/AccessoryExes"
+                    android:layout_alignParentStart="true"
+                    android:layout_column="0"
+                    android:layout_marginTop="15dp" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Ex1"
+                android:id="@+id/textView83" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/exGroup1">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lateral Dumbbell Raise"
+                            android:id="@+id/radioButton36"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Incline Chest Fly"
+                            android:id="@+id/radioButton37"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="One Armed Tricep Extension"
+                            android:id="@+id/radioButton38"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bicep Cable/Machine Movements"
+                            android:id="@+id/radioButton39"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Preacher Curl"
+                            android:id="@+id/radioButton40"
+                            android:checked="false"
+                            android:layout_gravity="left|center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skullcrushers"
+                            android:id="@+id/radioButton41"
+                            android:checked="false"
+                            android:layout_gravity="left|center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hammer Curl (if not used as main accessory)"
+                            android:id="@+id/radioButton42"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bicep Curl"
+                            android:id="@+id/radioButton43"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="None"
+                            android:id="@+id/radioButton44"
+                            android:checked="false" />
+                    </RadioGroup>
+                </LinearLayout>
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Ex2"
+                android:id="@+id/textView67" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/exGroup2">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lateral Dumbbell Raise"
+                            android:id="@+id/radioButton11"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Incline Chest Fly"
+                            android:id="@+id/radioButton12"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="One Armed Tricep Extension"
+                            android:id="@+id/radioButton13"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bicep Cable/Machine Movements"
+                            android:id="@+id/radioButton14"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Preacher Curl"
+                            android:id="@+id/radioButton15"
+                            android:checked="false"
+                            android:layout_gravity="left|center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skullcrushers"
+                            android:id="@+id/radioButton16"
+                            android:checked="false"
+                            android:layout_gravity="left|center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hammer Curl (if not used as main accessory)"
+                            android:id="@+id/radioButton17"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bicep Curl"
+                            android:id="@+id/radioButton18"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal" />
+
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="None"
+                            android:id="@+id/radioButton19"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/saveButton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

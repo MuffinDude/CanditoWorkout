@@ -1,8 +1,5 @@
-package longerinoentertainment.canditoworkout;
+package longerinoentertainment.canditoworkout.FirstTime;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,14 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.view.Window;
 import android.widget.TextView;
 
-import java.io.File;
+import longerinoentertainment.canditoworkout.R;
 
-import longerinoentertainment.canditoworkout.FirstTime.FirstTime;
-
-public class MainActivity extends AppCompatActivity {
+public class FirstTime extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -46,37 +40,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_first_time);
 
-
-// TODO: 15.07.2016 check text file and if yes or no transfer to FIRSTPAGE
-        final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
-
-        if(dir.exists() && !dir.isDirectory()) {
-
-            System.out.println("FILE DOES ECXISTS");
-        }else{
-            Intent i = new Intent(this, FirstTime.class);
-            startActivity(i);
-            System.out.println("FILE DOESN't ECXISTS");
-
-        }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_first_time, menu);
         return true;
     }
 
@@ -123,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_first_time, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -145,33 +127,48 @@ public class MainActivity extends AppCompatActivity {
             Fragment frag = null;
             switch (position) {
                 case 0:
-                    frag = new MainTabWeeks();
+                    frag = new LandingPage();
                     break;
                 case 1:
-                    frag = new MainTabInfo();
+                    frag = new FirstMaxReps();
                     break;
                 case 2:
-                    frag = new MainTabSettings();
+                    frag = new FirstAccessoryExes();
                     break;
+                case 3:
+                    frag = new FirstOptionalArms();
+                    break;
+                case 4:
+                    frag = new FirstOptionalLegs();
+                    break;
+                case 5:
+                    frag = new EndingPage();
             }
             return frag;
         }
 
+
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 6;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Weeks";
+                    return "LandingPage";
                 case 1:
-                    return "Introduction";
+                    return "Max Reps";
                 case 2:
-                    return "Settings";
+                    return "Accessory Exes";
+                case 3:
+                    return "Optionalrms";
+                case 4:
+                    return "Optional Legs";
+                case 5:
+                    return "Last page";
             }
             return null;
         }
