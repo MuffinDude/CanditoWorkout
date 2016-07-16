@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/barbell_row"
-                    android:id="@+id/accessory1"
+                    android:id="@+id/accessoryOne"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -100,7 +100,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory1"
+                    android:layout_below="@+id/accessoryOne"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout">
 
@@ -173,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/standing_dumbell_ohp"
-                    android:id="@+id/accessory2"
+                    android:id="@+id/accessoryTwo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -181,7 +181,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory2"
+                    android:layout_below="@+id/accessoryTwo"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout4" >
 
@@ -252,7 +252,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/lat_pulldown"
-                    android:id="@+id/accessory3"
+                    android:id="@+id/accessoryThree"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -260,7 +260,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory3"
+                    android:layout_below="@+id/accessoryThree"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout5" >
 

@@ -226,7 +226,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Deadlift Variation"
-                        android:id="@+id/accessory1"
+                        android:id="@+id/accessoryOne"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="5dp"
@@ -235,7 +235,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/accessory1"
+                        android:layout_below="@+id/accessoryOne"
                         android:layout_centerHorizontal="true"
                         android:id="@+id/relativeLayout">
 
