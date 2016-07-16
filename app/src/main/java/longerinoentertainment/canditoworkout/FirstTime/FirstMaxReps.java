@@ -1,16 +1,22 @@
 package longerinoentertainment.canditoworkout.FirstTime;
 
+import android.provider.Settings;
+import android.provider.SyncStateContract;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View.OnTouchListener;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,10 +34,10 @@ public class FirstMaxReps extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View beginnerTab = inflater.inflate(R.layout.activity_first_max_reps, container, false);
+        View beginnerTab = inflater.inflate(R.layout.activity_first_max_reps, null, false);
 
 
-        save = (Button) beginnerTab.findViewById(R.id.saveButton);
+        //save = (Button) beginnerTab.findViewById(R.id.saveButton);
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
@@ -41,31 +47,11 @@ public class FirstMaxReps extends Fragment {
         bench.setText(values[0], TextView.BufferType.EDITABLE);
         squat.setText(values[1], TextView.BufferType.EDITABLE);
         deadlift.setText(values[2], TextView.BufferType.EDITABLE);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final File file = new File(dir, "savedFile.txt");
-
-                Editable benchText = bench.getText();
-                String bench = benchText.toString();
-                //kui nümbrid ei ole korras siis epab -1 kirjutamisel võtma ja pärast +1 lisama doe
-                String benchString = String.valueOf(Double.parseDouble(bench));
-                String squatString = String.valueOf(squat.getText());
-                String deadString = String.valueOf(deadlift.getText());
-
-                try {
-                    updateLine(file, benchString, squatString, deadString);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
         return beginnerTab;
     }
+
+
     private void updateLine(File data, String bench, String squat, String dead) throws IOException {
         String values[] = readFromFile(data);
         values[0] = bench;
@@ -93,5 +79,34 @@ public class FirstMaxReps extends Fragment {
         }
         catch (IOException ignored){}
         return values;
+    }
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                Log.d("MyFragment", "Not visible anymore.  Saving data.");
+                final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+                final File file = new File(dir, "savedFile.txt");
+
+                Editable benchText = bench.getText();
+                String bench = benchText.toString();
+                //kui nümbrid ei ole korras siis epab -1 kirjutamisel võtma ja pärast +1 lisama doe
+                String benchString = String.valueOf(Double.parseDouble(bench));
+                String squatString = String.valueOf(squat.getText());
+                String deadString = String.valueOf(deadlift.getText());
+
+                try {
+                    updateLine(file, benchString, squatString, deadString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

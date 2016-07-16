@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,7 @@ public class FirstOptionalLegs extends Fragment {
     LinearLayout ex1;
     LinearLayout ex2;
     TextView rightNow;
+    final int[] numero = {0,1};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View beginnerTab = inflater.inflate(R.layout.activity_first_optional_legs, container, false);
@@ -54,7 +57,7 @@ public class FirstOptionalLegs extends Fragment {
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         rightNow.setText("Right now you have chosen: " + values[4] + " and " + values[5]);
 
-        final int[] numero = {0,1};
+
 
 
         hypertrophy1.setOnClickListener(new View.OnClickListener() {
@@ -146,37 +149,6 @@ public class FirstOptionalLegs extends Fragment {
                 }
             }
         });
-
-        /*save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // TODO: 22.06.2016 saves all the stuff and work better
-                final File file = new File(dir, "savedFile.txt");
-
-                String ex1,ex2;
-                if (numero[0]== 1){
-                    ex1= (String) hypertrophy1.getText();
-                } else if (numero[0] == 0){
-                    ex1="None";
-                }else{
-                    ex1= (String) explosiveness1.getText();
-                }
-                if (numero[1]==1){
-                    ex2 = (String) hypertrophy2.getText();
-                }else if (numero[1]==0){
-                    ex2="None";
-                }else{
-                    ex2 = (String) explosiveness2.getText();
-                }
-                try {
-                    updateLine(file, ex1, ex2);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });*/
         return beginnerTab;
     }
     final int CONTEXT_MENU_EX1 =1;
@@ -396,5 +368,43 @@ public class FirstOptionalLegs extends Fragment {
         }
         catch (IOException ignored){}
         return values;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                // TODO: This shit does not work, make it work.
+                Log.d("MyFragment", "Not visible anymore.  Saving data.");
+                final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+                final File file = new File(dir, "savedFile.txt");
+
+                String ex1,ex2;
+                if (numero[0]== 1){
+                    ex1= (String) hypertrophy1.getText();
+                } else if (numero[0] == 0){
+                    ex1="None";
+                }else{
+                    ex1= (String) explosiveness1.getText();
+                }
+                if (numero[1]==1){
+                    ex2 = (String) hypertrophy2.getText();
+                }else if (numero[1]==0){
+                    ex2="None";
+                }else{
+                    ex2 = (String) explosiveness2.getText();
+                }
+                try {
+                    updateLine(file, ex1, ex2);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

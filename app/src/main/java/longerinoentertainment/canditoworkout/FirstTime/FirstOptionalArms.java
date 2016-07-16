@@ -3,6 +3,8 @@ package longerinoentertainment.canditoworkout.FirstTime;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,29 +53,6 @@ public class FirstOptionalArms extends Fragment {
         if (Objects.equals(values[10], "Bicep Curl"))g2.check(R.id.radioButton18);
         if (Objects.equals(values[10], "None"))g2.check(R.id.radioButton19);
 
-        /*save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final File file = new File(dir, "savedFile.txt");
-
-                int selectedId = g1.getCheckedRadioButtonId();
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                assert radioButton != null;
-                String ex1 = String.valueOf(radioButton.getText());
-                int selectedId2 = g2.getCheckedRadioButtonId();
-                RadioButton radioButton2 = (RadioButton) findViewById(selectedId2);
-                assert radioButton2 != null;
-                String ex2 = String.valueOf(radioButton2.getText());
-
-                try {
-                    updateLine(file, ex1, ex2);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(getBaseContext(), "Saved", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });*/
         return beginnerTab;
     }
     private void updateLine(File data, String ex1, String ex2) throws IOException {
@@ -102,5 +81,36 @@ public class FirstOptionalArms extends Fragment {
         }
         catch (IOException ignored){}
         return values;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                Log.d("MyFragment", "Not visible anymore.  Saving data.");
+                final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+                final File file = new File(dir, "savedFile.txt");
+
+                int selectedId = g1.getCheckedRadioButtonId();
+                RadioButton radioButton = (RadioButton) getActivity().findViewById(selectedId);
+                assert radioButton != null;
+                String ex1 = String.valueOf(radioButton.getText());
+                int selectedId2 = g2.getCheckedRadioButtonId();
+                RadioButton radioButton2 = (RadioButton) getActivity().findViewById(selectedId2);
+                assert radioButton2 != null;
+                String ex2 = String.valueOf(radioButton2.getText());
+
+                try {
+                    updateLine(file, ex1, ex2);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

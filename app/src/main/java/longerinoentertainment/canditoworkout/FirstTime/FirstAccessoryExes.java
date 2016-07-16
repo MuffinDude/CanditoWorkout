@@ -3,6 +3,7 @@ package longerinoentertainment.canditoworkout.FirstTime;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,34 +47,6 @@ public class FirstAccessoryExes extends Fragment {
         if (Objects.equals(values[8], "Weighted Chin-up"))g3.check(R.id.radioButton34);
         if (Objects.equals(values[8], "Lat Pulldown"))g3.check(R.id.radioButton35);
 
-        // TODO: 16.07.2016 on swipe to right boyyy
-        /*save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final File file = new File(dir, "savedFile.txt");
-
-                int selectedId = g1.getCheckedRadioButtonId();
-                RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                assert radioButton != null;
-                String ex1 = String.valueOf(radioButton.getText());
-                int selectedId2 = g2.getCheckedRadioButtonId();
-                RadioButton radioButton2 = (RadioButton) findViewById(selectedId2);
-                assert radioButton2 != null;
-                String ex2 = String.valueOf(radioButton2.getText());
-                int selectedId3 = g3.getCheckedRadioButtonId();
-                RadioButton radioButton3 = (RadioButton) findViewById(selectedId3);
-                assert radioButton3 != null;
-                String ex3 = String.valueOf(radioButton3.getText());
-
-                try {
-                    updateLine(file, ex1, ex2, ex3);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(getBaseContext(), "Saved", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });*/
 
         return beginnerTab;
     }
@@ -104,5 +77,40 @@ public class FirstAccessoryExes extends Fragment {
         }
         catch (IOException ignored){}
         return values;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                Log.d("MyFragment", "Not visible anymore.  Saving data.");
+                final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+                final File file = new File(dir, "savedFile.txt");
+
+                int selectedId = g1.getCheckedRadioButtonId();
+                RadioButton radioButton = (RadioButton) getActivity().findViewById(selectedId);
+                assert radioButton != null;
+                String ex1 = String.valueOf(radioButton.getText());
+                int selectedId2 = g2.getCheckedRadioButtonId();
+                RadioButton radioButton2 = (RadioButton) getActivity().findViewById(selectedId2);
+                assert radioButton2 != null;
+                String ex2 = String.valueOf(radioButton2.getText());
+                int selectedId3 = g3.getCheckedRadioButtonId();
+                RadioButton radioButton3 = (RadioButton) getActivity().findViewById(selectedId3);
+                assert radioButton3 != null;
+                String ex3 = String.valueOf(radioButton3.getText());
+
+                try {
+                    updateLine(file, ex1, ex2, ex3);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
