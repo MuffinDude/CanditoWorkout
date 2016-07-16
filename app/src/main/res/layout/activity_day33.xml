@@ -10,7 +10,7 @@
     tools:context="longerinoentertainment.canditoworkout.Week3.Day3">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView5"
         android:layout_alignParentBottom="true"
@@ -122,6 +122,15 @@
                 </RelativeLayout>
 
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No Accessory Lifts"
+                android:id="@+id/textView15"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

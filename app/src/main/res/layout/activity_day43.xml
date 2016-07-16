@@ -9,7 +9,7 @@
     android:paddingRight="15dp">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView4" >
 
@@ -302,6 +302,15 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true" />
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No Optional Exercises"
+                android:id="@+id/textView17"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,6 +24,9 @@ public class Day4 extends Fragment {
     Button bench3;
     Button stopper;
     Chronometer chronometer;
+    TextView accessoryOne;
+    TextView accessoryTwo;
+    TextView accessoryThree;
     private long timeWhenStopped = 0;
 
     @Override
@@ -33,6 +37,9 @@ public class Day4 extends Fragment {
         bench3 = (Button) infoTab.findViewById(R.id.benchText3);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        accessoryOne = (TextView) infoTab.findViewById(R.id.accessoryOne);
+        accessoryTwo = (TextView) infoTab.findViewById(R.id.accessoryTwo);
+        accessoryThree = (TextView) infoTab.findViewById(R.id.accessoryThree);
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
@@ -45,6 +52,10 @@ public class Day4 extends Fragment {
         bench1.setText(benchText);
         bench2.setText(benchText);
         bench3.setText(benchText);
+
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
 
         stopper.setOnClickListener(new View.OnClickListener() {
             @Override
