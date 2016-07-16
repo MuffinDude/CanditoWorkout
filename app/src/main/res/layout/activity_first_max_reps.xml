@@ -65,13 +65,13 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
                         android:ems="10"
                         android:id="@+id/benchText"
                         android:layout_column="1"
                         android:text="100"
                         android:gravity="right"
-                        android:background="#00ffffff" />
+                        android:background="#00ffffff"
+                        android:inputType="number|numberDecimal" />
                 </TableRow>
 
                 <TableRow
@@ -91,7 +91,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="number|numberDecimal"
                         android:ems="10"
                         android:id="@+id/squatText"
                         android:layout_column="1"
@@ -116,7 +116,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="number|numberDecimal"
                         android:ems="10"
                         android:id="@+id/deadText"
                         android:layout_column="1"
