@@ -49,8 +49,8 @@ public class Day1 extends Fragment {
                 chronometer.start();
             }
         });
-        double deadNumber = round(values[2])+ 10;
-        double squatNumber = round(values[1])+ 7.5;
+        double deadNumber = round(0.85, values[2]) + 2.5;
+        double squatNumber = round(0.875, values[1]) + 2.5;
 
         String deadText = Double.toString(deadNumber)+ "x3-6";
         String squatText = Double.toString(squatNumber) + "x4-6";
@@ -78,8 +78,8 @@ public class Day1 extends Fragment {
         }
         return values;
     }
-    public static double round(String valueString) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
+    public static double round(double howMuch, String valueString) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * howMuch/2.5)*2.5;
         return value;
     }
 }

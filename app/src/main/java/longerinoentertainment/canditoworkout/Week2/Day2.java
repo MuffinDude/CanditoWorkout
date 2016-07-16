@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -25,6 +27,13 @@ public class Day2 extends Fragment {
     Button bench2;
     Button bench3;
     Button stopper;
+    RelativeLayout optional1;
+    RelativeLayout optional2;
+    TextView optionalOne;
+    TextView optionalTwo;
+    TextView accessoryOne;
+    TextView accessoryTwo;
+    TextView accessoryThree;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
 
@@ -37,21 +46,22 @@ public class Day2 extends Fragment {
         bench3 = (Button) infoTab.findViewById(R.id.benchText3);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
-        stopper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
-                chronometer.start();
-            }
-        });
+        optional1 = (RelativeLayout) infoTab.findViewById(R.id.optional1);
+        optional2 = (RelativeLayout) infoTab.findViewById(R.id.optional2);
+        optionalOne = (TextView) infoTab.findViewById(R.id.optionalOne);
+        optionalTwo = (TextView) infoTab.findViewById(R.id.optionalTwo);
+        accessoryOne = (TextView) infoTab.findViewById(R.id.accessoryOne);
+        accessoryTwo = (TextView) infoTab.findViewById(R.id.accessoryTwo);
+        accessoryThree = (TextView) infoTab.findViewById(R.id.accessoryThree);
+
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        double benchNumber1 = round(values[0])-2.5;
-        double benchNumber2 = round(values[0]);
-        double benchNumber3 = round(values[0])+5;
+        double benchNumber1 = round(0.725, values[0]);
+        double benchNumber2 = round(0.775, values[0]);
+        double benchNumber3 = round(0.8, values[0]) + 2.5;
 
         String benchText1 = Double.toString(benchNumber1) + "x10";
         String benchText2 = Double.toString(benchNumber2) + "x8";
@@ -60,7 +70,28 @@ public class Day2 extends Fragment {
         bench2.setText(benchText2);
         bench3.setText(benchText3);
 
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
 
+        if (values[9].equals("None")){
+            optional1.setVisibility(View.GONE);
+            optional2.setVisibility(View.GONE);
+        }else if(values[10].equals("None")){
+            optional2.setVisibility(View.GONE);
+            optionalOne.setText(values[9]);
+        }else {
+            optionalOne.setText(values[9]);
+            optionalTwo.setText(values[10]);
+        }
+
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
 
         return infoTab;
     }
@@ -80,8 +111,8 @@ public class Day2 extends Fragment {
         }
         return values;
     }
-    public static double round(String valueString) {
-        double value = Math.floor(Math.floor(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
+    public static double round(double howMuch, String valueString) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * howMuch/2.5)*2.5;
         return value;
     }
 }

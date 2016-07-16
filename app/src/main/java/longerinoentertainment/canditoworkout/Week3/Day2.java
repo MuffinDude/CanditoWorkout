@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,6 +23,9 @@ public class Day2 extends Fragment {
     Button bench2;
     Button bench3;
     Button stopper;
+    TextView accessoryOne;
+    TextView accessoryTwo;
+    TextView accessoryThree;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
 
@@ -33,18 +37,25 @@ public class Day2 extends Fragment {
         bench3 = (Button) infoTab.findViewById(R.id.benchText3);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        accessoryOne = (TextView) infoTab.findViewById(R.id.accessoryOne);
+        accessoryTwo = (TextView) infoTab.findViewById(R.id.accessoryTwo);
+        accessoryThree = (TextView) infoTab.findViewById(R.id.accessoryThree);
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        double benchNumber1 = round(values[0])+7.5;
+        double benchNumber1 = round(values[0]) + 2.5;
 
         String benchText = Double.toString(benchNumber1) + "x4-6";
         bench1.setText(benchText);
         bench2.setText(benchText);
         bench3.setText(benchText);
+
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
 
         stopper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +84,7 @@ public class Day2 extends Fragment {
         return values;
     }
     public static double round(String valueString) {
-        double value = Math.floor(Math.floor(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * 0.85/2.5)*2.5;
         return value;
     }
 }

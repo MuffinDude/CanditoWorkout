@@ -10,7 +10,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -32,7 +37,13 @@ public class Day3  extends Fragment {
     Button sqt8;
     Button sqt9;
     Button sqt10;
-    ImageButton info;
+    Button calculate;
+    TextView repsMade, failureText;
+    RelativeLayout optional1;
+    RelativeLayout optional2;
+    TextView optionalOne;
+    TextView optionalTwo;
+    LinearLayout backoffSets;
     Button stopper;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
@@ -54,6 +65,24 @@ public class Day3  extends Fragment {
         sqt10 = (Button) infoTab.findViewById(R.id.squat10);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        optional1 = (RelativeLayout) infoTab.findViewById(R.id.optional1);
+        optional2 = (RelativeLayout) infoTab.findViewById(R.id.optional2);
+        optionalOne = (TextView) infoTab.findViewById(R.id.optionalOne);
+        optionalTwo = (TextView) infoTab.findViewById(R.id.optionalTwo);
+        Button optionalB1 = (Button) infoTab.findViewById(R.id.button23);
+        Button optionalB2 = (Button) infoTab.findViewById(R.id.button24);
+        Button optionalB3 = (Button) infoTab.findViewById(R.id.button25);
+        Button optionalB4 = (Button) infoTab.findViewById(R.id.button27);
+        Button optionalB5 = (Button) infoTab.findViewById(R.id.button28);
+        Button optionalB6 = (Button) infoTab.findViewById(R.id.button30);
+        calculate = (Button) infoTab.findViewById(R.id.calculateButton);
+        repsMade = (TextView) infoTab.findViewById(R.id.completedReps);
+        backoffSets = (LinearLayout) infoTab.findViewById(R.id.backoffSets);
+        failureText = (TextView) infoTab.findViewById(R.id.failureText);
+
+        backoffSets.setVisibility(View.GONE);
+        failureText.setVisibility(View.GONE);
+
         stopper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,21 +90,73 @@ public class Day3  extends Fragment {
                 chronometer.start();
             }
         });
-        info = (ImageButton) infoTab.findViewById(R.id.infoButton);
-        info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "- If you completed less than 7 reps, skip back off sets entirely and reduce your entered 1 rep max by at least 2.5% for following weeks.", Toast.LENGTH_LONG).show();
-            }
-        });
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
-        String[] values = readFromFile(new File(dir, "savedFile.txt"));
+        final String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
         double squatNumber = round(values[1]);
+        final double failureNumber = squatNumber*0.025;
+
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String gottenReps = repsMade.getText().toString();
+                int repCount;
+                if (gottenReps.equals("")){
+                    repCount=0;
+                    repsMade.setText("0");
+                }else{
+                    repCount= Integer.parseInt(gottenReps);
+                }
+                if (repCount >=10 ){
+                    backoffSets.setVisibility(View.VISIBLE);
+                    failureText.setVisibility(View.GONE);
+                    sqt1.setVisibility(View.VISIBLE);
+                    sqt2.setVisibility(View.VISIBLE);
+                    sqt3.setVisibility(View.VISIBLE);
+                    sqt4.setVisibility(View.VISIBLE);
+                    sqt5.setVisibility(View.VISIBLE);
+                    sqt6.setVisibility(View.VISIBLE);
+                    sqt7.setVisibility(View.VISIBLE);
+                    sqt8.setVisibility(View.VISIBLE);
+                    sqt9.setVisibility(View.VISIBLE);
+                    sqt10.setVisibility(View.VISIBLE);
+                }else if (repCount==8 || repCount==9){
+                    backoffSets.setVisibility(View.VISIBLE);
+                    sqt1.setVisibility(View.VISIBLE);
+                    sqt2.setVisibility(View.VISIBLE);
+                    sqt3.setVisibility(View.VISIBLE);
+                    sqt4.setVisibility(View.VISIBLE);
+                    sqt5.setVisibility(View.VISIBLE);
+                    sqt6.setVisibility(View.VISIBLE);
+                    sqt7.setVisibility(View.VISIBLE);
+                    sqt8.setVisibility(View.VISIBLE);
+                    sqt10.setVisibility(View.GONE);
+                    sqt9.setVisibility(View.GONE);
+                    failureText.setVisibility(View.GONE);
+                }else if (repCount==7){
+                    backoffSets.setVisibility(View.VISIBLE);
+                    sqt1.setVisibility(View.VISIBLE);
+                    sqt2.setVisibility(View.VISIBLE);
+                    sqt3.setVisibility(View.VISIBLE);
+                    sqt4.setVisibility(View.VISIBLE);
+                    sqt5.setVisibility(View.VISIBLE);
+                    sqt10.setVisibility(View.GONE);
+                    sqt9.setVisibility(View.GONE);
+                    sqt8.setVisibility(View.GONE);
+                    sqt7.setVisibility(View.GONE);
+                    sqt6.setVisibility(View.GONE);
+                    failureText.setVisibility(View.GONE);
+                }else{
+                    backoffSets.setVisibility(View.GONE);
+                    failureText.setVisibility(View.VISIBLE);
+                    failureText.setText("Reduce the max Squat in the Settings by " + failureNumber);
+                }
+            }
+        });
 
         String squatText = Double.toString(squatNumber+2.5) + "x10MR";
         String squatTextSixty = Double.toString(squatNumber-2.5) + "x3";
@@ -157,6 +238,49 @@ public class Day3  extends Fragment {
                 sqt10.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
+
+        if (values[4].equals("None")){
+            optional1.setVisibility(View.GONE);
+            optional2.setVisibility(View.GONE);
+        }else if (values[5].equals("None")){
+            optional2.setVisibility(View.GONE);
+
+            if (values[5].substring(values[5].length()-1).equals("E")){
+                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+                optionalB1.setText("x4");
+                optionalB2.setText("x4");
+                optionalB3.setText("x4");
+            }else{
+                optionalOne.setText(values[5]);
+                optionalB1.setText("x7-10");
+                optionalB2.setText("x7-10");
+                optionalB3.setText("x7-10");
+            }
+        }else{
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
+                optionalB1.setText("x4");
+                optionalB2.setText("x4");
+                optionalB3.setText("x4");
+            }else{
+                optionalOne.setText(values[4]);
+                optionalB1.setText("x7-10");
+                optionalB2.setText("x7-10");
+                optionalB3.setText("x7-10");
+            }
+            if (values[5].substring(values[5].length()-1).equals("E")){
+                optionalTwo.setText(values[5].substring(0,values[5].length()-1));
+                optionalB4.setText("x4");
+                optionalB5.setText("x4");
+                optionalB6.setText("x4");
+            }else{
+                optionalTwo.setText(values[5]);
+                optionalB4.setText("x7-10");
+                optionalB5.setText("x7-10");
+                optionalB6.setText("x7-10");
+            }
+        }
+
         return infoTab;
     }
     public String[] readFromFile(File file){
