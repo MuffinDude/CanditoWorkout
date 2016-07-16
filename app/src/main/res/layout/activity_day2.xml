@@ -92,14 +92,15 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:id="@+id/accessory1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/barbell_row"
-                    android:id="@+id/accessory1"
+                    android:id="@+id/accessoryOne"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -107,7 +108,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory1"
+                    android:layout_below="@+id/accessoryOne"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout">
 
@@ -173,14 +174,15 @@
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
-                android:elevation="5dp" >
+                android:elevation="5dp"
+                android:id="@+id/accessory2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/standing_dumbell_ohp"
-                    android:id="@+id/accessory2"
+                    android:id="@+id/accessoryTwo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -188,7 +190,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory2"
+                    android:layout_below="@+id/accessoryTwo"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout4" >
 
@@ -252,14 +254,15 @@
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
-                android:elevation="5dp" >
+                android:elevation="5dp"
+                android:id="@+id/accessory3">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/lat_pulldown"
-                    android:id="@+id/accessory3"
+                    android:id="@+id/accessoryThree"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
@@ -267,7 +270,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessory3"
+                    android:layout_below="@+id/accessoryThree"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/relativeLayout5" >
 
@@ -333,7 +336,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
                 android:background="#898989"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:id="@+id/optional1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -401,7 +405,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
                 android:background="#898989"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:id="@+id/optional2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -476,24 +481,16 @@
                     android:text="STOPPER"
                     android:id="@+id/stopperButton"
                     android:layout_alignParentTop="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView55" />
+                    android:layout_alignParentStart="true" />
 
                 <Chronometer
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/chronometer"
                     android:layout_alignTop="@+id/stopperButton"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="AAAABBSS"
-                    android:id="@+id/textView55"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="5dp" />
             </RelativeLayout>
 
         </LinearLayout>

@@ -61,7 +61,7 @@ public class FirstOptionalLegs extends Fragment {
             @Override
             public void onClick(View view) {
                 registerForContextMenu(hypertrophy1);
-                openContextMenu(hypertrophy1);
+                getActivity().openContextMenu(hypertrophy1);
                 hypertrophy1.setBackgroundColor(0xFF3399ff);
                 explosiveness1.setBackgroundColor(0xFF000000);
                 explosiveness1.setText(R.string.explosiveness);
@@ -72,7 +72,7 @@ public class FirstOptionalLegs extends Fragment {
             @Override
             public void onClick(View view) {
                 registerForContextMenu(explosiveness1);
-                openContextMenu(explosiveness1);
+                getActivity().openContextMenu(explosiveness1);
                 explosiveness1.setBackgroundColor(0xFF3399ff);
                 hypertrophy1.setBackgroundColor(0xFF000000);
                 hypertrophy1.setText(R.string.hypertrophy);
@@ -84,7 +84,7 @@ public class FirstOptionalLegs extends Fragment {
             @Override
             public void onClick(View view) {
                 registerForContextMenu(hypertrophy2);
-                openContextMenu(hypertrophy2);
+                getActivity().openContextMenu(hypertrophy2);
                 hypertrophy2.setBackgroundColor(0xFF3399ff);
                 explosiveness2.setBackgroundColor(0xFF000000);
                 explosiveness2.setText(R.string.explosiveness);
@@ -95,7 +95,7 @@ public class FirstOptionalLegs extends Fragment {
             @Override
             public void onClick(View view) {
                 registerForContextMenu(explosiveness2);
-                openContextMenu(explosiveness2);
+                getActivity().openContextMenu(explosiveness2);
                 explosiveness2.setBackgroundColor(0xFF3399ff);
                 hypertrophy2.setBackgroundColor(0xFF000000);
                 hypertrophy2.setText(R.string.hypertrophy);
