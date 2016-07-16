@@ -35,119 +35,139 @@
                 android:background="#5c5c5c"
                 android:elevation="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Squat"
-                    android:id="@+id/textView8"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView8"
-                    android:id="@+id/linearLayout2">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Warm"
-                        android:id="@+id/button17"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="55 x MR10"
-                        android:id="@+id/squatText1"
-                        android:layout_weight="1" />
-
-                </LinearLayout>
-
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/linearLayout2"
-                    android:layout_toStartOf="@+id/textView8"
-                    android:layout_alignParentEnd="true">
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Squat"
+                        android:id="@+id/textView8"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center" />
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal">
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView8"
+                        android:id="@+id/linearLayout2">
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat1"
+                            android:text="Warm"
+                            android:id="@+id/button17"
                             android:layout_weight="1" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat2"
+                            android:text="55 x MR10"
+                            android:id="@+id/squatText1"
                             android:layout_weight="1" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat3"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat4"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat5"
-                            android:layout_weight="1" />
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Extra Volume Squats - Add 5 lbs or 2.5 kg if using kg plates, then perform 5 sets x 3 reps each set with 60 seconds rest between sets."
+                        android:text="How many reps did you complete?"
                         android:id="@+id/textView6"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/completedReps"
+                            android:layout_weight="1"
+                            android:text="10"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center_horizontal" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate"
+                            android:id="@+id/calculateButton"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_below="@+id/linearLayout2"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="5dp" />
+                        android:layout_toStartOf="@+id/textView8"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/backoffSets">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat1"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat2"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat3"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat4"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat5"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Note - If you were not able to complete a minimum of 8 reps on the MR10 set, reduce max entered by 2.5% moving forward"
-                        android:id="@+id/textView15"
+                        android:id="@+id/failureText"
                         android:layout_marginBottom="5dp" />
-
                 </LinearLayout>
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/infoButton"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:src="@android:drawable/ic_menu_info_details" />
 
             </RelativeLayout>
 
@@ -169,50 +189,124 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp" />
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/accessoryOne"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/relativeLayout">
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/accessoryOne">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true">
+                        android:layout_below="@+id/accessoryOne"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/relativeLayout">
 
-                        <Button
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Warm"
-                            android:id="@+id/button8"
-                            android:layout_weight="1" />
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true">
 
-                        <Button
-                            android:layout_width="wrap_content"
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Warm"
+                                android:id="@+id/button8"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/deadText1"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/deadText2"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x8"
+                                android:id="@+id/deadText3"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accessoryOne"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/relativeLayout3" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="x8 (Deficit)"
-                            android:id="@+id/deadText1"
-                            android:layout_weight="1" />
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" >
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8 (Sumo)"
-                            android:id="@+id/deadText2"
-                            android:layout_weight="1" />
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Variations"
+                                android:id="@+id/button63"
+                                android:layout_weight="0" />
 
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x8 (Snatch)"
-                            android:id="@+id/deadText3"
-                            android:layout_weight="1" />
-                    </LinearLayout>
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/horizontalScrollView4"
+                                android:layout_weight="1" >
 
-                </RelativeLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Snatch"
+                                        android:id="@+id/button65"
+                                        android:layout_weight="1" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Deficit"
+                                        android:id="@+id/button64"
+                                        android:layout_weight="1" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Trap"
+                                        android:id="@+id/button67"
+                                        android:layout_weight="1" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sumo"
+                                        android:id="@+id/button66"
+                                        android:layout_weight="1" />
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -349,24 +443,16 @@
                     android:text="STOPPER"
                     android:id="@+id/stopperButton"
                     android:layout_alignParentTop="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView55" />
+                    android:layout_alignParentStart="true" />
 
                 <Chronometer
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/chronometer"
                     android:layout_alignTop="@+id/stopperButton"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="AAAABBSS"
-                    android:id="@+id/textView55"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="5dp" />
             </RelativeLayout>
 
         </LinearLayout>

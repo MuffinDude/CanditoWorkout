@@ -78,87 +78,35 @@
                     android:layout_toStartOf="@+id/textView8"
                     android:layout_alignParentEnd="true">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal" >
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat1"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat2"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat3"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat4"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat5"
-                            android:layout_weight="1" />
-                    </LinearLayout>
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="How many reps did you complete?"
+                        android:id="@+id/textView16"
+                        android:layout_gravity="center" />
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal" >
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/completedReps"
+                            android:layout_weight="1"
+                            android:text="10"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center_horizontal" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat6"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat7"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat8"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat9"
-                            android:layout_weight="1" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="55 x3"
-                            android:id="@+id/squat10"
+                            android:text="Calculate"
+                            android:id="@+id/calculateButton"
                             android:layout_weight="1" />
                     </LinearLayout>
 
@@ -166,45 +114,101 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Back Off Squats - Reduce weight by 10 lbs or 5 kg if using kg plates.  Then proceed with the following:"
-                        android:id="@+id/textView6"
-                        android:layout_below="@+id/linearLayout2"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="- If you were able to complete 10 reps on the MR10 set, perform 10 sets of 3 reps per set, with 60 seconds rest between sets."
-                        android:id="@+id/textView15"
-                        android:layout_marginBottom="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="- If you completed 8-9 reps on the MR10 set, perform 8 sets of 3 reps per set, with 60 seconds rest between sets."
-                        android:id="@+id/textView16" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="- If you completed 7 reps on the MR 10 set, perform 5 sets of 3 reps per set, with 60 seconds rest between sets."
-                        android:id="@+id/textView17"
+                        android:id="@+id/failureText"
                         android:layout_gravity="center_horizontal" />
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/backoffSets">
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/infoButton"
-                    android:src="@android:drawable/ic_menu_info_details"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat1"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat2"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat3"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat4"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat5"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat6"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat7"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat8"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat9"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="55 x3"
+                                android:id="@+id/squat10"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </RelativeLayout>
 

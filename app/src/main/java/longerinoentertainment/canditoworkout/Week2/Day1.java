@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -27,7 +30,11 @@ public class Day1 extends Fragment {
     Button sqt4;
     Button sqt5;
     ImageButton info;
-    Button stopper;
+    RelativeLayout optional1;
+    RelativeLayout optional2;
+    TextView optionalOne, optionalTwo, failureText, repsMade;
+    LinearLayout backoffSets;
+    Button stopper, calculate;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
 
@@ -41,8 +48,26 @@ public class Day1 extends Fragment {
         sqt3 = (Button) infoTab.findViewById(R.id.squat3);
         sqt4 = (Button) infoTab.findViewById(R.id.squat4);
         sqt5 = (Button) infoTab.findViewById(R.id.squat5);
+        optional1 = (RelativeLayout) infoTab.findViewById(R.id.optional1);
+        optional2 = (RelativeLayout) infoTab.findViewById(R.id.optional2);
+        optionalOne = (TextView) infoTab.findViewById(R.id.optionalOne);
+        optionalTwo = (TextView) infoTab.findViewById(R.id.optionalTwo);
+        Button optionalB1 = (Button) infoTab.findViewById(R.id.button23);
+        Button optionalB2 = (Button) infoTab.findViewById(R.id.button24);
+        Button optionalB3 = (Button) infoTab.findViewById(R.id.button25);
+        Button optionalB4 = (Button) infoTab.findViewById(R.id.button27);
+        Button optionalB5 = (Button) infoTab.findViewById(R.id.button28);
+        Button optionalB6 = (Button) infoTab.findViewById(R.id.button30);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        calculate = (Button) infoTab.findViewById(R.id.calculateButton);
+        repsMade = (TextView) infoTab.findViewById(R.id.completedReps);
+        backoffSets = (LinearLayout) infoTab.findViewById(R.id.backoffSets);
+        failureText = (TextView) infoTab.findViewById(R.id.failureText);
+
+        backoffSets.setVisibility(View.GONE);
+        failureText.setVisibility(View.GONE);
+
         stopper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,14 +105,6 @@ public class Day1 extends Fragment {
                 sqt5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
-        info = (ImageButton) infoTab.findViewById(R.id.infoButton);
-        info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "Still complete the 5 sets of 3 reps regardless even if you do perform less than 8 reps on the MR10 set", Toast.LENGTH_LONG).show();
-            }
-        });
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
@@ -95,6 +112,71 @@ public class Day1 extends Fragment {
         readFromFile(file);
 
         double squatNumber = round(values[1]);
+
+        final double failureNumber = squatNumber*0.025;
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String gottenReps = repsMade.getText().toString();
+                int repCount;
+                if (gottenReps.equals("")){
+                    repCount=0;
+                    repsMade.setText("0");
+                }else{
+                    repCount= Integer.parseInt(gottenReps);
+                }
+                if (repCount >=8){
+                    backoffSets.setVisibility(View.VISIBLE);
+                    failureText.setVisibility(View.GONE);
+                }else{
+                    failureText.setVisibility(View.VISIBLE);
+                    backoffSets.setVisibility(View.VISIBLE);
+                    failureText.setText("Reduce the max Squat in the Settings by " + failureNumber + " and continue.");
+                }
+            }
+        });
+
+        if (values[4].equals("None")){
+            optional1.setVisibility(View.GONE);
+            optional2.setVisibility(View.GONE);
+        }else if (values[5].equals("None")){
+            optional2.setVisibility(View.GONE);
+
+            if (values[5].substring(values[5].length()-1).equals("E")){
+                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+                optionalB1.setText("x4");
+                optionalB2.setText("x4");
+                optionalB3.setText("x4");
+            }else{
+                optionalOne.setText(values[5]);
+                optionalB1.setText("x7-10");
+                optionalB2.setText("x7-10");
+                optionalB3.setText("x7-10");
+            }
+        }else{
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
+                optionalB1.setText("x4");
+                optionalB2.setText("x4");
+                optionalB3.setText("x4");
+            }else{
+                optionalOne.setText(values[4]);
+                optionalB1.setText("x7-10");
+                optionalB2.setText("x7-10");
+                optionalB3.setText("x7-10");
+            }
+            if (values[5].substring(values[5].length()-1).equals("E")){
+                optionalTwo.setText(values[5].substring(0,values[5].length()-1));
+                optionalB4.setText("x4");
+                optionalB5.setText("x4");
+                optionalB6.setText("x4");
+            }else{
+                optionalTwo.setText(values[5]);
+                optionalB4.setText("x7-10");
+                optionalB5.setText("x7-10");
+                optionalB6.setText("x7-10");
+            }
+        }
 
         String squatText = Double.toString(squatNumber) + "x10MR";
         String squatTextSixty = Double.toString(squatNumber + 2.5) + "x3";
