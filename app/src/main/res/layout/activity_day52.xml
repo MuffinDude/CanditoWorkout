@@ -70,8 +70,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp">
+                android:background="#727272"
+                android:elevation="5dp"
+                android:id="@+id/accessory1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -128,6 +129,15 @@
 
                 </RelativeLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView93"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -135,8 +145,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp" >
+                android:background="#727272"
+                android:elevation="5dp"
+                android:id="@+id/accessory2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -191,6 +202,15 @@
                             android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView94"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -198,8 +218,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp" >
+                android:background="#727272"
+                android:elevation="5dp"
+                android:id="@+id/accessory3">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -254,6 +275,15 @@
                             android:layout_weight="1" />
                     </LinearLayout>
                 </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="accessory"
+                    android:id="@+id/textView97"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -263,8 +293,9 @@
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp">
+                android:background="#898989"
+                android:elevation="5dp"
+                android:id="@+id/optional1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -313,6 +344,15 @@
                         android:text="x8-12" />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="optional"
+                    android:id="@+id/textView95"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -322,8 +362,9 @@
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:background="#5c5c5c"
-                android:elevation="5dp">
+                android:background="#898989"
+                android:elevation="5dp"
+                android:id="@+id/optional2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -372,6 +413,15 @@
                         android:text="x8-12" />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="optional"
+                    android:id="@+id/textView96"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 

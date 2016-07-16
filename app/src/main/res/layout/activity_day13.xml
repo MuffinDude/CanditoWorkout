@@ -141,7 +141,9 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="No Accessory Lifts"
-                android:id="@+id/textView65" />
+                android:id="@+id/textView65"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
