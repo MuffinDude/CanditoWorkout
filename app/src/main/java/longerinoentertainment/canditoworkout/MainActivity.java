@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
 // TODO: 15.07.2016 check text file and if yes or no transfer to FIRSTPAGE
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
+        final File file = new File(dir, "savedFile.txt");
 
-        if(dir.exists() && !dir.isDirectory()) {
+        if(!file.exists()) {
             Intent i = new Intent(this, FirstTime.class);
             startActivity(i);
             System.out.println("FILE DOESN't ECXISTS");

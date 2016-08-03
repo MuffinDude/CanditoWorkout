@@ -56,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="EX1"
+                    android:text="Ex1"
                     android:id="@+id/textView80"
                     android:layout_gravity="center_horizontal" />
 
@@ -67,17 +67,26 @@
                     android:id="@+id/noneBox"
                     android:checked="false" />
 
-                <Button
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hypertrophy"
-                    android:id="@+id/hypertrophyButton1" />
+                    android:layout_gravity="center_horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Explosiveness"
-                    android:id="@+id/explosivenessButton1" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hypertrophy"
+                        android:id="@+id/hypertrophyButton1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Explosiveness"
+                        android:id="@+id/explosivenessButton1"
+                        android:layout_weight="1" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -93,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="ex2"
+                    android:text="Ex2"
                     android:id="@+id/textView82"
                     android:layout_gravity="center_horizontal" />
 
@@ -104,29 +113,30 @@
                     android:id="@+id/noneBox2"
                     android:checked="false" />
 
-                <Button
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hypertrophy"
-                    android:id="@+id/hypertrophyButton2" />
+                    android:layout_gravity="center_horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Explosiveness"
-                    android:id="@+id/explosivenessButton2" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hypertrophy"
+                        android:id="@+id/hypertrophyButton2"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Explosiveness"
+                        android:id="@+id/explosivenessButton2"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:id="@+id/saveButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
