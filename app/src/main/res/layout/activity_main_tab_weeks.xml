@@ -10,7 +10,7 @@
     tools:context="longerinoentertainment.canditoworkout.MainTabWeeks">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView6" >
 
@@ -26,7 +26,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
                 android:padding="15dp">
 
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
                 android:padding="15dp">
 
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
                 android:padding="15dp">
 
@@ -106,7 +106,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
                 android:padding="15dp">
 
@@ -132,7 +132,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
                 android:padding="15dp">
 
@@ -158,7 +158,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#c8c8c8"
+                android:background="#5c5c5c"
                 android:padding="15dp">
 
                 <TextView

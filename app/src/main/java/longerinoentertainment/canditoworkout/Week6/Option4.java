@@ -69,11 +69,11 @@ public class Option4 extends Fragment {
             public void onClick(View view) {
                 DecimalFormat oneDigit = new DecimalFormat("#,##0.0");//format to 1 decimal place
                 int squatCalculate = Integer.parseInt(squatTimes.getText().toString());
-                int squatOldInt = Integer.parseInt(String.valueOf(squatOld.getText()));
+                double squatOldInt = Double.parseDouble(String.valueOf(squatOld.getText()));
                 int deadCalculate = Integer.parseInt(deadTimes.getText().toString());
-                int deadOldInt = Integer.parseInt(String.valueOf(deadOld.getText()));
+                double deadOldInt = Double.parseDouble(String.valueOf(deadOld.getText()));
                 int benchCalculate = Integer.parseInt(benchTimes.getText().toString());
-                int benchOldInt = Integer.parseInt(String.valueOf(benchOld.getText()));
+                double benchOldInt = Double.parseDouble(String.valueOf(benchOld.getText()));
 
                 if (squatCalculate == 2) squatNew.setText(Double.toString(Double.valueOf(oneDigit.format(squatOldInt*1.03))));
                 if (squatCalculate == 3) squatNew.setText(Double.toString(Double.valueOf(oneDigit.format(squatOldInt*1.06))));

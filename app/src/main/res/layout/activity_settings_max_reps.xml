@@ -45,7 +45,8 @@
                         android:layout_below="@+id/textView3"
                         android:layout_alignParentStart="true"
                         android:layout_marginBottom="15dp"
-                        android:layout_column="0" />
+                        android:layout_column="0"
+                        android:textAlignment="center" />
                 </TableRow>
 
                 <TableRow
@@ -133,33 +134,6 @@
                 </TableRow>
 
             </TableLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Weights are in"
-                android:id="@+id/textView84"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="15dp" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/weightSwitch"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_alignTop="@+id/textView84"
-                android:layout_marginStart="46dp"
-                android:textOff="KG"
-                android:textOn="LBS"
-                android:checked="false"
-                android:layout_alignParentEnd="true"
-                android:textSize="30dp"
-                android:switchPadding="20dp"
-                android:showText="true"
-                android:singleLine="false"
-                android:splitTrack="true"
-                android:nestedScrollingEnabled="false" />
 
         </LinearLayout>
     </ScrollView>

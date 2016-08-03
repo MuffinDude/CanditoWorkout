@@ -12,18 +12,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Skip week 6. Go to winnings page, insert your scores and start it all over again"
-        android:id="@+id/textView45"
-        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="OPTION 1"
+        android:id="@+id/textView58"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="OPTION 1"
-        android:id="@+id/textView58"
-        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Skip week 6"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView58" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Insert your scores and start it over again"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
