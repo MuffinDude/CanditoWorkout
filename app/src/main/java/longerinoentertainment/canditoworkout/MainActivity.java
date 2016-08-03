@@ -54,12 +54,11 @@ public class MainActivity extends AppCompatActivity {
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
 
         if(dir.exists() && !dir.isDirectory()) {
-
-            System.out.println("FILE DOES ECXISTS");
-        }else{
             Intent i = new Intent(this, FirstTime.class);
             startActivity(i);
             System.out.println("FILE DOESN't ECXISTS");
+        }else{
+            System.out.println("FILE DOES ECXISTS");
 
         }
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());

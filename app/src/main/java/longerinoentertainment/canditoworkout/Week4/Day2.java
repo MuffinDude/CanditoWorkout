@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,6 +25,13 @@ public class Day2  extends Fragment {
     Button bench2;
     Button bench3;
     Button stopper;
+    RelativeLayout optional1;
+    RelativeLayout optional2;
+    TextView optionalOne;
+    TextView optionalTwo;
+    TextView accessoryOne;
+    TextView accessoryTwo;
+    TextView accessoryThree;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
 
@@ -35,6 +44,13 @@ public class Day2  extends Fragment {
         bench3 = (Button) infoTab.findViewById(R.id.benchText3);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
+        optional1 = (RelativeLayout) infoTab.findViewById(R.id.optional1);
+        optional2 = (RelativeLayout) infoTab.findViewById(R.id.optional2);
+        optionalOne = (TextView) infoTab.findViewById(R.id.optionalOne);
+        optionalTwo = (TextView) infoTab.findViewById(R.id.optionalTwo);
+        accessoryOne = (TextView) infoTab.findViewById(R.id.accessoryOne);
+        accessoryTwo = (TextView) infoTab.findViewById(R.id.accessoryTwo);
+        accessoryThree = (TextView) infoTab.findViewById(R.id.accessoryThree);
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
@@ -57,6 +73,21 @@ public class Day2  extends Fragment {
                 chronometer.start();
             }
         });
+
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
+
+        if (values[9].equals("None")){
+            optional1.setVisibility(View.GONE);
+            optional2.setVisibility(View.GONE);
+        }else if(values[10].equals("None")){
+            optional2.setVisibility(View.GONE);
+            optionalOne.setText(values[9]);
+        }else {
+            optionalOne.setText(values[9]);
+            optionalTwo.setText(values[10]);
+        }
 
         return infoTab;
     }
