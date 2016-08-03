@@ -42,7 +42,8 @@ public class FirstMaxReps extends Fragment {
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
 
-        final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+        File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+        dir.mkdirs();
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         bench.setText(values[0], TextView.BufferType.EDITABLE);
         squat.setText(values[1], TextView.BufferType.EDITABLE);
@@ -89,12 +90,11 @@ public class FirstMaxReps extends Fragment {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
                 Log.d("MyFragment", "Not visible anymore.  Saving data.");
-                final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
-                final File file = new File(dir, "savedFile.txt");
+                File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
+                File file = new File(dir, "savedFile.txt");
 
                 Editable benchText = bench.getText();
                 String bench = benchText.toString();
-                //kui nümbrid ei ole korras siis epab -1 kirjutamisel võtma ja pärast +1 lisama doe
                 String benchString = String.valueOf(Double.parseDouble(bench));
                 String squatString = String.valueOf(squat.getText());
                 String deadString = String.valueOf(deadlift.getText());

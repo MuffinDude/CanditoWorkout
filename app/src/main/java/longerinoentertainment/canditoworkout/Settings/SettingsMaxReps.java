@@ -34,6 +34,7 @@ public class SettingsMaxReps extends AppCompatActivity {
         deadlift = (EditText) findViewById(R.id.deadText);
 
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
+        dir.mkdirs();
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         bench.setText(values[0], TextView.BufferType.EDITABLE);
         squat.setText(values[1], TextView.BufferType.EDITABLE);
@@ -47,7 +48,6 @@ public class SettingsMaxReps extends AppCompatActivity {
 
                 Editable benchText = bench.getText();
                 String bench = benchText.toString();
-                //kui nümbrid ei ole korras siis epab -1 kirjutamisel võtma ja pärast +1 lisama doe
                 String benchString = String.valueOf(Double.parseDouble(bench));
                 String squatString = String.valueOf(squat.getText());
                 String deadString = String.valueOf(deadlift.getText());
