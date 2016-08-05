@@ -75,13 +75,13 @@ public class Day4 extends Fragment {
         }else if (values[5].equals("None")){
             optional2.setVisibility(View.GONE);
 
-            if (values[5].substring(values[5].length()-1).equals("E")){
-                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
                 optionalB1.setText("x4");
                 optionalB2.setText("x4");
                 optionalB3.setText("x4");
             }else{
-                optionalOne.setText(values[5]);
+                optionalOne.setText(values[4]);
                 optionalB1.setText("x7-10");
                 optionalB2.setText("x7-10");
                 optionalB3.setText("x7-10");
@@ -111,7 +111,7 @@ public class Day4 extends Fragment {
             }
         }
 
-        double deadNumber = round(values[2])-2.5;
+        double deadNumber = round(values[2]);
         double squatNumber = round(values[1]);
 
         String deadText = Double.toString(deadNumber)+ " x8";

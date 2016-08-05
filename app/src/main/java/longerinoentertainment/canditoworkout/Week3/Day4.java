@@ -46,7 +46,7 @@ public class Day4 extends Fragment {
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        double benchNumber1 = round(values[0])+10;
+        double benchNumber1 = round(values[0])+2.5;
 
         String benchText = Double.toString(benchNumber1) + " x4-6";
         bench1.setText(benchText);
@@ -84,7 +84,7 @@ public class Day4 extends Fragment {
         return values;
     }
     public static double round(String valueString) {
-        double value = Math.floor(Math.floor(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
+        double value = Math.floor(Math.floor(Double.parseDouble(valueString)/2.5)*2.5 * 0.85/2.5)*2.5;
         return value;
     }
 }

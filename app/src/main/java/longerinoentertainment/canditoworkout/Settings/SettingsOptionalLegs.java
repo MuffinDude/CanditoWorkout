@@ -149,9 +149,7 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: 22.06.2016 saves all the stuff and work better
                 final File file = new File(dir, "savedFile.txt");
-
                 String ex1,ex2;
                 if (numero[0]== 1){
                     ex1= (String) hypertrophy1.getText();

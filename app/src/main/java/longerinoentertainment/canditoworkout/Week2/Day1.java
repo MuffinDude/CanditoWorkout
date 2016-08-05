@@ -142,13 +142,13 @@ public class Day1 extends Fragment {
         }else if (values[5].equals("None")){
             optional2.setVisibility(View.GONE);
 
-            if (values[5].substring(values[5].length()-1).equals("E")){
-                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
                 optionalB1.setText("x4");
                 optionalB2.setText("x4");
                 optionalB3.setText("x4");
             }else{
-                optionalOne.setText(values[5]);
+                optionalOne.setText(values[4]);
                 optionalB1.setText("x7-10");
                 optionalB2.setText("x7-10");
                 optionalB3.setText("x7-10");

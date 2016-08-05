@@ -41,6 +41,8 @@ public class Day1 extends Fragment {
         dead1 = (Button) infoTab.findViewById(R.id.deadText1);
         dead2 = (Button) infoTab.findViewById(R.id.deadText2);
         dead3 = (Button) infoTab.findViewById(R.id.deadText3);
+        stopper = (Button) infoTab.findViewById(R.id.stopperButton);
+        chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
         optional1 = (RelativeLayout) infoTab.findViewById(R.id.optional1);
         optional2 = (RelativeLayout) infoTab.findViewById(R.id.optional2);
         optionalOne = (TextView) infoTab.findViewById(R.id.optionalOne);
@@ -69,19 +71,27 @@ public class Day1 extends Fragment {
         dead2.setText(deadText2);
         dead3.setText(deadText3);
 
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
+
         if (values[4].equals("None")){
             optional1.setVisibility(View.GONE);
             optional2.setVisibility(View.GONE);
         }else if (values[5].equals("None")){
             optional2.setVisibility(View.GONE);
 
-            if (values[5].substring(values[5].length()-1).equals("E")){
-                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
                 optionalB1.setText("x4");
                 optionalB2.setText("x4");
                 optionalB3.setText("x4");
             }else{
-                optionalOne.setText(values[5]);
+                optionalOne.setText(values[4]);
                 optionalB1.setText("x7-10");
                 optionalB2.setText("x7-10");
                 optionalB3.setText("x7-10");

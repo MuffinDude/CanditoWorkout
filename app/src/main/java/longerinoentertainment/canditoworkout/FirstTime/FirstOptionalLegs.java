@@ -381,14 +381,14 @@ public class FirstOptionalLegs extends Fragment {
                 } else if (numero[0] == 0){
                     ex1="None";
                 }else{
-                    ex1= (String) explosiveness1.getText();
+                    ex1= (String) explosiveness1.getText() + "E";
                 }
                 if (numero[1]==1){
                     ex2 = (String) hypertrophy2.getText();
                 }else if (numero[1]==0){
                     ex2="None";
                 }else{
-                    ex2 = (String) explosiveness2.getText();
+                    ex2 = (String) explosiveness2.getText() + "E";
                 }
                 try {
                     updateLine(file, ex1, ex2);

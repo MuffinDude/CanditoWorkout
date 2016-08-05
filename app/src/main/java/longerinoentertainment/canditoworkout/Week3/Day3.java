@@ -40,7 +40,7 @@ public class Day3 extends Fragment {
                 chronometer.start();
             }
         });
-        double squatNumber = round(values[1])+10;
+        double squatNumber = round(values[1])+7.5;
 
         String squatText = Double.toString(squatNumber) + " x4-6";
         squat1.setText(squatText);

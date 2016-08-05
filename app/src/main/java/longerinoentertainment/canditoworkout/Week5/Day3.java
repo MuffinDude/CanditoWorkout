@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week5;
 
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,13 +63,13 @@ public class Day3 extends Fragment {
         }else if (values[5].equals("None")){
             optional2.setVisibility(View.GONE);
 
-            if (values[5].substring(values[5].length()-1).equals("E")){
-                optionalOne.setText(values[5].substring(0,values[5].length()-1));
+            if (values[4].substring(values[4].length()-1).equals("E")){
+                optionalOne.setText(values[4].substring(0,values[4].length()-1));
                 optionalB1.setText("x4");
                 optionalB2.setText("x4");
                 optionalB3.setText("x4");
             }else{
-                optionalOne.setText(values[5]);
+                optionalOne.setText(values[4]);
                 optionalB1.setText("x7-10");
                 optionalB2.setText("x7-10");
                 optionalB3.setText("x7-10");
@@ -97,6 +98,14 @@ public class Day3 extends Fragment {
                 optionalB6.setText("x7-10");
             }
         }
+
+        stopper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+            }
+        });
 
         return infoTab;
     }

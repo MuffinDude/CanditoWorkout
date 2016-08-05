@@ -28,14 +28,12 @@
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentBottom="false"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentLeft="false"
             android:layout_alignWithParentIfMissing="false"
-            android:layout_alignParentRight="false"
-            android:layout_centerInParent="true">
+            android:id="@+id/tableLayout4"
+            android:layout_below="@+id/textView79"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -96,6 +94,47 @@
             </TableRow>
 
         </TableLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tableLayout4"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Additional Info"
+                android:id="@+id/textView47"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="MR = Max Reps"
+                android:id="@+id/textView49" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="MR10 = Max Reps but no more than 10"
+                android:id="@+id/textView50" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="If you ever fail a required rep, reduce your max by 2.5%"
+                android:id="@+id/textView55" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 </RelativeLayout>
