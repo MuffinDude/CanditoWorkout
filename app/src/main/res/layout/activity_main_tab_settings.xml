@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="longerinoentertainment.canditoworkout.MainTabSettings">
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,40 +21,81 @@
             android:text="Change Settings"
             android:id="@+id/textView79"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Max Rep Weights and Units"
-            android:id="@+id/maxRepsButton"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
 
-        <Button
+        <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Accessory Exercises"
-            android:id="@+id/accessoryButton"
-            android:layout_below="@+id/maxRepsButton"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true">
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Optional Exercises  (ARMS)"
-            android:id="@+id/optionalArmsButton"
-            android:layout_below="@+id/accessoryButton"
-            android:layout_alignParentStart="true" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Optional Exercises  (LEGS)"
-            android:id="@+id/optionalLegsButton"
-            android:layout_below="@+id/accessoryButton"
-            android:layout_alignParentStart="true" />
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Max Rep Weights and Units"
+                    android:id="@+id/maxRepsButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:paddingBottom="50dp"
+                    android:paddingTop="50dp"
+                    android:elevation="5dp" />
 
-    </LinearLayout>
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Accessory Exercises For Arms"
+                    android:id="@+id/accessoryButton"
+                    android:layout_below="@+id/maxRepsButton"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:elevation="5dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Optional Exercises  (LEGS)"
+                    android:id="@+id/optionalLegsButton"
+                    android:layout_below="@+id/accessoryButton"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:paddingBottom="50dp"
+                    android:paddingTop="50dp"
+                    android:elevation="5dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Optional Exercises  (ARMS)"
+                    android:id="@+id/optionalArmsButton"
+                    android:layout_below="@+id/accessoryButton"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:elevation="5dp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
 </RelativeLayout>

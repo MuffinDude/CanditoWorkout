@@ -7,43 +7,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="longerinoentertainment.canditoworkout.FirstTime.EndingPage">
+    tools:context="longerinoentertainment.canditoworkout.FirstTime.EndingPage"
+    android:background="#00ffffff">
 
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:id="@+id/finishButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="press button to finish this shit up"
-            android:id="@+id/textView64"
-            android:layout_marginLeft="0dp"
-            android:layout_above="@+id/finishButton"
-            android:layout_centerHorizontal="true" />
+            android:text="If you are finished then just press the button down below. Everything is changeable later on from the settings menu so you don&apos;t have to worry if you want to change the weights or optional exercises."
+            android:id="@+id/textView45"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:textAlignment="center" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Everything is changeable from the settings menu later on so don&apos;t worry about fucking up"
-            android:id="@+id/textView63"
-            android:layout_marginLeft="0dp"
-            android:layout_alignParentTop="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="PS. This isn&apos;t the official app and was done by 2 college students who just didn&apos;t like to use excel on their mobile phones"
+            android:id="@+id/textView46"
+            android:layout_below="@+id/textView45"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="29dp" />
+            android:layout_margin="20dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Continue"
-            android:id="@+id/finishButton"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="292dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </RelativeLayout>

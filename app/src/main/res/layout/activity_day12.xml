@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="How many reps did you complete?"
+                        android:text="How many reps did you complete out of 10?"
                         android:id="@+id/textView6"
                         android:layout_gravity="center" />
 

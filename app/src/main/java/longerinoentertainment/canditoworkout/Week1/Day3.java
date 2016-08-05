@@ -64,10 +64,10 @@ public class Day3 extends Fragment {
         double benchNumber3 = round(0.75, values[0]);
         double benchNumber4 = round(0.775, values[0]);
 
-        String benchText1 = Double.toString(benchNumber1) + "x10";
-        String benchText2 = Double.toString(benchNumber2) + "x10";
-        String benchText3 = Double.toString(benchNumber3) + "x8";
-        String benchText4 = Double.toString(benchNumber4) + "x6";
+        String benchText1 = Double.toString(benchNumber1) + " x10";
+        String benchText2 = Double.toString(benchNumber2) + " x10";
+        String benchText3 = Double.toString(benchNumber3) + " x8";
+        String benchText4 = Double.toString(benchNumber4) + " x6";
         bench1.setText(benchText1);
         bench2.setText(benchText2);
         bench3.setText(benchText3);

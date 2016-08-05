@@ -108,8 +108,8 @@ public class Day1 extends Fragment {
                 optionalB6.setText("x7-10");
             }
         }
-        String deadText = Double.toString(deadNumber)+ "x6";
-        String squatText = Double.toString(squatNumber) + "x6";
+        String deadText = Double.toString(deadNumber)+ " x6";
+        String squatText = Double.toString(squatNumber) + " x6";
         squat1.setText(squatText);
         squat2.setText(squatText);
         squat3.setText(squatText);

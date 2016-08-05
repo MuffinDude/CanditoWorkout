@@ -12,27 +12,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="OPTION 3"
-        android:id="@+id/textView60"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Take a week to find actual One Rep Max"
+        android:text="1. Take a week to find your actual One Rep Max"
         android:id="@+id/textView9"
-        android:layout_below="@+id/textView60"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Then start the cycle again"
+        android:text="2. Then start the cycle after inserting your actual Max in the settings menu"
         android:id="@+id/textView11"
         android:layout_below="@+id/textView9"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp" />
 </RelativeLayout>

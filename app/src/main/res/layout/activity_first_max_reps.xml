@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="longerinoentertainment.canditoworkout.FirstTime.FirstMaxReps">
+    tools:context="longerinoentertainment.canditoworkout.FirstTime.FirstMaxReps"
+    android:background="#00ffffff">
 
     <LinearLayout
         android:orientation="vertical"
@@ -43,7 +44,8 @@
                     android:layout_column="0"
                     android:typeface="normal"
                     android:textColor="#ebfeff"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:background="#00ffffff" />
             </TableRow>
 
             <TableRow
@@ -69,7 +71,9 @@
                     android:text="100"
                     android:gravity="right"
                     android:background="#00ffffff"
-                    android:inputType="number|numberDecimal" />
+                    android:inputType="number|numberDecimal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp" />
             </TableRow>
 
             <TableRow
@@ -95,7 +99,9 @@
                     android:layout_column="1"
                     android:text="100"
                     android:gravity="right"
-                    android:background="#00ffffff" />
+                    android:background="#00ffffff"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp" />
             </TableRow>
 
             <TableRow
@@ -121,7 +127,9 @@
                     android:text="100"
                     android:gravity="right"
                     android:singleLine="false"
-                    android:background="#00ffffff" />
+                    android:background="#00ffffff"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp" />
             </TableRow>
 
             <TableRow

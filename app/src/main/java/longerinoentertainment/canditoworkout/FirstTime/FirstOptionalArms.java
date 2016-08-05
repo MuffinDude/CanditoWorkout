@@ -24,6 +24,7 @@ import longerinoentertainment.canditoworkout.R;
 public class FirstOptionalArms extends Fragment {
     private RadioGroup g1;
     private RadioGroup g2;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View beginnerTab = inflater.inflate(R.layout.activity_first_optional_arms, container, false);
@@ -91,7 +92,6 @@ public class FirstOptionalArms extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                Log.d("MyFragment", "Not visible anymore.  Saving data.");
                 final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
                 final File file = new File(dir, "savedFile.txt");
 
@@ -109,7 +109,6 @@ public class FirstOptionalArms extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -53,7 +53,7 @@ public class Day3 extends Fragment {
 
         double deadNumber = round(values[2]);
 
-        String deadText1 = Double.toString(deadNumber)+ "x1-4";
+        String deadText1 = Double.toString(deadNumber)+ " x1-4";
         dead1.setText(deadText1);
 
         if (values[4].equals("None")){

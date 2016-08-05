@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="longerinoentertainment.canditoworkout.FirstTime.FirstAccessoryExes">
+    tools:context="longerinoentertainment.canditoworkout.FirstTime.FirstAccessoryExes"
+    android:background="#7b5454">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -40,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Choose accessory exes"
+                        android:text="Choose accessory exercises"
                         android:id="@+id/textView73"
                         android:layout_above="@+id/AccessoryExes"
                         android:layout_alignParentStart="true"

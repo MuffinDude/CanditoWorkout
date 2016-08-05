@@ -42,7 +42,7 @@ public class Day3 extends Fragment {
         });
         double squatNumber = round(values[1])+10;
 
-        String squatText = Double.toString(squatNumber) + "x4-6";
+        String squatText = Double.toString(squatNumber) + " x4-6";
         squat1.setText(squatText);
         return infoTab;
     }

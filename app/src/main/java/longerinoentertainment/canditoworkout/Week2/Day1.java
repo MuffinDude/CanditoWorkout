@@ -178,8 +178,8 @@ public class Day1 extends Fragment {
             }
         }
 
-        String squatText = Double.toString(squatNumber) + "x10MR";
-        String squatTextSixty = Double.toString(squatNumber + 2.5) + "x3";
+        String squatText = Double.toString(squatNumber) + " x10MR";
+        String squatTextSixty = Double.toString(squatNumber + 2.5) + " x3";
         squat1.setText(squatText);
         sqt1.setText(squatTextSixty);
         sqt2.setText(squatTextSixty);

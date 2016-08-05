@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Muscular conditioning (Moderate Difficulty)"
+                    android:text="Muscular conditioning"
                     android:id="@+id/textView10"
                     android:layout_gravity="center_horizontal" />
 
@@ -61,8 +61,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Muscular conditioning / Hypertrophy (Higher Difficulty)"
-                    android:id="@+id/textView28" />
+                    android:text="Muscular conditioning / Hypertrophy"
+                    android:id="@+id/textView28"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -89,7 +91,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Linear Max OT Phase"
-                    android:id="@+id/textView29" />
+                    android:id="@+id/textView29"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -115,7 +118,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Heavy Weight Acclimation"
-                    android:id="@+id/textView30" />
+                    android:id="@+id/textView30"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -141,7 +145,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="High Intensity Strength"
-                    android:id="@+id/textView31" />
+                    android:id="@+id/textView31"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -166,7 +171,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="New Beginnings"
-                    android:id="@+id/textView33" />
+                    android:id="@+id/textView33"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
                     android:layout_width="match_parent"

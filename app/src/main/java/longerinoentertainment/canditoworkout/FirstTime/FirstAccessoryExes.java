@@ -109,7 +109,6 @@ public class FirstAccessoryExes extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
             }
         }
     }

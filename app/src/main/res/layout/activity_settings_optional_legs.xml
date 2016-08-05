@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="You can choose up to 2 exersaises"
+                android:text="You can choose up to 2 exercises"
                 android:id="@+id/textView78"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp" />
@@ -47,10 +47,13 @@
                 android:id="@+id/ex1Layout">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:id="@+id/rightNow" />
+                    android:id="@+id/rightNow"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,17 +78,21 @@
 
                     <Button
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="fill_parent"
                         android:text="Hypertrophy"
                         android:id="@+id/hypertrophyButton1"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+                        android:paddingBottom="30dp" />
 
                     <Button
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="fill_parent"
                         android:text="Explosiveness"
                         android:id="@+id/explosivenessButton1"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:paddingBottom="30dp"
+                        android:paddingTop="30dp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -124,14 +131,18 @@
                         android:layout_height="wrap_content"
                         android:text="Hypertrophy"
                         android:id="@+id/hypertrophyButton2"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:paddingTop="30dp"
+                        android:paddingBottom="30dp" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Explosiveness"
                         android:id="@+id/explosivenessButton2"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:paddingBottom="30dp"
+                        android:paddingTop="30dp" />
                 </LinearLayout>
 
             </LinearLayout>

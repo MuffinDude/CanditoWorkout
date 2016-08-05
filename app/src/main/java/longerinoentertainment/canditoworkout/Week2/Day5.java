@@ -55,7 +55,7 @@ public class Day5  extends Fragment {
 
         double benchNumber1 = round(values[0])-2.5;
 
-        String benchText1 = Double.toString(benchNumber1) + "xMR";
+        String benchText1 = Double.toString(benchNumber1) + " xMR";
         bench1.setText(benchText1);
 
         if (values[9].equals("None")){

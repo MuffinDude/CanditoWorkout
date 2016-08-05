@@ -49,20 +49,6 @@ public class MainActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-
-// TODO: 15.07.2016 check text file and if yes or no transfer to FIRSTPAGE
-        File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
-        dir.mkdirs();
-
-        if(dir.exists()) {
-
-            System.out.println("FILE DOES ECXISTS");
-        }else{
-            Intent i = new Intent(this, FirstTime.class);
-            startActivity(i);
-            System.out.println("FILE DOESN't ECXISTS");
-
-        }
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.

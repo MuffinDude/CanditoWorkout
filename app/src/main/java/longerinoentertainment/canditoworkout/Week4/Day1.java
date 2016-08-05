@@ -57,9 +57,9 @@ public class Day1 extends Fragment {
         readFromFile(file);
 
         double squatNumber = round(values[1]);
-        String squatText1 = Double.toString(squatNumber-2.5) + "x3";
-        String squatText2 = Double.toString(squatNumber) + "x3";
-        String squatText3 = Double.toString(squatNumber+2.5) + "x3";
+        String squatText1 = Double.toString(squatNumber-2.5) + " x3";
+        String squatText2 = Double.toString(squatNumber) + " x3";
+        String squatText3 = Double.toString(squatNumber+2.5) + " x3";
         squat1.setText(squatText1);
         squat2.setText(squatText2);
         squat3.setText(squatText3);

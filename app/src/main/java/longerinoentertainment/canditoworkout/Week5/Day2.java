@@ -54,7 +54,7 @@ public class Day2 extends Fragment {
 
         double benchNumber1 = round(values[0]);
 
-        String benchText1 = Double.toString(benchNumber1) + "x1-4";
+        String benchText1 = Double.toString(benchNumber1) + " x1-4";
         bench1.setText(benchText1);
 
         accessoryOne.setText(values[6]);

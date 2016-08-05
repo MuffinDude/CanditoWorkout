@@ -52,8 +52,8 @@ public class Day1 extends Fragment {
         double deadNumber = round(0.85, values[2]) + 2.5;
         double squatNumber = round(0.875, values[1]) + 2.5;
 
-        String deadText = Double.toString(deadNumber)+ "x3-6";
-        String squatText = Double.toString(squatNumber) + "x4-6";
+        String deadText = Double.toString(deadNumber)+ " x3-6";
+        String squatText = Double.toString(squatNumber) + " x4-6";
         squat1.setText(squatText);
         squat2.setText(squatText);
         squat3.setText(squatText);

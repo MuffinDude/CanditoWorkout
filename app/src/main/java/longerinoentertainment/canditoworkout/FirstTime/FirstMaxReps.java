@@ -30,25 +30,18 @@ public class FirstMaxReps extends Fragment {
     EditText bench;
     EditText squat;
     EditText deadlift;
-    Button save;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View beginnerTab = inflater.inflate(R.layout.activity_first_max_reps, null, false);
 
 
-        //save = (Button) beginnerTab.findViewById(R.id.saveButton);
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
 
         File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
-        String[] values = readFromFile(new File(dir, "savedFile.txt"));
-        bench.setText(values[0], TextView.BufferType.EDITABLE);
-        squat.setText(values[1], TextView.BufferType.EDITABLE);
-        deadlift.setText(values[2], TextView.BufferType.EDITABLE);
-
         return beginnerTab;
     }
 
@@ -89,7 +82,6 @@ public class FirstMaxReps extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                Log.d("MyFragment", "Not visible anymore.  Saving data.");
                 File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
                 File file = new File(dir, "savedFile.txt");
 
@@ -104,8 +96,6 @@ public class FirstMaxReps extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
             }
         }
     }

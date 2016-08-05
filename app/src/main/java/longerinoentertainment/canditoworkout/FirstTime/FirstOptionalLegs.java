@@ -37,7 +37,6 @@ public class FirstOptionalLegs extends Fragment {
     CheckBox none2;
     LinearLayout ex1;
     LinearLayout ex2;
-    TextView rightNow;
     final int[] numero = {0,1};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -46,7 +45,6 @@ public class FirstOptionalLegs extends Fragment {
         hypertrophy2 = (Button) beginnerTab.findViewById(R.id.hypertrophyButton2);
         explosiveness1 = (Button) beginnerTab.findViewById(R.id.explosivenessButton1);
         explosiveness2 = (Button) beginnerTab.findViewById(R.id.explosivenessButton2);
-        rightNow = (TextView) beginnerTab.findViewById(R.id.rightNow);
         save = (Button) beginnerTab.findViewById(R.id.saveButton);
         none = (CheckBox) beginnerTab.findViewById(R.id.noneBox);
         none2 = (CheckBox) beginnerTab.findViewById(R.id.noneBox2);
@@ -54,11 +52,6 @@ public class FirstOptionalLegs extends Fragment {
         ex2 = (LinearLayout) beginnerTab.findViewById(R.id.ex2Layout);
 
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
-        String[] values = readFromFile(new File(dir, "savedFile.txt"));
-        rightNow.setText("Right now you have chosen: " + values[4] + " and " + values[5]);
-
-
-
 
         hypertrophy1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,16 +105,16 @@ public class FirstOptionalLegs extends Fragment {
                 numero[0]=0;
                 numero[1]=0;
                 if (none.isChecked()){
-                    final int color = 0x80000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex1.setForeground(drawable);
+                    //final int color = 0x80000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex1.setForeground(drawable);
                     hypertrophy1.setVisibility(View.GONE);
                     explosiveness1.setVisibility(View.GONE);
                     ex2.setVisibility(View.GONE);
                 }else{
-                    final int color = 0x00000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex1.setForeground(drawable);
+                    //final int color = 0x00000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex1.setForeground(drawable);
                     hypertrophy1.setVisibility(View.VISIBLE);
                     explosiveness1.setVisibility(View.VISIBLE);
                     ex2.setVisibility(View.VISIBLE);
@@ -133,16 +126,16 @@ public class FirstOptionalLegs extends Fragment {
             public void onClick(View view) {
                 numero[1]=0;
                 if (none2.isChecked()){
-                    final int color = 0x80000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex2.setForeground(drawable);
+                    //final int color = 0x80000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.GONE);
                     explosiveness2.setVisibility(View.GONE);
 
                 }else{
-                    final int color = 0x00000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex2.setForeground(drawable);
+                    //final int color = 0x00000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.VISIBLE);
                     explosiveness2.setVisibility(View.VISIBLE);
 
@@ -379,7 +372,6 @@ public class FirstOptionalLegs extends Fragment {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
                 // TODO: This shit does not work, make it work.
-                Log.d("MyFragment", "Not visible anymore.  Saving data.");
                 final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
                 final File file = new File(dir, "savedFile.txt");
 
@@ -403,7 +395,6 @@ public class FirstOptionalLegs extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -114,8 +114,8 @@ public class Day4 extends Fragment {
         double deadNumber = round(values[2])-2.5;
         double squatNumber = round(values[1]);
 
-        String deadText = Double.toString(deadNumber)+ "x8";
-        String squatText = Double.toString(squatNumber) + "x8";
+        String deadText = Double.toString(deadNumber)+ " x8";
+        String squatText = Double.toString(squatNumber) + " x8";
         squat1.setText(squatText);
         squat2.setText(squatText);
         squat3.setText(squatText);

@@ -108,16 +108,16 @@ public class SettingsOptionalLegs extends AppCompatActivity {
                 numero[0]=0;
                 numero[1]=0;
                 if (none.isChecked()){
-                    final int color = 0x80000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex1.setForeground(drawable);
+                    //final int color = 0x80000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex1.setForeground(drawable);
                     hypertrophy1.setVisibility(View.GONE);
                     explosiveness1.setVisibility(View.GONE);
                     ex2.setVisibility(View.GONE);
                 }else{
-                    final int color = 0x00000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex1.setForeground(drawable);
+                    //final int color = 0x00000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex1.setForeground(drawable);
                     hypertrophy1.setVisibility(View.VISIBLE);
                     explosiveness1.setVisibility(View.VISIBLE);
                     ex2.setVisibility(View.VISIBLE);
@@ -129,16 +129,16 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             public void onClick(View view) {
                 numero[1]=0;
                 if (none2.isChecked()){
-                    final int color = 0x80000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex2.setForeground(drawable);
+                    //final int color = 0x80000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.GONE);
                     explosiveness2.setVisibility(View.GONE);
 
                 }else{
-                    final int color = 0x00000000;
-                    final Drawable drawable = new ColorDrawable(color);
-                    ex2.setForeground(drawable);
+                    //final int color = 0x00000000;
+                    //final Drawable drawable = new ColorDrawable(color);
+                    //ex2.setForeground(drawable);
                     hypertrophy2.setVisibility(View.VISIBLE);
                     explosiveness2.setVisibility(View.VISIBLE);
 
