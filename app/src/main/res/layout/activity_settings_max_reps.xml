@@ -145,6 +145,14 @@
 
                 </TableRow>
 
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:showText="true"
+                    android:textOn="KG"
+                    android:textOff="LBS"
+                    android:id="@+id/switch1" />
+
             </TableLayout>
 
         </LinearLayout>
