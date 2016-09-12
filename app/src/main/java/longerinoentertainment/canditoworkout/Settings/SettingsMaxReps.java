@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,6 +25,7 @@ public class SettingsMaxReps extends AppCompatActivity {
     EditText squat;
     EditText deadlift;
     Button save;
+    Switch weightUnit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,29 @@ public class SettingsMaxReps extends AppCompatActivity {
         bench = (EditText) findViewById(R.id.benchText);
         squat = (EditText) findViewById(R.id.squatText);
         deadlift = (EditText) findViewById(R.id.deadText);
+        weightUnit = (Switch) findViewById(R.id.switch1);
+
+        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    System.out.println("KG!");
+                } else {
+                    System.out.println("LBS!");
+                }
+            }
+        });
+
+        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    System.out.println("It's on now bitch!");
+                } else {
+                    System.out.println("ARE YOU FUCKING SORRY?");
+                }
+            }
+        });
 
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();

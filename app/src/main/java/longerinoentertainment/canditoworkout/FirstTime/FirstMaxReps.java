@@ -13,10 +13,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnTouchListener;
+import android.widget.ToggleButton;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +33,7 @@ public class FirstMaxReps extends Fragment {
     EditText bench;
     EditText squat;
     EditText deadlift;
+    Switch weightUnit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,6 +43,18 @@ public class FirstMaxReps extends Fragment {
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
+        weightUnit = (Switch) beginnerTab.findViewById(R.id.switch1);
+
+        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    System.out.println("KG!");
+                } else {
+                    System.out.println("LBS");
+                }
+            }
+        });
 
         File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
