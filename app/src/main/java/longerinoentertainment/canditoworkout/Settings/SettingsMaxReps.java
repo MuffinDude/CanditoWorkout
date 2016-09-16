@@ -54,7 +54,7 @@ public class SettingsMaxReps extends AppCompatActivity {
         benchForConversion = Double.parseDouble(values[0]);
         squatForConversion = Double.parseDouble(values[1]);
         deadliftForConversion = Double.parseDouble(values[2]);
-        System.out.println(values[3] + "joujoujou");
+
         // check if it's in kg or lbs mode
         if (values[3].equals("0")){
             weightUnit.setChecked(false);
@@ -70,23 +70,9 @@ public class SettingsMaxReps extends AppCompatActivity {
                 if (isChecked) {
                     System.out.println("KG!");
                     kilogram = "1";
-                    // convert to kilograms
-                    benchForConversion = benchForConversion * 0.454;
-                    deadliftForConversion = deadliftForConversion * 0.454;
-                    squatForConversion = squatForConversion * 0.454;
-                    bench.setText(benchForConversion.toString(), TextView.BufferType.EDITABLE);
-                    squat.setText(squatForConversion.toString(), TextView.BufferType.EDITABLE);
-                    deadlift.setText(deadliftForConversion.toString(), TextView.BufferType.EDITABLE);
                 } else {
                     System.out.println("LBS");
                     kilogram = "0";
-                    // convert to pounds
-                    benchForConversion = benchForConversion/0.454;
-                    deadliftForConversion = deadliftForConversion/0.454;
-                    squatForConversion = squatForConversion/0.454;
-                    bench.setText(benchForConversion.toString(), TextView.BufferType.EDITABLE);
-                    squat.setText(squatForConversion.toString(), TextView.BufferType.EDITABLE);
-                    deadlift.setText(deadliftForConversion.toString(), TextView.BufferType.EDITABLE);
                 }
             }
         });
@@ -103,7 +89,6 @@ public class SettingsMaxReps extends AppCompatActivity {
                 String deadString = String.valueOf(deadlift.getText());
 
                 try {
-                    System.out.println("kas siia j]uad?");
                     updateLine(file, benchString, squatString, deadString, kilogram);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -121,7 +106,6 @@ public class SettingsMaxReps extends AppCompatActivity {
         values[1] = squat;
         values[2] = dead;
         values[3] = weightUnits;
-        System.out.println(values[3]+"vaata mind!!!!");
 
         FileWriter fw = new FileWriter(data);
         for (int j = 0; j < values.length; j++) {
