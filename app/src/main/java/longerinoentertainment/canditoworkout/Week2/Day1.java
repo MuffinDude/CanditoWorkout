@@ -118,6 +118,8 @@ public class Day1 extends Fragment {
             @Override
             public void onClick(View view) {
                 String gottenReps = repsMade.getText().toString();
+                Toast.makeText(getActivity(), "You can only rest 60 seconds after each set of X3",
+                        Toast.LENGTH_LONG).show();
                 int repCount;
                 if (gottenReps.equals("")){
                     repCount=0;
