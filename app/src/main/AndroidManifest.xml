@@ -68,7 +68,8 @@
         <activity android:name=".FirstTime.FirstOptionalLegs" />
         <activity android:name=".FirstTime.LandingPage" />
         <activity android:name=".FirstTime.EndingPage" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SecretInfo"></activity>
     </application>
 
 </manifest>

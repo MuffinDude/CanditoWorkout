@@ -28,23 +28,45 @@
                 android:layout_height="wrap_content"
                 android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:id="@+id/weekLayout1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Muscular conditioning"
-                    android:id="@+id/textView10"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Week 1"
-                    android:id="@+id/week1Button"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Muscular conditioning"
+                            android:id="@+id/textView10"
+                            android:layout_gravity="center_horizontal" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Week 1"
+                            android:id="@+id/week1Button"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="hh"
+                        android:id="@+id/weekToggle1"
+                        android:checked="false" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -55,25 +77,47 @@
                 android:layout_gravity="center_horizontal"
                 android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:id="@+id/weekLayout2">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Muscular conditioning / Hypertrophy"
-                    android:id="@+id/textView28"
-                    android:textAlignment="center"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Week 2"
-                    android:id="@+id/week2Button"
-                    android:layout_below="@+id/week1Button"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Muscular conditioning / Hypertrophy"
+                            android:id="@+id/textView28"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_horizontal" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Week 2"
+                            android:id="@+id/week2Button"
+                            android:layout_below="@+id/week1Button"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="New ToggleButton"
+                        android:id="@+id/weekToggle2"
+                        android:checked="false" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -84,24 +128,46 @@
                 android:layout_gravity="center_horizontal"
                 android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:id="@+id/weekLayout3">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Linear Max OT Phase"
-                    android:id="@+id/textView29"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Week 3"
-                    android:id="@+id/week3Button"
-                    android:layout_below="@+id/week2Button"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Linear Max OT Phase"
+                            android:id="@+id/textView29"
+                            android:layout_gravity="center_horizontal" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Week 3"
+                            android:id="@+id/week3Button"
+                            android:layout_below="@+id/week2Button"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="New ToggleButton"
+                        android:id="@+id/weekToggle3"
+                        android:checked="false" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -111,24 +177,46 @@
                 android:layout_height="wrap_content"
                 android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:id="@+id/weekLayout4">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Heavy Weight Acclimation"
-                    android:id="@+id/textView30"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Week 4"
-                    android:id="@+id/week4Button"
-                    android:layout_below="@+id/week3Button"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Heavy Weight Acclimation"
+                            android:id="@+id/textView30"
+                            android:layout_gravity="center_horizontal" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Week 4"
+                            android:id="@+id/week4Button"
+                            android:layout_below="@+id/week3Button"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="New ToggleButton"
+                        android:id="@+id/weekToggle4"
+                        android:checked="false" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -138,24 +226,46 @@
                 android:layout_height="wrap_content"
                 android:background="#5c5c5c"
                 android:layout_marginBottom="15dp"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:id="@+id/weekLayout5">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="High Intensity Strength"
-                    android:id="@+id/textView31"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Week 5"
-                    android:id="@+id/week5Button"
-                    android:layout_below="@+id/week4Button"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="High Intensity Strength"
+                            android:id="@+id/textView31"
+                            android:layout_gravity="center_horizontal" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Week 5"
+                            android:id="@+id/week5Button"
+                            android:layout_below="@+id/week4Button"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="New ToggleButton"
+                        android:id="@+id/weekToggle5"
+                        android:checked="false" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -184,6 +294,18 @@
                     android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Cycle"
+                android:id="@+id/newCycleButton"
+                android:layout_gravity="center_horizontal"
+                android:padding="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="#845f5f"
+                android:elevation="15dp" />
 
         </LinearLayout>
     </ScrollView>

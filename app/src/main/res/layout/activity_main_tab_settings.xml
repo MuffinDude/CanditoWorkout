@@ -138,5 +138,15 @@
 
         </LinearLayout>
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secretSettingsButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_settings_black_24dp"
+            android:background="#00ffffff"
+            android:layout_margin="15dp" />
+
     </RelativeLayout>
 </RelativeLayout>

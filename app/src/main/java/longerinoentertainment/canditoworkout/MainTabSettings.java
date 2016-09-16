@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import longerinoentertainment.canditoworkout.Settings.SettingsAccessoryExercises;
 import longerinoentertainment.canditoworkout.Settings.SettingsMaxReps;
@@ -18,10 +19,8 @@ import longerinoentertainment.canditoworkout.Settings.SettingsOptionalArms;
 import longerinoentertainment.canditoworkout.Settings.SettingsOptionalLegs;
 
 public class MainTabSettings extends Fragment {
-    Button maxReps;
-    Button accessory;
-    Button optionalArms;
-    Button optionalLegs;
+    Button maxReps,accessory, optionalArms, optionalLegs;
+    ImageButton superSettings;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,11 +31,19 @@ public class MainTabSettings extends Fragment {
         accessory = (Button) settingsTab.findViewById(R.id.accessoryButton);
         optionalArms = (Button) settingsTab.findViewById(R.id.optionalArmsButton);
         optionalLegs = (Button) settingsTab.findViewById(R.id.optionalLegsButton);
+        superSettings = (ImageButton) settingsTab.findViewById(R.id.secretSettingsButton);
 
         maxReps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), SettingsMaxReps.class);
+                startActivity(i);
+            }
+        });
+        superSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), SecretInfo.class);
                 startActivity(i);
             }
         });

@@ -183,66 +183,99 @@ public class Day3  extends Fragment {
             @Override
             public void onClick(View view) {
                 squat1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt5.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt6.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt7.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt8.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt9.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
         sqt10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sqt10.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
+                chronometer.start();
+                Toast.makeText(getActivity(), "Stopper started", Toast.LENGTH_SHORT).show();
             }
         });
 
