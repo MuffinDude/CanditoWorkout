@@ -35,7 +35,7 @@ public class Day1 extends Fragment {
     TextView optionalTwo;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
-    static String weightUnit;
+    static double decimeterPoint;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,9 +65,10 @@ public class Day1 extends Fragment {
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        weightUnit = values[3];
-        double deadNumber = round(values[2], weightUnit);
-        double squatNumber = round(values[1], weightUnit);
+        if (values[3].equals("1")) decimeterPoint = 2.5;
+        if (values[3].equals("1")) decimeterPoint = 5;
+        double deadNumber = round(values[2], decimeterPoint);
+        double squatNumber = round(values[1], decimeterPoint);
 
         if (values[4].equals("None")){
             optional1.setVisibility(View.GONE);
@@ -147,15 +148,8 @@ public class Day1 extends Fragment {
         return values;
     }
 
-    public static double round(String valueString, String unit) {
-        double value;
-        System.out.println("hahahhahaha" + unit);
-        if (unit.equals("1")){
-            value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * 0.8/2.5)*2.5;
-        } else {
-            value = Math.round(Math.round(Double.parseDouble(valueString)/5)*5 * 0.8/5)*5;
-        }
-
+    public static double round(String valueString, double unit) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/unit)*unit * 0.8/unit)*unit;
         return value;
     }
 }
