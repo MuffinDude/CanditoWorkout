@@ -66,7 +66,7 @@ public class Day1 extends Fragment {
         readFromFile(file);
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
-        if (values[3].equals("1")) decimeterPoint = 5;
+        if (values[3].equals("0")) decimeterPoint = 5;
         double deadNumber = round(values[2], decimeterPoint);
         double squatNumber = round(values[1], decimeterPoint);
 
