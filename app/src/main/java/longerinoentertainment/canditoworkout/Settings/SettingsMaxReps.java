@@ -24,12 +24,15 @@ public class SettingsMaxReps extends AppCompatActivity {
     EditText bench;
     EditText squat;
     EditText deadlift;
+    Double squatForConversion;
+    Double benchForConversion;
+    Double deadliftForConversion;
     Button save;
     Switch weightUnit;
     String kilogram;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_max_reps);
 
@@ -48,11 +51,17 @@ public class SettingsMaxReps extends AppCompatActivity {
         squat.setText(values[1], TextView.BufferType.EDITABLE);
         deadlift.setText(values[2], TextView.BufferType.EDITABLE);
 
+        benchForConversion = Double.parseDouble(values[0]);
+        squatForConversion = Double.parseDouble(values[1]);
+        deadliftForConversion = Double.parseDouble(values[2]);
+        System.out.println(values[3] + "joujoujou");
         // check if it's in kg or lbs mode
         if (values[3].equals("0")){
             weightUnit.setChecked(false);
+            kilogram = "0";
         } else {
             weightUnit.setChecked(true);
+            kilogram = "1";
         }
 
         weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -61,9 +70,23 @@ public class SettingsMaxReps extends AppCompatActivity {
                 if (isChecked) {
                     System.out.println("KG!");
                     kilogram = "1";
+                    // convert to kilograms
+                    benchForConversion = benchForConversion * 0.454;
+                    deadliftForConversion = deadliftForConversion * 0.454;
+                    squatForConversion = squatForConversion * 0.454;
+                    bench.setText(benchForConversion.toString(), TextView.BufferType.EDITABLE);
+                    squat.setText(squatForConversion.toString(), TextView.BufferType.EDITABLE);
+                    deadlift.setText(deadliftForConversion.toString(), TextView.BufferType.EDITABLE);
                 } else {
                     System.out.println("LBS");
                     kilogram = "0";
+                    // convert to pounds
+                    benchForConversion = benchForConversion/0.454;
+                    deadliftForConversion = deadliftForConversion/0.454;
+                    squatForConversion = squatForConversion/0.454;
+                    bench.setText(benchForConversion.toString(), TextView.BufferType.EDITABLE);
+                    squat.setText(squatForConversion.toString(), TextView.BufferType.EDITABLE);
+                    deadlift.setText(deadliftForConversion.toString(), TextView.BufferType.EDITABLE);
                 }
             }
         });
@@ -78,10 +101,10 @@ public class SettingsMaxReps extends AppCompatActivity {
                 String benchString = String.valueOf(Double.parseDouble(bench));
                 String squatString = String.valueOf(squat.getText());
                 String deadString = String.valueOf(deadlift.getText());
-                String weightUnits = kilogram;
 
                 try {
-                    updateLine(file, benchString, squatString, deadString, weightUnits);
+                    System.out.println("kas siia j]uad?");
+                    updateLine(file, benchString, squatString, deadString, kilogram);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -98,6 +121,7 @@ public class SettingsMaxReps extends AppCompatActivity {
         values[1] = squat;
         values[2] = dead;
         values[3] = weightUnits;
+        System.out.println(values[3]+"vaata mind!!!!");
 
         FileWriter fw = new FileWriter(data);
         for (int j = 0; j < values.length; j++) {
