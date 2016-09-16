@@ -69,6 +69,10 @@ public class Day5  extends Fragment {
             optionalTwo.setText(values[10]);
         }
 
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
+
         stopper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

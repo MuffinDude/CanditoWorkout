@@ -68,6 +68,10 @@ public class Day4 extends Fragment {
         bench2.setText(benchText2);
         bench3.setText(benchText3);
 
+        accessoryOne.setText(values[6]);
+        accessoryTwo.setText(values[7]);
+        accessoryThree.setText(values[8]);
+
         if (values[9].equals("None")){
             optional1.setVisibility(View.GONE);
             optional2.setVisibility(View.GONE);
