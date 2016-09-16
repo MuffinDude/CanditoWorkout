@@ -32,7 +32,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="20dp"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="25dp" />
 
                 <LinearLayout
                     android:orientation="vertical"
