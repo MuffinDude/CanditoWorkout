@@ -34,7 +34,7 @@ public class FirstMaxReps extends Fragment {
     EditText squat;
     EditText deadlift;
     Switch weightUnit;
-    String kilogram = "1";
+    String kilogram;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

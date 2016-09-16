@@ -63,6 +63,7 @@ public class Day1 extends Fragment {
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
+        System.out.println(values[3] + "vaata mind!");
 
         double deadNumber = round(values[2]);
         double squatNumber = round(values[1]);

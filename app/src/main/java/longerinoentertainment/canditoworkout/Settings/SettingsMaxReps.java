@@ -26,7 +26,7 @@ public class SettingsMaxReps extends AppCompatActivity {
     EditText deadlift;
     Button save;
     Switch weightUnit;
-    String kilogram = "1";
+    String kilogram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,29 +39,7 @@ public class SettingsMaxReps extends AppCompatActivity {
         deadlift = (EditText) findViewById(R.id.deadText);
         weightUnit = (Switch) findViewById(R.id.switch1);
 
-        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    System.out.println("KG!");
-                    kilogram = "1";
-                } else {
-                    System.out.println("LBS!");
-                    kilogram = "0";
-                }
-            }
-        });
 
-        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    System.out.println("It's on now bitch!");
-                } else {
-                    System.out.println("ARE YOU FUCKING SORRY?");
-                }
-            }
-        });
 
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
@@ -70,6 +48,25 @@ public class SettingsMaxReps extends AppCompatActivity {
         squat.setText(values[1], TextView.BufferType.EDITABLE);
         deadlift.setText(values[2], TextView.BufferType.EDITABLE);
 
+        // check if it's in kg or lbs mode
+        if (values[3].equals("0")){
+            weightUnit.setChecked(false);
+        } else {
+            weightUnit.setChecked(true);
+        }
+
+        weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    System.out.println("KG!");
+                    kilogram = "1";
+                } else {
+                    System.out.println("LBS");
+                    kilogram = "0";
+                }
+            }
+        });
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,9 +78,10 @@ public class SettingsMaxReps extends AppCompatActivity {
                 String benchString = String.valueOf(Double.parseDouble(bench));
                 String squatString = String.valueOf(squat.getText());
                 String deadString = String.valueOf(deadlift.getText());
+                String weightUnits = kilogram;
 
                 try {
-                    updateLine(file, benchString, squatString, deadString);
+                    updateLine(file, benchString, squatString, deadString, weightUnits);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -94,12 +92,12 @@ public class SettingsMaxReps extends AppCompatActivity {
         });
     }
 
-    private void updateLine(File data, String bench, String squat, String dead) throws IOException {
+    private void updateLine(File data, String bench, String squat, String dead, String weightUnits) throws IOException {
         String values[] = readFromFile(data);
         values[0] = bench;
         values[1] = squat;
         values[2] = dead;
-        values[3] = kilogram;
+        values[3] = weightUnits;
 
         FileWriter fw = new FileWriter(data);
         for (int j = 0; j < values.length; j++) {
