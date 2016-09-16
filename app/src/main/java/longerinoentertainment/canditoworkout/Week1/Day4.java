@@ -39,6 +39,7 @@ public class Day4 extends Fragment {
     TextView optionalTwo;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
+    static double decimeterPoint;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -111,8 +112,10 @@ public class Day4 extends Fragment {
             }
         }
 
-        double deadNumber = round(values[2]);
-        double squatNumber = round(values[1]);
+        if (values[3].equals("1")) decimeterPoint = 2.5;
+        if (values[3].equals("0")) decimeterPoint = 5;
+        double deadNumber = round(values[2], decimeterPoint);
+        double squatNumber = round(values[1], decimeterPoint);
 
         String deadText = Double.toString(deadNumber)+ " x8";
         String squatText = Double.toString(squatNumber) + " x8";
@@ -151,8 +154,8 @@ public class Day4 extends Fragment {
         }
         return values;
     }
-    public static double round(String valueString) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * 0.7/2.5)*2.5;
+    public static double round(String valueString, double units) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * 0.7/units)*units;
         return value;
     }
 

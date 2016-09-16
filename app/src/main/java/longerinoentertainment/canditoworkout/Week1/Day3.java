@@ -35,6 +35,7 @@ public class Day3 extends Fragment {
     TextView accessoryThree;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
+    static double decimeterPoint;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -59,10 +60,12 @@ public class Day3 extends Fragment {
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
         readFromFile(file);
 
-        double benchNumber1 = round(0.5, values[0]);
-        double benchNumber2 = round(0.675, values[0]);
-        double benchNumber3 = round(0.75, values[0]);
-        double benchNumber4 = round(0.775, values[0]);
+        if (values[3].equals("1")) decimeterPoint = 2.5;
+        if (values[3].equals("0")) decimeterPoint = 5;
+        double benchNumber1 = round(0.5, values[0], decimeterPoint);
+        double benchNumber2 = round(0.675, values[0], decimeterPoint);
+        double benchNumber3 = round(0.75, values[0], decimeterPoint);
+        double benchNumber4 = round(0.775, values[0], decimeterPoint);
 
         String benchText1 = Double.toString(benchNumber1) + " x10";
         String benchText2 = Double.toString(benchNumber2) + " x10";
@@ -114,8 +117,8 @@ public class Day3 extends Fragment {
         }
         return values;
     }
-    public static double round(double howMuch, String valueString) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * howMuch/2.5)*2.5;
+    public static double round(double howMuch, String valueString, double units) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * howMuch/units)*units;
         return value;
     }
 }
