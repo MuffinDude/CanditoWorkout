@@ -9,23 +9,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="longerinoentertainment.canditoworkout.Week6.Option1">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="1. Skip week 6"
-        android:id="@+id/textView2"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="2. Insert your results on the WINNING! tab and restart the cycle"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp" />
+        android:background="#636567"
+        android:elevation="15dp"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1. Skip week 6"
+                android:id="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2. Insert your results on the WINNING! tab and restart the cycle"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
