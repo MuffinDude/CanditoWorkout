@@ -51,7 +51,11 @@ public class SettingsOptionalLegs extends AppCompatActivity {
 
         final File dir = new File(getFilesDir() + "/CanditoWorkoutApp");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
-        rightNow.setText("Right now you have chosen: " + values[4] + " and " + values[5]);
+        String optional1 = values[4];
+        String optional2 = values[5];
+        if (values[4].endsWith("E")) optional1=values[4].substring(0, values[4].length()-1);
+        if (values[5].endsWith("E")) optional2=values[5].substring(0, values[5].length()-1);
+        rightNow.setText("Right now you have chosen: " + optional1 + " and " + optional2);
 
         final int[] numero = {0,1};
 
