@@ -6,7 +6,8 @@
     tools:context="longerinoentertainment.canditoworkout.Week5.Day2"
     android:paddingLeft="15dp"
     android:paddingTop="15dp"
-    android:paddingRight="15dp">
+    android:paddingRight="15dp"
+    android:background="#7b5454">
 
     <ScrollView
         android:layout_width="wrap_content"

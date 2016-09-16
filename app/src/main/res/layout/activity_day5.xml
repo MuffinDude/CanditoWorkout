@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="longerinoentertainment.canditoworkout.Week1.Day5">
+    tools:context="longerinoentertainment.canditoworkout.Week1.Day5"
+    android:background="#7b5454">
 
     <ScrollView
         android:layout_width="wrap_content"

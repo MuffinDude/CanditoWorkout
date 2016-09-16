@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="longerinoentertainment.canditoworkout.Settings.SettingsOptionalArms">
+    tools:context="longerinoentertainment.canditoworkout.Settings.SettingsOptionalArms"
+    android:background="#7b5454">
 
     <ScrollView
         android:layout_width="fill_parent"
