@@ -23,15 +23,9 @@ import java.io.IOException;
 import longerinoentertainment.canditoworkout.R;
 
 public class SettingsOptionalLegs extends AppCompatActivity {
-    Button hypertrophy1;
-    Button explosiveness1;
-    Button explosiveness2;
-    Button hypertrophy2;
-    Button save;
-    CheckBox none;
-    CheckBox none2;
-    LinearLayout ex1;
-    LinearLayout ex2;
+    Button hypertrophy1, explosiveness1, explosiveness2, hypertrophy2, save;
+    CheckBox none, none2;
+    LinearLayout ex1, ex2;
     TextView rightNow;
 
     @Override
@@ -50,15 +44,17 @@ public class SettingsOptionalLegs extends AppCompatActivity {
         ex2 = (LinearLayout) findViewById(R.id.ex2Layout);
 
         final File dir = new File(getFilesDir() + "/CanditoWorkoutApp");
-        String[] values = readFromFile(new File(dir, "savedFile.txt"));
+        final String[] values = readFromFile(new File(dir, "savedFile.txt"));
         String optional1 = values[4];
         String optional2 = values[5];
         if (values[4].endsWith("E")) optional1=values[4].substring(0, values[4].length()-1);
         if (values[5].endsWith("E")) optional2=values[5].substring(0, values[5].length()-1);
         rightNow.setText("Right now you have chosen: " + optional1 + " and " + optional2);
 
+        //numero 0 is first exercise, 1 is second exercise
         final int[] numero = {0,1};
-
+        numero[0]=3;
+        numero[1]=3;
 
         hypertrophy1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,20 +151,17 @@ public class SettingsOptionalLegs extends AppCompatActivity {
             public void onClick(View view) {
                 final File file = new File(dir, "savedFile.txt");
                 String ex1,ex2;
-                if (numero[0]== 1){
-                    ex1= (String) hypertrophy1.getText();
-                } else if (numero[0] == 0){
-                    ex1="None";
-                }else{
-                    ex1= (String) explosiveness1.getText() + "E";
-                }
-                if (numero[1]==1){
-                    ex2 = (String) hypertrophy2.getText();
-                }else if (numero[1]==0){
-                    ex2="None";
-                }else{
-                    ex2 = (String) explosiveness2.getText() + "E";
-                }
+
+                if (numero[0]== 1) ex1= (String) hypertrophy1.getText();
+                else if (numero[0] == 0) ex1 = "None";
+                else if (numero[0] == 3) ex1 = values[4];
+                else ex1= (String) explosiveness1.getText() + "E";
+
+                if (numero[1]==1) ex2 = (String) hypertrophy2.getText();
+                else if (numero[1]==0) ex2 = "None";
+                else if (numero[1] == 3) ex2 = values[5];
+                else ex2 = (String) explosiveness2.getText() + "E";
+
                 try {
                     updateLine(file, ex1, ex2);
                 } catch (IOException e) {
