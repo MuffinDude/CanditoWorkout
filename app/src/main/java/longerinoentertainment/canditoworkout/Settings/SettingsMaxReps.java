@@ -26,6 +26,7 @@ public class SettingsMaxReps extends AppCompatActivity {
     EditText deadlift;
     Button save;
     Switch weightUnit;
+    String kilogram = "1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +44,10 @@ public class SettingsMaxReps extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     System.out.println("KG!");
+                    kilogram = "1";
                 } else {
                     System.out.println("LBS!");
+                    kilogram = "0";
                 }
             }
         });
@@ -96,6 +99,7 @@ public class SettingsMaxReps extends AppCompatActivity {
         values[0] = bench;
         values[1] = squat;
         values[2] = dead;
+        values[3] = kilogram;
 
         FileWriter fw = new FileWriter(data);
         for (int j = 0; j < values.length; j++) {
