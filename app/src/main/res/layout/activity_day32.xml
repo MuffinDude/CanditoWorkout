@@ -17,7 +17,8 @@
         android:layout_alignParentTop="true"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingRight="15dp">
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -83,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="How many reps did you complete?"
-                        android:id="@+id/textView16"
+                        android:id="@+id/completionText"
                         android:layout_gravity="center" />
 
                     <LinearLayout

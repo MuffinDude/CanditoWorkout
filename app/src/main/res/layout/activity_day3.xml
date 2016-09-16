@@ -3,9 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:paddingTop="15dp"
     tools:context="longerinoentertainment.canditoworkout.Week1.Day3"
     android:background="#7b5454">
 
@@ -26,9 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp"
                 android:background="#5c5c5c"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:layout_margin="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,35 +50,40 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button17"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="42.5x10"
                         android:id="@+id/benchText1"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="57.5x10"
                         android:id="@+id/benchText2"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65x8"
                         android:id="@+id/benchText3"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65x6"
                         android:id="@+id/benchText4"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
 
@@ -94,7 +96,9 @@
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
                 android:elevation="5dp"
-                android:id="@+id/accessory1">
+                android:id="@+id/accessory1"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,7 +180,9 @@
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
                 android:elevation="5dp"
-                android:id="@+id/accessory2">
+                android:id="@+id/accessory2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -256,7 +262,9 @@
                 android:layout_marginBottom="15dp"
                 android:background="#727272"
                 android:elevation="5dp"
-                android:id="@+id/accessory3">
+                android:id="@+id/accessory3"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -338,7 +346,9 @@
                 android:layout_marginBottom="15dp"
                 android:background="#898989"
                 android:elevation="5dp"
-                android:id="@+id/optional1">
+                android:id="@+id/optional1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -407,7 +417,9 @@
                 android:layout_marginBottom="15dp"
                 android:background="#898989"
                 android:elevation="5dp"
-                android:id="@+id/optional2">
+                android:id="@+id/optional2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -474,7 +486,9 @@
                 android:layout_gravity="center_horizontal"
                 android:background="#5c5c5c"
                 android:elevation="5dp"
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
                 <Button
                     android:layout_width="wrap_content"

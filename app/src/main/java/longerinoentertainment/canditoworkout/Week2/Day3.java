@@ -38,7 +38,7 @@ public class Day3  extends Fragment {
     Button sqt9;
     Button sqt10;
     Button calculate;
-    TextView repsMade, failureText;
+    TextView repsMade, failureText, completionText;
     RelativeLayout optional1;
     RelativeLayout optional2;
     TextView optionalOne;
@@ -79,6 +79,7 @@ public class Day3  extends Fragment {
         repsMade = (TextView) infoTab.findViewById(R.id.completedReps);
         backoffSets = (LinearLayout) infoTab.findViewById(R.id.backoffSets);
         failureText = (TextView) infoTab.findViewById(R.id.failureText);
+        completionText = (TextView) infoTab.findViewById(R.id.completionText);
 
         backoffSets.setVisibility(View.GONE);
         failureText.setVisibility(View.GONE);
@@ -105,6 +106,7 @@ public class Day3  extends Fragment {
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "You can only rest 60 seconds after each set of X3",
                         Toast.LENGTH_LONG).show();
+                completionText.setVisibility(View.GONE);
                 String gottenReps = repsMade.getText().toString();
                 int repCount;
                 if (gottenReps.equals("")){
