@@ -21,15 +21,13 @@ import java.io.IOException;
 import longerinoentertainment.canditoworkout.R;
 
 public class SettingsMaxReps extends AppCompatActivity {
-    EditText bench;
-    EditText squat;
-    EditText deadlift;
-    Double squatForConversion;
-    Double benchForConversion;
-    Double deadliftForConversion;
+    EditText bench, squat, deadlift;
+    Double squatForConversion, benchForConversion, deadliftForConversion;
     Button save;
     Switch weightUnit;
     String kilogram;
+    ToggleButton benchToggle, squatToggle, deadToggle;
+    TextView weightConfirmation;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -41,12 +39,14 @@ public class SettingsMaxReps extends AppCompatActivity {
         squat = (EditText) findViewById(R.id.squatText);
         deadlift = (EditText) findViewById(R.id.deadText);
         weightUnit = (Switch) findViewById(R.id.switch1);
-
-
+        benchToggle = (ToggleButton) findViewById(R.id.benchToggle);
+        squatToggle = (ToggleButton) findViewById(R.id.squatToggle);
+        deadToggle = (ToggleButton) findViewById(R.id.deadToggle);
+        weightConfirmation = (TextView) findViewById(R.id.weightAssuranceText);
 
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
-        String[] values = readFromFile(new File(dir, "savedFile.txt"));
+        final String[] values = readFromFile(new File(dir, "savedFile.txt"));
         bench.setText(values[0], TextView.BufferType.EDITABLE);
         squat.setText(values[1], TextView.BufferType.EDITABLE);
         deadlift.setText(values[2], TextView.BufferType.EDITABLE);
@@ -54,11 +54,57 @@ public class SettingsMaxReps extends AppCompatActivity {
         benchForConversion = Double.parseDouble(values[0]);
         squatForConversion = Double.parseDouble(values[1]);
         deadliftForConversion = Double.parseDouble(values[2]);
+        benchToggle.setText("Click here if you failed a set of bench press");
+        squatToggle.setText("Click here if you failed a set of squats");
+        deadToggle.setText("Click here if you failed a set of deadlifts");
 
+        //see ei tee praegu komasid millegi pärast
+        double benchCalculation = Math.round(Double.parseDouble(values[0]) * 0.975*100)/100;
+        double squatCalculation = Math.round(Double.parseDouble(values[1]) * 0.975*100)/100;
+        double deadCalculation = Math.round(Double.parseDouble(values[2]) * 0.975*100)/100;
+        final String lowerBench = Double.toString(benchCalculation);
+        final String lowerSquat = Double.toString(squatCalculation);
+        final String lowerDead = Double.toString(deadCalculation);
+
+        benchToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    bench.setText(lowerBench);
+                    benchToggle.setTextOn("Bench press weights lowered");
+                } else {
+                    bench.setText(values[0]);
+                    benchToggle.setTextOff("Weights back on");
+                }
+            }
+        });
+        squatToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    squat.setText(lowerSquat);
+                    squatToggle.setTextOn("Squat weights lowered");
+                } else {
+                    squat.setText(values[1]);
+                    squatToggle.setTextOff("Weights back on");
+                }
+            }
+        });
+        deadToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    deadlift.setText(lowerDead);
+                    deadToggle.setTextOn("Deadlift weights lowered");
+                } else {
+                    deadlift.setText(values[2]);
+                    deadToggle.setTextOff("Weights back on");
+                }
+            }
+        });
         // check if it's in kg or lbs mode
         if (values[3].equals("0")){
             weightUnit.setChecked(false);
             kilogram = "0";
+            weightConfirmation.setText("Weights are in Pounds");
+
         } else {
             weightUnit.setChecked(true);
             kilogram = "1";
@@ -70,9 +116,12 @@ public class SettingsMaxReps extends AppCompatActivity {
                 if (isChecked) {
                     System.out.println("KG!");
                     kilogram = "1";
+                    weightConfirmation.setText("Weights are in Kilograms");
                 } else {
                     System.out.println("LBS");
                     kilogram = "0";
+                    weightConfirmation.setText("Weights are in Pounds");
+
                 }
             }
         });
