@@ -49,7 +49,7 @@ public class Day4 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double benchNumber1 = round(values[0], decimeterPoint)+2.5;
+        double benchNumber1 = round(values[0], decimeterPoint)+decimeterPoint;
 
         String benchText = Double.toString(benchNumber1) + " x4-6";
         bench1.setText(benchText);

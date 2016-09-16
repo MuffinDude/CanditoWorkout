@@ -185,7 +185,7 @@ public class Day1 extends Fragment {
         }
 
         String squatText = Double.toString(squatNumber) + " x10MR";
-        String squatTextSixty = Double.toString(squatNumber + 2.5) + " x3";
+        String squatTextSixty = Double.toString(squatNumber + decimeterPoint) + " x3";
         squat1.setText(squatText);
         sqt1.setText(squatTextSixty);
         sqt2.setText(squatTextSixty);
@@ -213,6 +213,7 @@ public class Day1 extends Fragment {
     }
     public static double round(String valueString, double units) {
         double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * 0.8/units)*units;
+        System.out.println(value+"su ema");
         return value;
     }
 }

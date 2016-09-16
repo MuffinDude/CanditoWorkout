@@ -53,7 +53,7 @@ public class Day1 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double deadNumber = round(0.85, values[2], decimeterPoint) + 2.5;
+        double deadNumber = round(0.85, values[2], decimeterPoint) + decimeterPoint;
         double squatNumber = round(0.875, values[1], decimeterPoint);
 
         String deadText = Double.toString(deadNumber)+ " x3-6";

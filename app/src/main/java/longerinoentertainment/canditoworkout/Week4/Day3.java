@@ -65,10 +65,10 @@ public class Day3 extends Fragment {
         double deadNumber = round(values[2], decimeterPoint);
         double squatNumber = round(values[1], decimeterPoint);
 
-        String deadText1 = Double.toString(deadNumber+2.5)+ " x3";
-        String deadText2 = Double.toString(deadNumber+5)+ " x1-2";
-        String squatText1 = Double.toString(squatNumber+2.5) + " x3";
-        String squatText2 = Double.toString(squatNumber+5) + " x1-2";
+        String deadText1 = Double.toString(deadNumber+decimeterPoint)+ " x3";
+        String deadText2 = Double.toString(deadNumber+decimeterPoint)+ " x1-2";
+        String squatText1 = Double.toString(squatNumber+decimeterPoint) + " x3";
+        String squatText2 = Double.toString(squatNumber+decimeterPoint) + " x1-2";
         squat1.setText(squatText1);
         squat2.setText(squatText2);
         dead1.setText(deadText1);

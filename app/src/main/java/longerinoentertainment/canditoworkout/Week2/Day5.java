@@ -56,7 +56,7 @@ public class Day5  extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double benchNumber1 = round(values[0], decimeterPoint)-2.5;
+        double benchNumber1 = round(values[0], decimeterPoint)-decimeterPoint;
 
         String benchText1 = Double.toString(benchNumber1) + " xMR";
         bench1.setText(benchText1);

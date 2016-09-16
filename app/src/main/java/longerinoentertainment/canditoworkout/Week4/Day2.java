@@ -62,9 +62,9 @@ public class Day2  extends Fragment {
         if (values[3].equals("0")) decimeterPoint = 5;
         double benchNumber = round(values[0], decimeterPoint);
 
-        String benchText1 = Double.toString(benchNumber+2.5) + " x3";
-        String benchText2 = Double.toString(benchNumber+5) + " x3";
-        String benchText3 = Double.toString(benchNumber+10) + " x3";
+        String benchText1 = Double.toString(benchNumber+decimeterPoint) + " x3";
+        String benchText2 = Double.toString(benchNumber+decimeterPoint*2) + " x3";
+        String benchText3 = Double.toString(benchNumber+decimeterPoint*4) + " x3";
         bench1.setText(benchText1);
         bench2.setText(benchText2);
         bench3.setText(benchText3);

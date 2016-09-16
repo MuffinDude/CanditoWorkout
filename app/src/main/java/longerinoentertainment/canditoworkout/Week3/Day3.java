@@ -44,7 +44,7 @@ public class Day3 extends Fragment {
         });
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double squatNumber = round(values[1], decimeterPoint)+7.5;
+        double squatNumber = round(values[1], decimeterPoint)+decimeterPoint*3;
 
         String squatText = Double.toString(squatNumber) + " x4-6";
         squat1.setText(squatText);
