@@ -27,6 +27,7 @@ public class Day1 extends Fragment {
     Button stopper;
     Chronometer chronometer;
     private long timeWhenStopped = 0;
+    static double decimeterPoint;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day13, container, false);
@@ -49,8 +50,11 @@ public class Day1 extends Fragment {
                 chronometer.start();
             }
         });
-        double deadNumber = round(0.85, values[2]) + 2.5;
-        double squatNumber = round(0.875, values[1]);
+
+        if (values[3].equals("1")) decimeterPoint = 2.5;
+        if (values[3].equals("0")) decimeterPoint = 5;
+        double deadNumber = round(0.85, values[2], decimeterPoint) + 2.5;
+        double squatNumber = round(0.875, values[1], decimeterPoint);
 
         String deadText = Double.toString(deadNumber)+ " x3-6";
         String squatText = Double.toString(squatNumber) + " x4-6";
@@ -78,8 +82,8 @@ public class Day1 extends Fragment {
         }
         return values;
     }
-    public static double round(double howMuch, String valueString) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/2.5)*2.5 * howMuch/2.5)*2.5;
+    public static double round(double howMuch, String valueString, double units) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * howMuch/units)*units;
         return value;
     }
 }
