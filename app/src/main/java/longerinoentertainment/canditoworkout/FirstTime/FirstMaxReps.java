@@ -34,6 +34,7 @@ public class FirstMaxReps extends Fragment {
     EditText squat;
     EditText deadlift;
     Switch weightUnit;
+    String kilogram = "1";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,8 +51,10 @@ public class FirstMaxReps extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     System.out.println("KG!");
+                    kilogram = "1";
                 } else {
                     System.out.println("LBS");
+                    kilogram = "0";
                 }
             }
         });
@@ -67,6 +70,7 @@ public class FirstMaxReps extends Fragment {
         values[0] = bench;
         values[1] = squat;
         values[2] = dead;
+        values[3] = kilogram;
 
         FileWriter fw = new FileWriter(data);
         for (int j = 0; j < values.length; j++) {
