@@ -112,7 +112,7 @@ public class Option4 extends Fragment {
                 }
 
                 Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
-
+                getActivity().onBackPressed();
             }
         });
 

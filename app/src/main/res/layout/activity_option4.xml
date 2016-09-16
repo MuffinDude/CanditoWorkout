@@ -81,9 +81,9 @@
                             android:layout_weight="0"
                             android:visibility="visible"
                             android:background="#00ffffff"
-                            android:gravity="right"
                             android:paddingBottom="10dp"
-                            android:paddingTop="10dp" />
+                            android:paddingTop="10dp"
+                            android:gravity="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -96,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Bench Press"
+                            android:text="Deadlift"
                             android:id="@+id/textView14"
                             android:layout_weight="1"
                             android:paddingBottom="10dp"
@@ -112,7 +112,7 @@
                             android:layout_alignEnd="@+id/squatTimes"
                             android:text="1"
                             android:background="#00ffffff"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp" />
                     </LinearLayout>
@@ -127,7 +127,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Deadlift"
+                            android:text="Squat"
                             android:id="@+id/textView18"
                             android:layout_weight="1"
                             android:paddingTop="10dp"
@@ -143,7 +143,7 @@
                             android:layout_toStartOf="@+id/calculateButton"
                             android:text="1"
                             android:background="#00ffffff"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:paddingBottom="10dp"
                             android:paddingTop="10dp" />
                     </LinearLayout>
