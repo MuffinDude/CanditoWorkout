@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week5;
 
+import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -46,7 +47,20 @@ public class Week5 extends AppCompatActivity {
 
 
     }
-
+    public void changeColorChest(View view){
+        view.setBackgroundColor(Color.parseColor("#547b7b"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
+    public void changeColor(View view){
+        view.setBackgroundColor(Color.parseColor("#7b5454"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
     /**
      * A placeholder fragment containing a simple view.
      */

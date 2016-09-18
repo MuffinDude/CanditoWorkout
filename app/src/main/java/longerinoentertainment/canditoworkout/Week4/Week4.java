@@ -1,5 +1,6 @@
 package longerinoentertainment.canditoworkout.Week4;
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -55,7 +56,20 @@ public class Week4 extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
 
     }
-
+    public void changeColorChest(View view){
+        view.setBackgroundColor(Color.parseColor("#547b7b"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
+    public void changeColor(View view){
+        view.setBackgroundColor(Color.parseColor("#7b5454"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

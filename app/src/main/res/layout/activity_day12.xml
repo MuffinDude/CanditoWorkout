@@ -62,14 +62,16 @@
                             android:layout_height="wrap_content"
                             android:text="Warm"
                             android:id="@+id/button17"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColor" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55 x MR10"
                             android:id="@+id/squatText1"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColor" />
 
                     </LinearLayout>
 
@@ -213,28 +215,32 @@
                                 android:layout_height="wrap_content"
                                 android:text="Warm"
                                 android:id="@+id/button8"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
 
                             <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="x8"
                                 android:id="@+id/deadText1"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
 
                             <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="x8"
                                 android:id="@+id/deadText2"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
 
                             <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="x8"
                                 android:id="@+id/deadText3"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
                         </LinearLayout>
 
                     </RelativeLayout>
@@ -345,28 +351,32 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button22"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button23"
                         android:layout_weight="1"
-                        android:text="x7-10" />
+                        android:text="x7-10"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button24"
                         android:layout_weight="1"
-                        android:text="x7-10" />
+                        android:text="x7-10"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button25"
                         android:layout_weight="1"
-                        android:text="x7-10" />
+                        android:text="x7-10"
+                        android:onClick="changeColor" />
 
                 </LinearLayout>
             </RelativeLayout>
@@ -407,28 +417,32 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button26"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button27"
                         android:layout_weight="1"
-                        android:text="x4" />
+                        android:text="x4"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="x4"
                         android:id="@+id/button28"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="x4"
                         android:id="@+id/button30"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
                 </LinearLayout>
 
             </RelativeLayout>

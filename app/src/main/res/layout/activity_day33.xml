@@ -55,14 +55,16 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button17"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="55x6"
                         android:id="@+id/squatText1"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColor" />
 
                 </LinearLayout>
 
@@ -114,14 +116,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="Warm"
                                 android:id="@+id/button8"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
 
                             <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="x8"
                                 android:id="@+id/deadText1"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:onClick="changeColor" />
 
                         </LinearLayout>
 

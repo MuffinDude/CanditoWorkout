@@ -50,28 +50,32 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button17"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="42.5x10"
                         android:id="@+id/benchText1"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="57.5x10"
                         android:id="@+id/benchText2"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="65x8"
                         android:id="@+id/benchText3"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                 </LinearLayout>
 
@@ -117,35 +121,40 @@
                             android:layout_height="wrap_content"
                             android:text="Warm"
                             android:id="@+id/button8"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x10"
                             android:id="@+id/button9"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x10"
                             android:id="@+id/button16"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x8"
                             android:id="@+id/button36"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x6"
                             android:id="@+id/button37"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -201,35 +210,40 @@
                             android:layout_height="wrap_content"
                             android:text="Warm"
                             android:id="@+id/button29"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x12"
                             android:id="@+id/button31"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x12"
                             android:id="@+id/button38"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x10"
                             android:id="@+id/button32"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x8"
                             android:id="@+id/button39"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -283,35 +297,40 @@
                             android:layout_height="wrap_content"
                             android:text="Warm"
                             android:id="@+id/button33"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x12"
                             android:id="@+id/button34"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x12"
                             android:id="@+id/button40"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x10"
                             android:id="@+id/button35"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
 
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x8"
                             android:id="@+id/button41"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:onClick="changeColorChest" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -361,35 +380,40 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button22"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button23"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button42"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button43"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button7"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                 </LinearLayout>
 
@@ -439,35 +463,40 @@
                         android:layout_height="wrap_content"
                         android:text="Warm"
                         android:id="@+id/button26"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button44"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button45"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button46"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button19"
                         android:layout_weight="1"
-                        android:text="x8-12" />
+                        android:text="x8-12"
+                        android:onClick="changeColorChest" />
 
                 </LinearLayout>
 
