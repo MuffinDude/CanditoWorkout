@@ -62,6 +62,7 @@ public class Day3 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
+        System.out.println("VALUES IS " + values[3] + " AND DECIMETER POINT IS " + decimeterPoint);
         double benchNumber1 = round(0.5, values[0], decimeterPoint);
         double benchNumber2 = round(0.675, values[0], decimeterPoint);
         double benchNumber3 = round(0.75, values[0], decimeterPoint);

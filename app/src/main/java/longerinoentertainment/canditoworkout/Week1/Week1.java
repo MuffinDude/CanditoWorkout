@@ -1,5 +1,7 @@
 package longerinoentertainment.canditoworkout.Week1;
 
+import android.graphics.Color;
+import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import longerinoentertainment.canditoworkout.R;
@@ -55,6 +59,20 @@ public class Week1 extends AppCompatActivity {
 
     }
 
+    public void changeColorChest(View view){
+        view.setBackgroundColor(Color.parseColor("#547b7b"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
+    public void changeColor(View view){
+        view.setBackgroundColor(Color.parseColor("#7b5454"));
+        view.setElevation(15);
+        //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        //chronometer.setBase(SystemClock.elapsedRealtime());
+        //chronometer.start();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

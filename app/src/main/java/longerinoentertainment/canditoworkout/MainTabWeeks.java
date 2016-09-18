@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.io.BufferedReader;
@@ -59,31 +60,31 @@ public class MainTabWeeks extends Fragment {
         String[] values = readFromFile(new File(dir, "weeks.txt"));
         readFromFile(file);
 
-        if (Integer.parseInt(values[0]) == 1) {
+        if  (Objects.equals(values[0], "1")) {
             weekToggle1.setChecked(true);
             w1.setBackgroundColor(Color.parseColor("#7b5454"));
-            weekToggle1.setText("DONE");
-        }else weekToggle1.setText("DONE?");
+            weekToggle1.setTextOn("DONE");
+        }else weekToggle1.setTextOff("DONE?");
         if (Objects.equals(values[1], "1")) {
             weekToggle2.setChecked(true);
             w2.setBackgroundColor(Color.parseColor("#7b5454"));
-            weekToggle2.setText("DONE");
-        }else weekToggle2.setText("DONE?");
+            weekToggle2.setTextOn("DONE");
+        }else weekToggle2.setTextOff("DONE?");
         if  (Objects.equals(values[2], "1")) {
             weekToggle3.setChecked(true);
             w3.setBackgroundColor(Color.parseColor("#7b5454"));
-            weekToggle3.setText("DONE");
-        }else weekToggle3.setText("DONE?");
+            weekToggle3.setTextOn("DONE");
+        }else weekToggle3.setTextOff("DONE?");
         if  (Objects.equals(values[3], "1")) {
             weekToggle4.setChecked(true);
             w4.setBackgroundColor(Color.parseColor("#7b5454"));
-            weekToggle4.setText("DONE");
-        }else weekToggle4.setText("DONE?");
+            weekToggle4.setTextOn("DONE");
+        }else weekToggle4.setTextOff("DONE?");
         if  (Objects.equals(values[4], "1")) {
             weekToggle5.setChecked(true);
             w5.setBackgroundColor(Color.parseColor("#7b5454"));
-            weekToggle5.setText("DONE");
-        }else weekToggle5.setText("DONE?");
+            weekToggle5.setTextOn("DONE");
+        }else weekToggle5.setTextOff("DONE?");
 
         weekToggle1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -204,7 +205,8 @@ public class MainTabWeeks extends Fragment {
                 weekToggle3.setChecked(false);
                 weekToggle4.setChecked(false);
                 weekToggle5.setChecked(false);
-
+                Toast.makeText(getActivity(), "Cycle has been reset!",
+                        Toast.LENGTH_LONG).show();
                 try {
                     updateLine("one", 0, file);
                     updateLine("two", 0, file);
@@ -273,10 +275,15 @@ public class MainTabWeeks extends Fragment {
         if (Objects.equals(weekDay, "four"))values[3]=Integer.toString(doneOrNot);
         if (Objects.equals(weekDay, "five"))values[4]=Integer.toString(doneOrNot);
         if (Objects.equals(weekDay, "counter")) {
-            if (Objects.equals(values[5], "null"))values[5]="0";
-            values[5]=Integer.toString(Integer.parseInt(values[5])+ doneOrNot);
+            if (!Objects.equals(values[5], "null")){
+                values[5]=Integer.toString(Integer.parseInt(values[5])+ doneOrNot);
+
+                System.out.println("DONE");
+            }else{
+                values[5]="1";
+                System.out.println("FUCKED UP");
+            }
         }
-        System.out.println("COUNTER ON HETKEL: " + values[5]);
         /*
         values[0] = week1;
         values[1] = week2;
@@ -303,6 +310,7 @@ public class MainTabWeeks extends Fragment {
                 values[i] = line;
                 i++;
             }
+
             br.close();
         }
         catch (IOException ignored){}
