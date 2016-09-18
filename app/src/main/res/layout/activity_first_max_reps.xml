@@ -136,15 +136,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            </TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Weights are in Kilograms"
+                    android:id="@+id/weightAssuranceText"
+                    android:layout_column="0"
+                    android:layout_weight="1" />
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:showText="true"
-                android:textOn="KG"
-                android:textOff="LBS"
-                android:id="@+id/switch1" />
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:showText="true"
+                    android:textOn="KG"
+                    android:textOff="LBS"
+                    android:id="@+id/switch1"
+                    android:layout_weight="1" />
+            </TableRow>
 
         </TableLayout>
 

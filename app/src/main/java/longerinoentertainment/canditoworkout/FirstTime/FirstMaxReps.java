@@ -35,6 +35,7 @@ public class FirstMaxReps extends Fragment {
     EditText deadlift;
     Switch weightUnit;
     String kilogram;
+    TextView weightConfirmation;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class FirstMaxReps extends Fragment {
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
-        weightUnit = (Switch) beginnerTab.findViewById(R.id.switch1);
+        weightConfirmation = (TextView) beginnerTab.findViewById(R.id.weightAssuranceText);
 
         weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -52,9 +53,11 @@ public class FirstMaxReps extends Fragment {
                 if (isChecked) {
                     System.out.println("KG!");
                     kilogram = "1";
+                    weightConfirmation.setText("Weights are in Kilograms");
                 } else {
                     System.out.println("LBS");
                     kilogram = "0";
+                    weightConfirmation.setText("Weights are in Pounds");
                 }
             }
         });
