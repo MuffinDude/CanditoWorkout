@@ -2,7 +2,10 @@ package longerinoentertainment.canditoworkout.FirstTime;
 
 import android.provider.Settings;
 import android.provider.SyncStateContract;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -28,6 +31,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import longerinoentertainment.canditoworkout.R;
+import me.relex.circleindicator.CircleIndicator;
 
 public class FirstMaxReps extends Fragment {
     EditText bench;
@@ -38,8 +42,9 @@ public class FirstMaxReps extends Fragment {
     TextView weightConfirmation;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,Bundle savedInstanceState) {
         View beginnerTab = inflater.inflate(R.layout.activity_first_max_reps, null, false);
+
 
 
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
@@ -67,6 +72,8 @@ public class FirstMaxReps extends Fragment {
         dir.mkdirs();
         return beginnerTab;
     }
+
+
 
 
     private void updateLine(File data, String bench, String squat, String dead) throws IOException {

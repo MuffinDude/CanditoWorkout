@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import longerinoentertainment.canditoworkout.R;
+import me.relex.circleindicator.CircleIndicator;
 
 public class FirstTime extends AppCompatActivity {
 
@@ -48,7 +49,9 @@ public class FirstTime extends AppCompatActivity {
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        indicator.setViewPager(mViewPager);
 
     }
 
