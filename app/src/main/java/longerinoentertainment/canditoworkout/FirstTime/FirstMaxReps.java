@@ -45,6 +45,7 @@ public class FirstMaxReps extends Fragment {
         bench = (EditText) beginnerTab.findViewById(R.id.benchText);
         squat = (EditText) beginnerTab.findViewById(R.id.squatText);
         deadlift = (EditText) beginnerTab.findViewById(R.id.deadText);
+        weightUnit = (Switch) beginnerTab.findViewById(R.id.switch1);
         weightConfirmation = (TextView) beginnerTab.findViewById(R.id.weightAssuranceText);
 
         weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
