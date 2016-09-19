@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Weights are in Kilograms"
+                    android:text="Weights are in Pounds"
                     android:id="@+id/weightAssuranceText"
                     android:layout_column="0"
                     android:layout_weight="1" />
