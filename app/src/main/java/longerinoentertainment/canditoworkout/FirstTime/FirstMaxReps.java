@@ -53,7 +53,7 @@ public class FirstMaxReps extends Fragment {
         weightUnit = (Switch) beginnerTab.findViewById(R.id.switch1);
         weightConfirmation = (TextView) beginnerTab.findViewById(R.id.weightAssuranceText);
 
-
+        kilogram="0";
         weightUnit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
