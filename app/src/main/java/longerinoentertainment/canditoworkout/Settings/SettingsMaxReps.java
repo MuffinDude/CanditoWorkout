@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -34,6 +35,9 @@ public class SettingsMaxReps extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_max_reps);
 
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
+
         save = (Button) findViewById(R.id.saveButton);
         bench = (EditText) findViewById(R.id.benchText);
         squat = (EditText) findViewById(R.id.squatText);
@@ -47,9 +51,12 @@ public class SettingsMaxReps extends AppCompatActivity {
         final File dir = new File(getBaseContext().getFilesDir() + "/CanditoWorkoutApp");
         dir.mkdirs();
         final String[] values = readFromFile(new File(dir, "savedFile.txt"));
-        bench.setText(values[0], TextView.BufferType.EDITABLE);
-        squat.setText(values[1], TextView.BufferType.EDITABLE);
-        deadlift.setText(values[2], TextView.BufferType.EDITABLE);
+        double immideateBench = Double.parseDouble(values[0]);
+        double immideateSquat = Double.parseDouble(values[1]);
+        double immideateDead = Double.parseDouble(values[2]);
+        bench.setText(format.format(immideateBench), TextView.BufferType.EDITABLE);
+        squat.setText(format.format(immideateSquat), TextView.BufferType.EDITABLE);
+        deadlift.setText(format.format(immideateDead), TextView.BufferType.EDITABLE);
 
         benchForConversion = Double.parseDouble(values[0]);
         squatForConversion = Double.parseDouble(values[1]);
@@ -62,9 +69,9 @@ public class SettingsMaxReps extends AppCompatActivity {
         double benchCalculation = Math.round(Double.parseDouble(values[0]) * 0.975*100)/100;
         double squatCalculation = Math.round(Double.parseDouble(values[1]) * 0.975*100)/100;
         double deadCalculation = Math.round(Double.parseDouble(values[2]) * 0.975*100)/100;
-        final String lowerBench = Double.toString(benchCalculation);
-        final String lowerSquat = Double.toString(squatCalculation);
-        final String lowerDead = Double.toString(deadCalculation);
+        final String lowerBench = format.format(benchCalculation);
+        final String lowerSquat = format.format(squatCalculation);
+        final String lowerDead = format.format(deadCalculation);
 
         benchToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

@@ -41,6 +41,7 @@ public class Day1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day1, container, false);
+
         DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
 

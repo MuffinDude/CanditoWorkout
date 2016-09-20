@@ -21,6 +21,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -52,6 +53,9 @@ public class Day3  extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day32, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         squat1 = (Button) infoTab.findViewById(R.id.squatText1);
         sqt1 = (Button) infoTab.findViewById(R.id.squat1);
@@ -165,8 +169,8 @@ public class Day3  extends Fragment {
             }
         });
 
-        String squatText = Double.toString(squatNumber+decimeterPoint) + " x10MR";
-        String squatTextSixty = Double.toString(squatNumber-decimeterPoint) + " x3";
+        String squatText = format.format(squatNumber+decimeterPoint) + " x10MR";
+        String squatTextSixty = format.format(squatNumber-decimeterPoint) + " x3";
         squat1.setText(squatText);
         sqt1.setText(squatTextSixty);
         sqt2.setText(squatTextSixty);

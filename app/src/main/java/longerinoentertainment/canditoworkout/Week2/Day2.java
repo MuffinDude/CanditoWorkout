@@ -18,6 +18,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -41,6 +42,9 @@ public class Day2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day22, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         bench1 = (Button) infoTab.findViewById(R.id.benchText1);
         bench2 = (Button) infoTab.findViewById(R.id.benchText2);
@@ -66,9 +70,9 @@ public class Day2 extends Fragment {
         double benchNumber2 = round(0.775, values[0], decimeterPoint);
         double benchNumber3 = round(0.8, values[0], decimeterPoint) + decimeterPoint;
 
-        String benchText1 = Double.toString(benchNumber1) + " x10";
-        String benchText2 = Double.toString(benchNumber2) + " x8";
-        String benchText3 = Double.toString(benchNumber3) + " x6-8";
+        String benchText1 = format.format(benchNumber1) + " x10";
+        String benchText2 = format.format(benchNumber2) + " x8";
+        String benchText3 = format.format(benchNumber3) + " x6-8";
         bench1.setText(benchText1);
         bench2.setText(benchText2);
         bench3.setText(benchText3);
