@@ -2,14 +2,14 @@
 
 To-Do
 
--Making a better stopper
+-Stopper actually counts down from certain time and alerts the user when time is up
 
--When done with a workout, it changes color and so do weeks
+-Stopper is separate fragment and also appears in notifications
 
--Designing better settings menu
+-Exists a motivational function in where it takes in your BodyMassIndex and based on that popups like "my grandma has bigger biceps" or "your lifts are worse than a 3 legged dogs" appear
 
--Designing normal opening menu for the first timers
+-Fix bugs a la if you enter over 1k in max reps, it stops saveing and crashes
 
--Calculate everything for LBS aswell
+-Add graph view to show progress
 
-Basically, all that is left is design improvements
+-Fix opening menu design where it shows bubbles on the finish button
