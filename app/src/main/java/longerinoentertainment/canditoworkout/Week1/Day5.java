@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -37,6 +38,9 @@ public class Day5 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day5, container, false);
 
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
+
         bench1 = (Button) infoTab.findViewById(R.id.benchText1);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
@@ -56,7 +60,7 @@ public class Day5 extends Fragment {
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
         double benchNumber1 = round(values[0], decimeterPoint);
-        String benchText1 = Double.toString(benchNumber1) + " xMR";
+        String benchText1 = format.format(benchNumber1) + " xMR";
         bench1.setText(benchText1);
 
         accessoryOne.setText(values[6]);
