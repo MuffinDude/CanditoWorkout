@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -42,6 +43,9 @@ public class Day2 extends Fragment {
         accessoryTwo = (TextView) infoTab.findViewById(R.id.accessoryTwo);
         accessoryThree = (TextView) infoTab.findViewById(R.id.accessoryThree);
 
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
+
         final File dir = new File(getContext().getFilesDir() + "/CanditoWorkoutApp");
         final File file = new File(dir, "savedFile.txt");
         String[] values = readFromFile(new File(dir, "savedFile.txt"));
@@ -49,9 +53,9 @@ public class Day2 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double benchNumber1 = round(values[0], decimeterPoint) + decimeterPoint;
+        double benchNumber1 = round(values[0], decimeterPoint);
 
-        String benchText = Double.toString(benchNumber1) + " x4-6";
+        String benchText = format.format(benchNumber1) + " x4-6";
         bench1.setText(benchText);
         bench2.setText(benchText);
         bench3.setText(benchText);
