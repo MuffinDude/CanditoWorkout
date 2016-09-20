@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -38,6 +39,9 @@ public class Day4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day44, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         bench1 = (Button) infoTab.findViewById(R.id.benchText1);
         bench2 = (Button) infoTab.findViewById(R.id.benchText2);
@@ -63,9 +67,9 @@ public class Day4 extends Fragment {
         double benchNumber2 = round(0.9, values[0], decimeterPoint);
         double benchNumber3 = round(0.95, values[0], decimeterPoint);
 
-        String benchText1 = Double.toString(benchNumber1) + " x3";
-        String benchText2 = Double.toString(benchNumber2) + " x2-4";
-        String benchText3 = Double.toString(benchNumber3) + " x1-2";
+        String benchText1 = format.format(benchNumber1) + " x3";
+        String benchText2 = format.format(benchNumber2) + " x2-4";
+        String benchText3 = format.format(benchNumber3) + " x1-2";
         bench1.setText(benchText1);
         bench2.setText(benchText2);
         bench3.setText(benchText3);
@@ -112,7 +116,7 @@ public class Day4 extends Fragment {
         return values;
     }
     public static double round(double number, String valueString, double units) {
-        double value = Math.floor(Math.floor(Double.parseDouble(valueString)/units)*units * number/units)*units;
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * number/units)*units;
         return value;
     }
 }

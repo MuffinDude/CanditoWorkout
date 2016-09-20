@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -37,6 +38,9 @@ public class Day3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day34, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
         chronometer = (Chronometer) infoTab.findViewById(R.id.chronometer);
@@ -62,13 +66,15 @@ public class Day3 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double deadNumber = round(values[2], decimeterPoint);
-        double squatNumber = round(values[1], decimeterPoint);
+        double deadNumber1 = round(values[2], decimeterPoint, 0.9) + decimeterPoint;
+        double deadNumber2 = round(values[2], decimeterPoint, 0.95);
+        double squatNumber1 = round(values[1], decimeterPoint, 0.9)+decimeterPoint;
+        double squatNumber2 = round(values[1], decimeterPoint, 0.95);
 
-        String deadText1 = Double.toString(deadNumber+decimeterPoint)+ " x3";
-        String deadText2 = Double.toString(deadNumber+decimeterPoint)+ " x1-2";
-        String squatText1 = Double.toString(squatNumber+decimeterPoint) + " x3";
-        String squatText2 = Double.toString(squatNumber+decimeterPoint) + " x1-2";
+        String deadText1 = format.format(deadNumber1)+ " x3";
+        String deadText2 = format.format(deadNumber2)+ " x1-2";
+        String squatText1 = format.format(squatNumber1) + " x3";
+        String squatText2 = format.format(squatNumber2) + " x1-2";
         squat1.setText(squatText1);
         squat2.setText(squatText2);
         dead1.setText(deadText1);
@@ -143,8 +149,8 @@ public class Day3 extends Fragment {
         }
         return values;
     }
-    public static double round(String valueString, double units) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * 0.9/units)*units;
+    public static double round(String valueString, double units, double specialNumber) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * specialNumber/units)*units;
         return value;
     }
 }
