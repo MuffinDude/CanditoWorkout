@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -37,6 +38,9 @@ public class Day1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day15, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         squat1 = (Button) infoTab.findViewById(R.id.squatText1);
         dead1 = (Button) infoTab.findViewById(R.id.deadText1);
@@ -62,13 +66,15 @@ public class Day1 extends Fragment {
 
         if (values[3].equals("1")) decimeterPoint = 2.5;
         if (values[3].equals("0")) decimeterPoint = 5;
-        double deadNumber = round(values[2], decimeterPoint);
-        double squatNumber = round(values[1], decimeterPoint);
+        double deadNumber1 = round(values[2], decimeterPoint, 0.675);
+        double deadNumber2 = round(values[2], decimeterPoint, 0.7);
+        double deadNumber3 = round(values[2], decimeterPoint, 0.725);
+        double squatNumber = round(values[1], decimeterPoint, 0.975);
 
-        String deadText1 = Double.toString(deadNumber-decimeterPoint*5)+ " x4";
-        String deadText2 = Double.toString(deadNumber-decimeterPoint*4)+ " x4";
-        String deadText3 = Double.toString(deadNumber-decimeterPoint*3)+ " x2";
-        String squatText = Double.toString(squatNumber+decimeterPoint*5) + " x1-4";
+        String deadText1 = format.format(deadNumber1)+ " x4";
+        String deadText2 = format.format(deadNumber2)+ " x4";
+        String deadText3 = format.format(deadNumber3)+ " x2";
+        String squatText = format.format(squatNumber) + " x1-4";
         squat1.setText(squatText);
         dead1.setText(deadText1);
         dead2.setText(deadText2);
@@ -143,8 +149,8 @@ public class Day1 extends Fragment {
         }
         return values;
     }
-    public static double round(String valueString, double units) {
-        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * 0.8/units)*units;
+    public static double round(String valueString, double units, double specialNumber) {
+        double value = Math.round(Math.round(Double.parseDouble(valueString)/units)*units * specialNumber/units)*units;
         return value;
     }
 }

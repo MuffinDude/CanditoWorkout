@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import longerinoentertainment.canditoworkout.R;
 
@@ -33,6 +34,9 @@ public class Day3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View infoTab = inflater.inflate(R.layout.activity_day35, container, false);
+
+        DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
 
         dead1 = (Button) infoTab.findViewById(R.id.deadText1);
         stopper = (Button) infoTab.findViewById(R.id.stopperButton);
@@ -57,7 +61,7 @@ public class Day3 extends Fragment {
         if (values[3].equals("0")) decimeterPoint = 5;
         double deadNumber = round(values[2], decimeterPoint);
 
-        String deadText1 = Double.toString(deadNumber)+ " x1-4";
+        String deadText1 = format.format(deadNumber)+ " x1-4";
         dead1.setText(deadText1);
 
         if (values[4].equals("None")){
