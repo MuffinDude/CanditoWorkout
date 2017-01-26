@@ -81,14 +81,12 @@ public class Week3 extends AppCompatActivity {
     }
     public void changeColorChest(View view){
         view.setBackgroundColor(Color.parseColor("#547b7b"));
-        view.setElevation(15);
         //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
         //chronometer.setBase(SystemClock.elapsedRealtime());
         //chronometer.start();
     }
     public void changeColor(View view){
         view.setBackgroundColor(Color.parseColor("#7b5454"));
-        view.setElevation(15);
         //Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
         //chronometer.setBase(SystemClock.elapsedRealtime());
         //chronometer.start();
