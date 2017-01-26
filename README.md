@@ -1,6 +1,6 @@
 # CanditoWorkout
 
-To-Do
+## To-Do
 
 1.Stopper actually counts down from certain time and alerts the user when time is up
 2.Sopper is separate fragment and also appears in notifications
