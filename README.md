@@ -8,6 +8,7 @@
 4. Fix bugs a la if you enter over 1k in max reps, it stops saveing and crashes, when choosing optional arm exes, if first is "none" then second won't count anyways.
 5. Add graph view to show progress
 6. Fix opening menu design where it shows bubbles on the finish button
+7. Add calendar functionality or a date system that shows when exercises should be done like the excel sheet
 
 ## Problems
-1. Android 4.4 will crash when completing a set and pressing on a button to change the color. Says something about it being void.
+1. None
