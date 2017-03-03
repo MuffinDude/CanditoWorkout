@@ -11,7 +11,7 @@
 7. Add calendar functionality or a date system that shows when exercises should be done like the excel sheet
 
 ## Problems
-1. None
+1. Should be only in portrait, cannot rotate. But it does rotate, why you do dis
 
 
 ## Optional
