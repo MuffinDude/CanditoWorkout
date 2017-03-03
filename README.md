@@ -9,6 +9,7 @@
 5. Add graph view to show progress
 6. Fix opening menu design where it shows bubbles on the finish button
 7. Add calendar functionality or a date system that shows when exercises should be done like the excel sheet
+8. Add possibility of themes, as in the default is dark themed but it is possible to change in the options to light theme
 
 ## Problems
 1. Should be only in portrait, cannot rotate. But it does rotate, why you do dis
